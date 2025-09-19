@@ -1,428 +1,113 @@
 {
-    "generated_utc": "2025-09-18T21:18:30Z",
-    "positions": [
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "VUG",
-            "quantity": 3.3597,
-            "avg_cost_usd": 449.04,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "etf-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "IVW",
-            "quantity": 11.23158,
-            "avg_cost_usd": 113.42,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "etf-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "IUSG",
-            "quantity": 3.17,
-            "avg_cost_usd": 158.22,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "etf-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "SOXX",
-            "quantity": 8.86952,
-            "avg_cost_usd": 242.44,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "etf-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "TSM",
-            "quantity": 8.24418,
-            "avg_cost_usd": 230.17,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "equity-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "AVGO",
-            "quantity": 5.94157,
-            "avg_cost_usd": 293.59,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "equity-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "VST",
-            "quantity": 2.75565,
-            "avg_cost_usd": 186.56,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "equity-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "NVDA",
-            "quantity": 3.53138,
-            "avg_cost_usd": 141.59,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "equity-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "PLTR",
-            "quantity": 7.19967,
-            "avg_cost_usd": 145.6,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "equity-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "ARGT",
-            "quantity": 15.84,
-            "avg_cost_usd": 75.16,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "etf-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "sleeve": "Avenue-Variable",
-            "ticker": "SMCI",
-            "quantity": 5.01761,
-            "avg_cost_usd": 45.68,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "equity-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Binance",
-            "sleeve": "Binance-Crypto",
-            "ticker": "BTC",
-            "quantity": 0.04418485,
-            "avg_cost_usd": 111487.98,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "crypto-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Binance",
-            "sleeve": "Binance-Crypto",
-            "ticker": "ETH",
-            "quantity": 0.50470159,
-            "avg_cost_usd": 3644.09,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "crypto-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Binance",
-            "sleeve": "Binance-Crypto",
-            "ticker": "SOL",
-            "quantity": 9.26548266,
-            "avg_cost_usd": 132.45,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "crypto-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Binance",
-            "sleeve": "Binance-Crypto",
-            "ticker": "LINK",
-            "quantity": 62.91556022,
-            "avg_cost_usd": 18.01,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "crypto-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Binance",
-            "sleeve": "Binance-Crypto",
-            "ticker": "XRP",
-            "quantity": 331.81287879,
-            "avg_cost_usd": 2.32,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "crypto-core",
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Binance",
-            "sleeve": "Binance-Crypto",
-            "ticker": "FET",
-            "quantity": 859.439704,
-            "avg_cost_usd": 0.6788,
-            "hwm_price_usd": null,
-            "hwm_date_utc": "2025-09-12",
-            "class": "crypto-core",
-            "notes": ""
-        }
-    ],
-    "cash": [
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Avenue",
-            "cash_label": "SGOV+Disponível",
-            "amount_usd": 1457.27,
-            "notes": ""
-        },
-        {
-            "timestamp_utc": "2025-09-18T21:18:30Z",
-            "platform": "Binance",
-            "cash_label": "USDT",
-            "amount_usd": 2331.72734026,
-            "notes": ""
-        }
-    ],
-    "ledger": [
-        {
-            "platform": "Avenue",
-            "ticker": "SOXX",
-            "operation": "buy",
-            "quantity": 5.76,
-            "price_usd": "242.52",
-            "trade_date": "2025-09-03",
-            "trade_time_utc": "",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Conforme chat 03/09"
-        },
-        {
-            "platform": "Avenue",
-            "ticker": "AVGO",
-            "operation": "buy",
-            "quantity": 4,
-            "price_usd": "298.51",
-            "trade_date": "2025-09-03",
-            "trade_time_utc": "",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Conforme chat 03/09"
-        },
-        {
-            "platform": "Avenue",
-            "ticker": "TSM",
-            "operation": "buy",
-            "quantity": 5.21,
-            "price_usd": "230.06",
-            "trade_date": "2025-09-03",
-            "trade_time_utc": "",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Conforme chat 03/09"
-        },
-        {
-            "platform": "Avenue",
-            "ticker": "PLTR",
-            "operation": "buy",
-            "quantity": 3.84,
-            "price_usd": "155.54",
-            "trade_date": "2025-09-03",
-            "trade_time_utc": "",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Conforme chat 03/09"
-        },
-        {
-            "platform": "Avenue",
-            "ticker": "ARGT",
-            "operation": "buy",
-            "quantity": 5.06,
-            "price_usd": "78.92",
-            "trade_date": "2025-09-03",
-            "trade_time_utc": "",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Conforme chat 03/09"
-        },
-        {
-            "platform": "Binance",
-            "ticker": "BTC",
-            "operation": "buy",
-            "quantity": 0.0107,
-            "price_usd": "1200 total",
-            "trade_date": "2025-09-03",
-            "trade_time_utc": "",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Conforme chat 03/09"
-        },
-        {
-            "platform": "Binance",
-            "ticker": "SOL",
-            "operation": "buy",
-            "quantity": 2.8265,
-            "price_usd": "600 total",
-            "trade_date": "2025-09-03",
-            "trade_time_utc": "",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Conforme chat 03/09"
-        },
-        {
-            "platform": "Binance",
-            "ticker": "LINK",
-            "operation": "buy",
-            "quantity": 16.8818,
-            "price_usd": "400 total",
-            "trade_date": "2025-09-03",
-            "trade_time_utc": "",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Conforme chat 03/09"
-        },
-        {
-            "platform": "Binance",
-            "ticker": "XRP",
-            "operation": "buy",
-            "quantity": 69.344,
-            "price_usd": "200 total",
-            "trade_date": "2025-09-03",
-            "trade_time_utc": "",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Conforme chat 03/09"
-        },
-        {
-            "platform": "Binance",
-            "ticker": "ETH",
-            "operation": "buy",
-            "quantity": 0.16699864,
-            "price_usd": "4610.82",
-            "trade_date": "2025-09-18",
-            "trade_time_utc": "21:16:00",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Rebalance USDT band & BTC cap"
-        },
-        {
-            "platform": "Binance",
-            "ticker": "SOL",
-            "operation": "buy",
-            "quantity": 2.06245215,
-            "price_usd": "249.703",
-            "trade_date": "2025-09-18",
-            "trade_time_utc": "21:16:00",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Rebalance USDT band & BTC cap"
-        },
-        {
-            "platform": "Binance",
-            "ticker": "LINK",
-            "operation": "buy",
-            "quantity": 10.51484482,
-            "price_usd": "24.7269",
-            "trade_date": "2025-09-18",
-            "trade_time_utc": "21:17:00",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Rebalance USDT band & BTC cap"
-        },
-        {
-            "platform": "Binance",
-            "ticker": "FET",
-            "operation": "buy",
-            "quantity": 250.03947883,
-            "price_usd": "0.679893",
-            "trade_date": "2025-09-18",
-            "trade_time_utc": "21:17:00",
-            "fees_usd": "",
-            "order_id": "",
-            "source": "user",
-            "notes": "Rebalance USDT band & BTC cap"
-        }
-    ],
-    "meta": {
-        "strategy_version": "v20250912A",
-        "baseline_hwm_date_utc": "2025-09-12",
-        "use_latest_print_always": true,
-        "lockout_rule_active": false,
-        "precedence_order": "Winners/Giveback \u25ba BTC_cap_<=40%_exUSDT \u25ba USDT_band",
-        "pre_alerts": "OFF",
-        "last_updated_utc": "2025-09-18T21:18:30Z",
-        "universe": {
-            "avenue": [
-                "VUG",
-                "IVW",
-                "IUSG",
-                "SOXX",
-                "TSM",
-                "AVGO",
-                "VST",
-                "NVDA",
-                "PLTR",
-                "ARGT",
-                "SMCI"
-            ],
-            "binance": [
-                "BTC",
-                "ETH",
-                "SOL",
-                "LINK",
-                "XRP",
-                "FET"
-            ]
-        }
+  "version": "2025-09-19T17:15:00-03:00",
+  "strategy_version": "v20250912A",
+  "meta": {
+    "hwm_portfolio_start_date": "2025-09-12",
+    "prints_valid_days": 3
+  },
+  "controls": {
+    "quiet_hours_brt": "09:00-21:00",
+    "winners": {
+      "use_reference": "avg_cost_usd",
+      "cooldown_days": 5,
+      "step_up_pp": 10
+    },
+    "binance_lockout": {
+      "usdt_lockout_active": true,
+      "reason": "USDT > 20% após winners/giveback (§6.2.1)",
+      "activated_utc": "2025-09-19T20:09:00Z",
+      "business_days": 2,
+      "expires_utc": "2025-09-23T23:59:59Z"
     }
+  },
+  "avenue": {
+    "cash_usd": 1457.27,
+    "positions": {
+      "VUG":  { "quantity": 3.35970,  "avg_cost_usd": 449.04 },
+      "IVW":  { "quantity": 11.23158, "avg_cost_usd": 113.42 },
+      "IUSG": { "quantity": 3.17,     "avg_cost_usd": 158.22 },
+      "SOXX": { "quantity": 8.86952,  "avg_cost_usd": 242.44 },
+      "TSM":  { "quantity": 8.24418,  "avg_cost_usd": 230.17 },
+      "AVGO": { "quantity": 5.94157,  "avg_cost_usd": 293.59 },
+      "VST":  { "quantity": 2.75565,  "avg_cost_usd": 186.56 },
+      "NVDA": { "quantity": 3.53138,  "avg_cost_usd": 141.59 },
+      "PLTR": { "quantity": 7.19967,  "avg_cost_usd": 145.60 },
+      "ARGT": { "quantity": 15.84,    "avg_cost_usd": 75.16 },
+      "SMCI": { "quantity": 5.01761,  "avg_cost_usd": 45.68 }
+    }
+  },
+  "binance": {
+    "usdt": 3250.72734026,
+    "positions": {
+      "BTC":  { "quantity": 0.04418485,  "avg_cost_usd": 111487.98 },
+      "ETH":  { "quantity": 0.50470159,  "avg_cost_usd": 3644.09 },
+      "SOL":  { "quantity": 6.93286297,  "avg_cost_usd": 132.45,      "winner_last_exec_utc": "2025-09-19T20:08:00Z" },
+      "LINK": { "quantity": 47.01523949, "avg_cost_usd": 18.01,       "winner_last_exec_utc": "2025-09-19T20:09:00Z" },
+      "XRP":  { "quantity": 331.81287879,"avg_cost_usd": 2.32 },
+      "FET":  { "quantity": 859.439704,  "avg_cost_usd": 0.67889699 },
+      "ETHW": { "quantity": 0.2331806,   "avg_cost_usd": 0.37124134 }
+    }
+  },
+  "ledger": [
+    {
+      "platform": "binance",
+      "symbol": "ETH",
+      "side": "buy",
+      "quantity": 0.16699864,
+      "price_usd": 4610.82,
+      "cost_usdt": 770,
+      "timestamp_utc": "2025-09-18T21:16:00Z",
+      "note": "compra spot"
+    },
+    {
+      "platform": "binance",
+      "symbol": "SOL",
+      "side": "buy",
+      "quantity": 2.06245215,
+      "price_usd": 249.703,
+      "cost_usdt": 515,
+      "timestamp_utc": "2025-09-18T21:16:00Z",
+      "note": "compra spot"
+    },
+    {
+      "platform": "binance",
+      "symbol": "LINK",
+      "side": "buy",
+      "quantity": 10.51484482,
+      "price_usd": 24.7269,
+      "cost_usdt": 260,
+      "timestamp_utc": "2025-09-18T21:17:00Z",
+      "note": "compra spot"
+    },
+    {
+      "platform": "binance",
+      "symbol": "FET",
+      "side": "buy",
+      "quantity": 250.03947883,
+      "price_usd": 0.679893,
+      "cost_usdt": 170,
+      "timestamp_utc": "2025-09-18T21:17:00Z",
+      "note": "compra spot"
+    },
+    {
+      "platform": "binance",
+      "symbol": "SOL",
+      "side": "sell",
+      "quantity": 2.33261969,
+      "price_usd": 235.358,
+      "proceeds_usdt": 549,
+      "timestamp_utc": "2025-09-19T20:08:00Z",
+      "note": "winner 25% (venda parcial)"
+    },
+    {
+      "platform": "binance",
+      "symbol": "LINK",
+      "side": "sell",
+      "quantity": 15.90032073,
+      "price_usd": 23.27,
+      "proceeds_usdt": 370,
+      "timestamp_utc": "2025-09-19T20:09:00Z",
+      "note": "winner 25% (venda parcial)"
+    }
+  ]
 }
