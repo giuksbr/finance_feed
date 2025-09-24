@@ -1,9 +1,39 @@
 {
-    "version": "2025-09-19T17:15:00-03:00",
+    "version": "2025-09-24T12:00:00-03:00",
     "strategy_version": "v20250912A",
     "meta": {
         "hwm_portfolio_start_date": "2025-09-12",
-        "prints_valid_days": 3
+        "prints_valid_days": 3,
+        "notes": "Estratégia Consolidada ativa; winners/giveback usam avg_cost_usd do feed."
+    },
+    "universe": {
+        "avenue_tickers": [
+            "VUG",
+            "IVW",
+            "IUSG",
+            "SOXX",
+            "TSM",
+            "AVGO",
+            "VST",
+            "NVDA",
+            "PLTR",
+            "ARGT",
+            "SMCI"
+        ],
+        "binance_tickers": [
+            "BTC",
+            "ETH",
+            "SOL",
+            "LINK",
+            "XRP",
+            "FET",
+            "ETHW"
+        ],
+        "fx_refs": [
+            "DXY",
+            "PTAX_5d",
+            "PF_BRL_composite"
+        ]
     },
     "controls": {
         "version": "v20250912A",
@@ -69,12 +99,45 @@
             ],
             "binance_usdt_min_pct": 5
         },
+        "btc_cap_guideline_pct_ex_usdt": 40,
         "lockout_logic": {
             "derive_from_timestamps": true,
             "block_non_reentry_buys_when_active": true,
             "allow_when_active": [
                 "N_level",
                 "structural_rebalance"
+            ]
+        }
+    },
+    "governance": {
+        "avenue_limits": {
+            "max_pct_per_broad_asset": 20,
+            "core_growth_us_range_pct": [
+                25,
+                40
+            ],
+            "core_growth_us_floor_pct": 25,
+            "single_country_non_core_cap_pct": 12,
+            "income_sleeve_target_pct": [
+                5,
+                10
+            ],
+            "rebalance_window_business_days": [
+                1,
+                5
+            ],
+            "avoid_idle_cash_days_gt": 15
+        },
+        "precedence": {
+            "binance": [
+                "winners_giveback",
+                "btc_cap_40pct",
+                "usdt_band_min"
+            ],
+            "avenue": [
+                "winners_giveback",
+                "cash_band",
+                "core_growth_floor"
             ]
         }
     },
@@ -87,14 +150,41 @@
             "reentry_modes": [
                 "N_level",
                 "structural_rebalance"
-            ]
+            ],
+            "description": "Ativa após venda winners/giveback que eleve USDT>20% do sleeve cripto; status é derivado por now_utc < expires_utc."
         },
         "state": {
             "last_trigger": "winners/giveback",
             "activated_utc": "2025-09-19T20:09:00Z",
             "expires_utc": "2025-09-23T23:59:59Z",
             "usdt_pct_snapshot": 22.4,
-            "note": "STATUS DERIVADO: ativo = (now_utc < expires_utc)."
+            "note": "STATUS DERIVADO: ativo = (now_utc < expires_utc). Não usar booleans."
+        }
+    },
+    "avenue_policy": {
+        "cash": {
+            "target_pct": 10,
+            "band_pct": [
+                8,
+                12
+            ]
+        },
+        "order_min_usd": 250,
+        "order_pref_core_usd": [
+            400,
+            600
+        ],
+        "tactical_entry_usd": [
+            200,
+            300
+        ],
+        "batching": {
+            "enabled": true,
+            "freq": "weekly_or_window_1_5"
+        },
+        "winners_giveback": {
+            "winner_take_pct": 25,
+            "giveback_take_pct": 20
         }
     },
     "avenue": {
@@ -190,7 +280,7 @@
             "price_usd": 4610.82,
             "cost_usdt": 770,
             "timestamp_utc": "2025-09-18T21:16:00Z",
-            "note": "compra spot"
+            "reason": "spot_buy"
         },
         {
             "platform": "binance",
@@ -200,7 +290,7 @@
             "price_usd": 249.703,
             "cost_usdt": 515,
             "timestamp_utc": "2025-09-18T21:16:00Z",
-            "note": "compra spot"
+            "reason": "spot_buy"
         },
         {
             "platform": "binance",
@@ -210,7 +300,7 @@
             "price_usd": 24.7269,
             "cost_usdt": 260,
             "timestamp_utc": "2025-09-18T21:17:00Z",
-            "note": "compra spot"
+            "reason": "spot_buy"
         },
         {
             "platform": "binance",
@@ -220,7 +310,7 @@
             "price_usd": 0.679893,
             "cost_usdt": 170,
             "timestamp_utc": "2025-09-18T21:17:00Z",
-            "note": "compra spot"
+            "reason": "spot_buy"
         },
         {
             "platform": "binance",
@@ -230,7 +320,7 @@
             "price_usd": 235.358,
             "proceeds_usdt": 549,
             "timestamp_utc": "2025-09-19T20:08:00Z",
-            "note": "winner 25% (venda parcial)"
+            "reason": "winner_25pct"
         },
         {
             "platform": "binance",
@@ -240,7 +330,7 @@
             "price_usd": 23.27,
             "proceeds_usdt": 370,
             "timestamp_utc": "2025-09-19T20:09:00Z",
-            "note": "winner 25% (venda parcial)"
+            "reason": "winner_25pct"
         }
     ]
 }
