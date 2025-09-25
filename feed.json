@@ -1,6 +1,6 @@
 {
     "version": "2025-09-24T12:00:00-03:00",
-    "strategy_version": "v20250912A",
+    "strategy_version": "v20250925B",
     "meta": {
         "hwm_portfolio_start_date": "2025-09-12",
         "prints_valid_days": 3,
@@ -237,7 +237,7 @@
         }
     },
     "binance": {
-        "usdt": 3250.72734026,
+        "usdt": 3000.72734026,
         "positions": {
             "BTC": {
                 "quantity": 0.04418485,
@@ -248,8 +248,8 @@
                 "avg_cost_usd": 3644.09
             },
             "SOL": {
-                "quantity": 6.93286297,
-                "avg_cost_usd": 132.45,
+                "quantity": 8.17145914,
+                "avg_cost_usd": 136.72,
                 "winner_last_exec_utc": "2025-09-19T20:08:00Z"
             },
             "LINK": {
@@ -335,12 +335,12 @@
         {
             "platform": "binance",
             "symbol": "SOL",
-            "side": "sell",
+            "side": "buy",
             "quantity": 1.23859617,
             "price_usd": 201.841,
-            "proceeds_usdt": 250,
+            "cost_usdt": 250,
             "timestamp_utc": "2025-09-25T12:53:00Z",
-            "reason": "entrada N2"
+            "reason": "spot_buy"
         }
     ]
 }
