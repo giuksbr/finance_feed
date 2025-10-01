@@ -191,20 +191,20 @@
         "cash_usd": 1457.27,
         "positions": {
             "VUG": {
-                "quantity": 3.3597,
-                "avg_cost_usd": 449.04
+                "quantity": 6.2597,
+                "avg_cost_usd": 464.45
             },
             "IVW": {
-                "quantity": 11.23158,
-                "avg_cost_usd": 113.42
+                "quantity": 21.12158,
+                "avg_cost_usd": 117.14
             },
             "IUSG": {
-                "quantity": 3.17,
-                "avg_cost_usd": 158.22
+                "quantity": 8,
+                "avg_cost_usd": 162.57
             },
             "SOXX": {
-                "quantity": 8.86952,
-                "avg_cost_usd": 242.44
+                "quantity": 13.23952,
+                "avg_cost_usd": 253.04
             },
             "TSM": {
                 "quantity": 8.24418,
@@ -248,22 +248,20 @@
                 "avg_cost_usd": 3644.09
             },
             "SOL": {
-                "quantity": 8.17145914,
-                "avg_cost_usd": 136.72,
-                "winner_last_exec_utc": "2025-09-19T20:08:00Z"
+                "quantity": 11.35718936,
+                "avg_cost_usd": 147.38
             },
             "LINK": {
-                "quantity": 47.01523949,
-                "avg_cost_usd": 18.01,
-                "winner_last_exec_utc": "2025-09-19T20:09:00Z"
+                "quantity": 64.72744086,
+                "avg_cost_usd": 18.87
             },
             "XRP": {
-                "quantity": 331.81287879,
-                "avg_cost_usd": 2.32
+                "quantity": 467.76420643,
+                "avg_cost_usd": 2.46
             },
             "FET": {
-                "quantity": 859.439704,
-                "avg_cost_usd": 0.67889699
+                "quantity": 1159.439704,
+                "avg_cost_usd": 0.65118684
             },
             "ETHW": {
                 "quantity": 0.2331806,
@@ -341,6 +339,86 @@
             "cost_usdt": 250,
             "timestamp_utc": "2025-09-25T15:53:00Z",
             "reason": "spot_buy_N2"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "VUG",
+            "side": "buy",
+            "quantity": 2.9,
+            "price_usd": 482.3,
+            "cost_usd": 1398.67,
+            "timestamp_utc": "2025-10-01T18:18:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "IVW",
+            "side": "buy",
+            "quantity": 9.89,
+            "price_usd": 121.37,
+            "cost_usd": 1200.35,
+            "timestamp_utc": "2025-10-01T18:19:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "IUSG",
+            "side": "buy",
+            "quantity": 4.83,
+            "price_usd": 165.42,
+            "cost_usd": 801.48,
+            "timestamp_utc": "2025-10-01T18:19:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "SOXX",
+            "side": "buy",
+            "quantity": 4.37,
+            "price_usd": 274.57,
+            "cost_usd": 1204.89,
+            "timestamp_utc": "2025-10-01T18:20:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "binance",
+            "symbol": "SOL",
+            "side": "buy",
+            "quantity": 3.18573022,
+            "price_usd": 219.73,
+            "cost_usdt": 700,
+            "timestamp_utc": "2025-10-01T18:24:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "binance",
+            "symbol": "LINK",
+            "side": "buy",
+            "quantity": 17.71220137,
+            "price_usd": 22.5833,
+            "cost_usdt": 400,
+            "timestamp_utc": "2025-10-01T18:24:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "binance",
+            "symbol": "XRP",
+            "side": "buy",
+            "quantity": 135.95132764,
+            "price_usd": 2.94223,
+            "cost_usdt": 400,
+            "timestamp_utc": "2025-10-01T18:25:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "binance",
+            "symbol": "FET",
+            "side": "buy",
+            "quantity": 300,
+            "price_usd": 0.596328,
+            "cost_usdt": 178.89845875,
+            "timestamp_utc": "2025-10-01T18:25:00Z",
+            "reason": "spot_buy"
         }
     ]
 }
