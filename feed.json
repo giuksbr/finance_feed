@@ -1,6 +1,6 @@
 {
     "version": "2025-09-24T12:00:00-03:00",
-    "strategy_version": "v20250925B",
+    "strategy_version": "v20250925D",
     "meta": {
         "hwm_portfolio_start_date": "2025-09-12",
         "prints_valid_days": 3,
@@ -36,7 +36,7 @@
         ]
     },
     "controls": {
-        "version": "v20250925B",
+        "version": "v20250925D + v20251001A",
         "quiet_hours_brt": "09:00-21:00",
         "notify_only_on_action": true,
         "pre_alerts": false,
