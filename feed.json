@@ -249,19 +249,19 @@
             },
             "SOL": {
                 "quantity": 11.35718936,
-                "avg_cost_usd": 147.38
+                "avg_cost_usd": 160.00
             },
             "LINK": {
                 "quantity": 64.72744086,
-                "avg_cost_usd": 18.87
+                "avg_cost_usd": 19.26145084
             },
             "XRP": {
                 "quantity": 467.76420643,
-                "avg_cost_usd": 2.46
+                "avg_cost_usd": 2.50084538
             },
             "FET": {
                 "quantity": 1159.439704,
-                "avg_cost_usd": 0.65118684
+                "avg_cost_usd": 0.65753262
             },
             "ETHW": {
                 "quantity": 0.2331806,
