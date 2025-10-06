@@ -237,19 +237,19 @@
         }
     },
     "binance": {
-        "usdt": 4281.6778415,
+        "usdt": 3681.6778415,
         "positions": {
             "BTC": {
-                "quantity": 0.04418485,
-                "avg_cost_usd": 111487.98
+                "quantity": 0.04657892,
+                "avg_cost_usd": 112198.38
             },
             "ETH": {
-                "quantity": 0.50470159,
-                "avg_cost_usd": 3644.09
+                "quantity": 0.54185606,
+                "avg_cost_usd": 3717.18
             },
             "SOL": {
-                "quantity": 11.35718936,
-                "avg_cost_usd": 160.00
+                "quantity": 11.88237974,
+                "avg_cost_usd": 163.45
             },
             "LINK": {
                 "quantity": 64.72744086,
@@ -419,6 +419,36 @@
             "cost_usdt": 178.89845875,
             "timestamp_utc": "2025-10-01T18:25:00Z",
             "reason": "spot_buy"
+        },
+        {
+            "id": "ldg-binance-BTC-2025-10-06T16:03:00Z",
+            "platform": "binance",
+            "account": "spot",
+            "asset": "BTC",
+            "delta": 0.00239407,
+            "reason": "trade",
+            "ref": "binance-spot-BTC-2025-10-06T16:03:00Z",
+            "timestamp_utc": "2025-10-06T16:03:00Z"
+        },
+        {
+            "id": "ldg-binance-ETH-2025-10-06T16:03:30Z",
+            "platform": "binance",
+            "account": "spot",
+            "asset": "ETH",
+            "delta": 0.03715447,
+            "reason": "trade",
+            "ref": "binance-spot-ETH-2025-10-06T16:03:30Z",
+            "timestamp_utc": "2025-10-06T16:03:30Z"
+        },
+        {
+            "id": "ldg-binance-SOL-2025-10-06T16:04:00Z",
+            "platform": "binance",
+            "account": "spot",
+            "asset": "SOL",
+            "delta": 0.52519038,
+            "reason": "trade",
+            "ref": "binance-spot-SOL-2025-10-06T16:04:00Z",
+            "timestamp_utc": "2025-10-06T16:04:00Z"
         }
     ]
 }
