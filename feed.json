@@ -237,11 +237,11 @@
         }
     },
     "binance": {
-        "usdt": 3681.6778415,
+        "usdt": 4281.6778415,
         "positions": {
             "BTC": {
-                "quantity": 0.04657892,
-                "avg_cost_usd": 112198.38
+                "quantity": 0.04161251,
+                "avg_cost_usd": 113950.09
             },
             "ETH": {
                 "quantity": 0.54185606,
@@ -449,6 +449,16 @@
             "reason": "trade",
             "ref": "binance-spot-SOL-2025-10-06T16:04:00Z",
             "timestamp_utc": "2025-10-06T16:04:00Z"
+        },
+        {
+            "platform": "binance",
+            "symbol": "BTC",
+            "side": "sell",
+            "quantity": 0.00496641,
+            "price_usd": 120811.7,
+            "proceeds_usdt": 600,
+            "timestamp_utc": "2025-10-07T18:08:13Z",
+            "reason": "spot_convert_to_usdt"
         }
     ]
 }
