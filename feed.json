@@ -194,6 +194,10 @@
                 "quantity": 6.2597,
                 "avg_cost_usd": 464.45
             },
+            "SGOV": {
+                "quantity": 5.37556,
+                "avg_cost_usd": 100.45
+            },
             "IVW": {
                 "quantity": 21.12158,
                 "avg_cost_usd": 117.14
