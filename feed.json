@@ -1,34 +1,62 @@
 {
-    "version": "2025-09-24T12:00:00-03:00",
+    "schema_version": "2.0",
+    "generated_at_brt": "2025-10-09T13:30:00-03:00",
     "strategy_version": "v20250925D",
+    "patches_active": [
+        "v20251007A",
+        "v20251007B",
+        "v20251007C-REV2",
+        "v20251007D",
+        "v20251008A",
+        "v20251009A",
+        "v20251009B",
+        "v20251009C",
+        "v20251009D",
+        "v20251009E",
+        "v20251009F",
+        "v20251009G",
+        "v20251009H",
+        "v20251009I"
+    ],
     "meta": {
+        "version_timestamp": "2025-09-24T12:00:00-03:00",
         "hwm_portfolio_start_date": "2025-09-12",
         "prints_valid_days": 3,
         "notes": "Estratégia Consolidada ativa; winners/giveback usam avg_cost_usd do feed."
     },
+    "data_sources": {
+        "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
+        "feed_fallbacks": [
+            "https://raw.githubusercontent.com/giuksbr/finance_feed/main/feed.json",
+            "https://cdn.jsdelivr.net/gh/giuksbr/finance_feed@main/feed.json",
+            "https://api.github.com/repos/giuksbr/finance_feed/contents/feed.json?ref=main"
+        ]
+    },
     "universe": {
-        "avenue_tickers": [
-            "VUG",
-            "IVW",
-            "IUSG",
-            "SOXX",
-            "TSM",
-            "AVGO",
-            "VST",
-            "NVDA",
-            "PLTR",
-            "ARGT",
-            "SMCI"
-        ],
-        "binance_tickers": [
-            "BTC",
-            "ETH",
-            "SOL",
-            "LINK",
-            "XRP",
-            "FET",
-            "ETHW"
-        ],
+        "mode": "AMPLIADO",
+        "avenue": {
+            "filters": {
+                "adv_usd_min": 50000000,
+                "price_min_usd": 5,
+                "beta_max": 1.6,
+                "dd12m_max_pct": 50
+            },
+            "exclude": [
+                "alavancados",
+                "inversos",
+                "microcaps",
+                "pre-receita",
+                "temáticos_ultra"
+            ]
+        },
+        "binance": {
+            "filters": {
+                "top_n": 50,
+                "hist_days_min": 90,
+                "depth_mult_min": 20,
+                "spread_max_pct": 0.35
+            }
+        },
         "fx_refs": [
             "DXY",
             "PTAX_5d",
@@ -36,7 +64,6 @@
         ]
     },
     "controls": {
-        "version": "v20250925D + v20251001A",
         "quiet_hours_brt": "09:00-21:00",
         "notify_only_on_action": true,
         "pre_alerts": false,
@@ -46,21 +73,7 @@
         "reentry_modes": [
             "N_level",
             "structural_rebalance"
-        ],
-        "data_sources": {
-            "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
-            "feed_fallback_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/main/feed.json",
-            "market": [
-                "RSI14",
-                "BB(20,2)",
-                "ATR14",
-                "funding",
-                "open_interest",
-                "DXY",
-                "PTAX_5d",
-                "PF_BRL_composite"
-            ]
-        }
+        ]
     },
     "automation_rules": {
         "n_levels": [
@@ -101,48 +114,6 @@
         },
         "btc_cap_guideline_pct_ex_usdt": 40,
         "lockout_logic": {
-            "derive_from_timestamps": true,
-            "block_non_reentry_buys_when_active": true,
-            "allow_when_active": [
-                "N_level",
-                "structural_rebalance"
-            ]
-        }
-    },
-    "governance": {
-        "avenue_limits": {
-            "max_pct_per_broad_asset": 20,
-            "core_growth_us_range_pct": [
-                25,
-                40
-            ],
-            "core_growth_us_floor_pct": 25,
-            "single_country_non_core_cap_pct": 12,
-            "income_sleeve_target_pct": [
-                5,
-                10
-            ],
-            "rebalance_window_business_days": [
-                1,
-                5
-            ],
-            "avoid_idle_cash_days_gt": 15
-        },
-        "precedence": {
-            "binance": [
-                "winners_giveback",
-                "btc_cap_40pct",
-                "usdt_band_min"
-            ],
-            "avenue": [
-                "winners_giveback",
-                "cash_band",
-                "core_growth_floor"
-            ]
-        }
-    },
-    "binance_lockout": {
-        "policy": {
             "scope": "global",
             "threshold_pct": 20,
             "tolerance_pct": 30,
@@ -150,93 +121,206 @@
             "reentry_modes": [
                 "N_level",
                 "structural_rebalance"
-            ],
-            "description": "Ativa após venda winners/giveback que eleve USDT>20% do sleeve cripto; status é derivado por now_utc < expires_utc."
-        },
-        "state": {
-            "last_trigger": "winners/giveback",
-            "activated_utc": "2025-09-19T20:09:00Z",
-            "expires_utc": "2025-09-23T23:59:59Z",
-            "usdt_pct_snapshot": 22.4,
-            "note": "STATUS DERIVADO: ativo = (now_utc < expires_utc). Não usar booleans."
+            ]
         }
     },
-    "avenue_policy": {
-        "cash": {
-            "target_pct": 10,
-            "band_pct": [
-                8,
-                12
-            ]
+    "policy_overlays": {
+        "risk": {
+            "dxy_3d_pct": 0.8,
+            "vix_gt": 25,
+            "usdt_depeg_pct": -0.5
         },
-        "order_min_usd": 250,
-        "order_pref_core_usd": [
-            400,
-            600
-        ],
-        "tactical_entry_usd": [
-            200,
-            300
-        ],
-        "batching": {
-            "enabled": true,
-            "freq": "weekly_or_window_1_5"
-        },
-        "winners_giveback": {
-            "winner_take_pct": 25,
-            "giveback_take_pct": 20
-        }
+        "order_min_avenue_usd": 300,
+        "position_floors_enabled": true
     },
     "avenue": {
         "cash_usd": 1519.62,
         "positions": {
             "VUG": {
                 "quantity": 6.2597,
-                "avg_cost_usd": 464.45
+                "avg_cost_usd": 464.45,
+                "asset_type": "etf",
+                "venue": "NYSEARCA",
+                "symbol_canonical": "NYSEARCA:VUG",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": "US9229087360",
+                "schema_warn": []
             },
             "SGOV": {
                 "quantity": 5.37556,
-                "avg_cost_usd": 100.45
+                "avg_cost_usd": 100.45,
+                "asset_type": "etf",
+                "venue": "NYSEARCA",
+                "symbol_canonical": "NYSEARCA:SGOV",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": null,
+                "schema_warn": [
+                    "missing_isin_or_figi"
+                ]
             },
             "IVW": {
                 "quantity": 21.12158,
-                "avg_cost_usd": 117.14
+                "avg_cost_usd": 117.14,
+                "asset_type": "etf",
+                "venue": "NYSEARCA",
+                "symbol_canonical": "NYSEARCA:IVW",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": "US4642873099",
+                "schema_warn": []
             },
             "IUSG": {
                 "quantity": 8,
-                "avg_cost_usd": 162.57
+                "avg_cost_usd": 162.57,
+                "asset_type": "etf",
+                "venue": "NYSEARCA",
+                "symbol_canonical": "NYSEARCA:IUSG",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": "US4642878791",
+                "schema_warn": []
             },
             "SOXX": {
                 "quantity": 13.23952,
-                "avg_cost_usd": 253.04
+                "avg_cost_usd": 253.04,
+                "asset_type": "etf",
+                "venue": "NASDAQ",
+                "symbol_canonical": "NASDAQ:SOXX",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": null,
+                "schema_warn": [
+                    "missing_isin_or_figi"
+                ]
             },
             "TSM": {
                 "quantity": 8.24418,
-                "avg_cost_usd": 230.17
+                "avg_cost_usd": 230.17,
+                "asset_type": "equity",
+                "venue": "NYSE",
+                "symbol_canonical": "NYSE:TSM",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": "US8740391003",
+                "schema_warn": []
             },
             "AVGO": {
                 "quantity": 5.94157,
-                "avg_cost_usd": 293.59
+                "avg_cost_usd": 293.59,
+                "asset_type": "equity",
+                "venue": "NASDAQ",
+                "symbol_canonical": "NASDAQ:AVGO",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": "US11135F1012",
+                "schema_warn": []
             },
             "VST": {
                 "quantity": 2.75565,
-                "avg_cost_usd": 186.56
+                "avg_cost_usd": 186.56,
+                "asset_type": "equity",
+                "venue": "NYSE",
+                "symbol_canonical": "NYSE:VST",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": "US92840M1027",
+                "schema_warn": []
             },
             "NVDA": {
                 "quantity": 3.53138,
-                "avg_cost_usd": 141.59
+                "avg_cost_usd": 141.59,
+                "asset_type": "equity",
+                "venue": "NASDAQ",
+                "symbol_canonical": "NASDAQ:NVDA",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": "US67066G1040",
+                "schema_warn": []
             },
             "PLTR": {
                 "quantity": 7.19967,
-                "avg_cost_usd": 145.6
+                "avg_cost_usd": 145.6,
+                "asset_type": "equity",
+                "venue": "NYSE",
+                "symbol_canonical": "NYSE:PLTR",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": "US69608A1088",
+                "schema_warn": []
             },
             "ARGT": {
                 "quantity": 15.84,
-                "avg_cost_usd": 75.16
+                "avg_cost_usd": 75.16,
+                "asset_type": "etf",
+                "venue": "NYSEARCA",
+                "symbol_canonical": "NYSEARCA:ARGT",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": null,
+                "schema_warn": [
+                    "missing_isin_or_figi"
+                ]
             },
             "SMCI": {
                 "quantity": 5.01761,
-                "avg_cost_usd": 45.68
+                "avg_cost_usd": 45.68,
+                "asset_type": "equity",
+                "venue": "NASDAQ",
+                "symbol_canonical": "NASDAQ:SMCI",
+                "currency": "USD",
+                "vendor_profile": [
+                    "alpha",
+                    "beta",
+                    "gamma"
+                ],
+                "isin": "US86800U1043",
+                "schema_warn": []
             }
         }
     },
@@ -245,31 +329,109 @@
         "positions": {
             "BTC": {
                 "quantity": 0.04161251,
-                "avg_cost_usd": 113950.09
+                "avg_cost_usd": 113950.09,
+                "asset_type": "crypto",
+                "venue": "BINANCE",
+                "symbol_canonical": "BINANCE:BTCUSDT",
+                "currency": "USD",
+                "vendor_profile": [
+                    "c1",
+                    "c2",
+                    "c3"
+                ]
             },
             "ETH": {
                 "quantity": 0.54185606,
-                "avg_cost_usd": 3717.18
+                "avg_cost_usd": 3717.18,
+                "asset_type": "crypto",
+                "venue": "BINANCE",
+                "symbol_canonical": "BINANCE:ETHUSDT",
+                "currency": "USD",
+                "vendor_profile": [
+                    "c1",
+                    "c2",
+                    "c3"
+                ]
             },
             "SOL": {
                 "quantity": 11.88237974,
-                "avg_cost_usd": 163.45
+                "avg_cost_usd": 163.45,
+                "asset_type": "crypto",
+                "venue": "BINANCE",
+                "symbol_canonical": "BINANCE:SOLUSDT",
+                "currency": "USD",
+                "vendor_profile": [
+                    "c1",
+                    "c2",
+                    "c3"
+                ]
             },
             "LINK": {
                 "quantity": 64.72744086,
-                "avg_cost_usd": 19.26145084
+                "avg_cost_usd": 19.26145084,
+                "asset_type": "crypto",
+                "venue": "BINANCE",
+                "symbol_canonical": "BINANCE:LINKUSDT",
+                "currency": "USD",
+                "vendor_profile": [
+                    "c1",
+                    "c2",
+                    "c3"
+                ]
             },
             "XRP": {
                 "quantity": 467.76420643,
-                "avg_cost_usd": 2.50084538
+                "avg_cost_usd": 2.50084538,
+                "asset_type": "crypto",
+                "venue": "BINANCE",
+                "symbol_canonical": "BINANCE:XRPUSDT",
+                "currency": "USD",
+                "vendor_profile": [
+                    "c1",
+                    "c2",
+                    "c3"
+                ]
             },
             "FET": {
                 "quantity": 1159.439704,
-                "avg_cost_usd": 0.65753262
+                "avg_cost_usd": 0.65753262,
+                "asset_type": "crypto",
+                "venue": "BINANCE",
+                "symbol_canonical": "BINANCE:FETUSDT",
+                "currency": "USD",
+                "vendor_profile": [
+                    "c1",
+                    "c2",
+                    "c3"
+                ]
             },
             "ETHW": {
                 "quantity": 0.2331806,
-                "avg_cost_usd": 0.37124134
+                "avg_cost_usd": 0.37124134,
+                "asset_type": "crypto",
+                "venue": "BINANCE",
+                "symbol_canonical": "BINANCE:ETHWUSDT",
+                "currency": "USD",
+                "vendor_profile": [
+                    "c1",
+                    "c2",
+                    "c3"
+                ]
+            }
+        }
+    },
+    "lockouts": {
+        "binance_usdt": {
+            "scope": "global",
+            "threshold_pct": 20,
+            "tolerance_pct": 30,
+            "duration_business_days": 2,
+            "state": {
+                "last_trigger": "winners/giveback",
+                "activated_utc": "2025-09-19T20:09:00Z",
+                "expires_utc": "2025-09-23T23:59:59Z",
+                "usdt_pct_snapshot": 22.4,
+                "note": "STATUS DERIVADO: ativo = (now_utc < expires_utc)."
             }
         }
     },
