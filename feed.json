@@ -49,6 +49,349 @@
                 "temáticos_ultra"
             ]
         },
+        "watchlists": {
+            "avenue": {
+                "whitelist": [
+                    {
+                        "symbol_canonical": "NYSEARCA:VUG",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "núcleo growth EUA"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:IVW",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "núcleo growth S&P"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:IUSG",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "núcleo growth amplo"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:SGOV",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "renda/caixa USD"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:QQQM",
+                        "asset_type": "etf",
+                        "venue": "NASDAQ",
+                        "notes": "core satélite Nasdaq-100 (baixo custo)"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:SOXX",
+                        "asset_type": "etf",
+                        "venue": "NASDAQ",
+                        "notes": "semicondutores (setorial)"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:NVDA",
+                        "asset_type": "equity",
+                        "venue": "NASDAQ",
+                        "notes": "AI/semis"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:AVGO",
+                        "asset_type": "equity",
+                        "venue": "NASDAQ",
+                        "notes": "semis/infra"
+                    },
+                    {
+                        "symbol_canonical": "NYSE:TSM",
+                        "asset_type": "equity",
+                        "venue": "NYSE",
+                        "notes": "foundry líder"
+                    },
+                    {
+                        "symbol_canonical": "NYSE:PLTR",
+                        "asset_type": "equity",
+                        "venue": "NYSE",
+                        "notes": "software/AI"
+                    },
+                    {
+                        "symbol_canonical": "NYSE:VST",
+                        "asset_type": "equity",
+                        "venue": "NYSE",
+                        "notes": "utilities/energia"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:ARGT",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "satélite single-country (teto baixo)"
+                    }
+                ],
+                "candidate_pool": [
+                    {
+                        "symbol_canonical": "NYSEARCA:SPY",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "S&P 500"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:VOO",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "S&P 500 (baixo custo)"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:VTI",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "US total market"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:QQQ",
+                        "asset_type": "etf",
+                        "venue": "NASDAQ",
+                        "notes": "Nasdaq-100"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:XLK",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "setor tecnologia"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:SMH",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "semis (VanEck)"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:IJR",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "small caps S&P 600"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:IWF",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "Russell 1000 Growth"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:IWD",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "Russell 1000 Value"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:XLV",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "saúde"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:XLF",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "financeiro"
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:XLE",
+                        "asset_type": "etf",
+                        "venue": "NYSEARCA",
+                        "notes": "energia"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:MSFT",
+                        "asset_type": "equity",
+                        "venue": "NASDAQ",
+                        "notes": "megacap qualidade"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:AAPL",
+                        "asset_type": "equity",
+                        "venue": "NASDAQ",
+                        "notes": "megacap qualidade"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:GOOGL",
+                        "asset_type": "equity",
+                        "venue": "NASDAQ",
+                        "notes": "megacap qualidade"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:AMZN",
+                        "asset_type": "equity",
+                        "venue": "NASDAQ",
+                        "notes": "megacap qualidade"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:META",
+                        "asset_type": "equity",
+                        "venue": "NASDAQ",
+                        "notes": "megacap qualidade"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:AMD",
+                        "asset_type": "equity",
+                        "venue": "NASDAQ",
+                        "notes": "semis"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:LRCX",
+                        "asset_type": "equity",
+                        "venue": "NASDAQ",
+                        "notes": "equip. semis"
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:ASML",
+                        "asset_type": "equity",
+                        "venue": "NASDAQ",
+                        "notes": "lithography"
+                    },
+                    {
+                        "symbol_canonical": "NYSE:COST",
+                        "asset_type": "equity",
+                        "venue": "NYSE",
+                        "notes": "qualidade/defensivo"
+                    },
+                    {
+                        "symbol_canonical": "NYSE:UNH",
+                        "asset_type": "equity",
+                        "venue": "NYSE",
+                        "notes": "saúde"
+                    },
+                    {
+                        "symbol_canonical": "NYSE:JPM",
+                        "asset_type": "equity",
+                        "venue": "NYSE",
+                        "notes": "bancos"
+                    },
+                    {
+                        "symbol_canonical": "NYSE:BRK.B",
+                        "asset_type": "equity",
+                        "venue": "NYSE",
+                        "notes": "holding"
+                    },
+                    {
+                        "symbol_canonical": "NYSE:NVO",
+                        "asset_type": "equity",
+                        "venue": "NYSE",
+                        "notes": "farma"
+                    },
+                    {
+                        "symbol_canonical": "NYSE:LLY",
+                        "asset_type": "equity",
+                        "venue": "NYSE",
+                        "notes": "farma"
+                    }
+                ]
+            },
+            "binance": {
+                "whitelist": [
+                    {
+                        "symbol_canonical": "BINANCE:BTCUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE",
+                        "notes": "núcleo"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:ETHUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE",
+                        "notes": "núcleo"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:SOLUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE",
+                        "notes": "núcleo"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:LINKUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE",
+                        "notes": "tático"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:XRPUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE",
+                        "notes": "tático"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:FETUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE",
+                        "notes": "tático"
+                    }
+                ],
+                "candidate_pool": [
+                    {
+                        "symbol_canonical": "BINANCE:ADAUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:DOTUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:ATOMUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:ARBUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:OPUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:AAVEUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:UNIUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:LTCUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:TRXUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:TONUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:NEARUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:INJUSDT",
+                        "asset_type": "crypto",
+                        "venue": "BINANCE"
+                    }
+                ]
+            },
+            "maintenance": {
+                "whitelist_review_cadence": "quarterly",
+                "candidate_pool_refresh": "weekly",
+                "notes": "engine pode ajustar automaticamente o pool conforme filtros de liquidez/risco; Whitelist só muda quando perfil/mandato mudar."
+            }
+        },
         "binance": {
             "filters": {
                 "top_n": 50,
