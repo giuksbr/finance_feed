@@ -477,7 +477,7 @@
         "position_floors_enabled": true
     },
     "avenue": {
-        "cash_usd": 2496.67,
+        "cash_usd": 2941.38,
         "positions": {
             "VUG": {
                 "quantity": 6.2597,
@@ -604,7 +604,7 @@
                 "schema_warn": []
             },
             "NVDA": {
-                "quantity": 3.53138,
+                "quantity": 2.64138,
                 "avg_cost_usd": 141.59,
                 "asset_type": "equity",
                 "venue": "NASDAQ",
@@ -619,7 +619,7 @@
                 "schema_warn": []
             },
             "PLTR": {
-                "quantity": 5.41967,
+                "quantity": 4.05967,
                 "avg_cost_usd": 145.6,
                 "asset_type": "equity",
                 "venue": "NYSE",
@@ -987,6 +987,26 @@
             "price_usd": 197.4,
             "proceeds_usd": 348.87,
             "timestamp_utc": "2025-10-29T17:39:00Z",
+            "reason": "winner_25pct"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "NVDA",
+            "side": "sell",
+            "quantity": 0.89,
+            "price_usd": 202.68,
+            "proceeds_usd": 177.89,
+            "timestamp_utc": "2025-10-31T17:17:00Z",
+            "reason": "winner_25pct"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "PLTR",
+            "side": "sell",
+            "quantity": 1.36,
+            "price_usd": 198.03,
+            "proceeds_usd": 266.82,
+            "timestamp_utc": "2025-10-31T17:16:00Z",
             "reason": "winner_25pct"
         }
     ]
