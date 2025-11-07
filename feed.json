@@ -477,7 +477,7 @@
         "position_floors_enabled": true
     },
     "avenue": {
-        "cash_usd": 2941.38,
+        "cash_usd": 8587.40,
         "positions": {
             "VUG": {
                 "quantity": 6.2597,
@@ -668,7 +668,7 @@
         }
     },
     "binance": {
-        "usdt": 4281.6778415,
+        "usdt": 6858.21309871,
         "positions": {
             "BTC": {
                 "quantity": 0.04161251,
