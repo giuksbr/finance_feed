@@ -477,7 +477,7 @@
         "position_floors_enabled": true
     },
     "avenue": {
-        "cash_usd": 8587.40,
+        "cash_usd": 7291.49,
         "positions": {
             "VUG": {
                 "quantity": 6.2597,
@@ -527,8 +527,8 @@
                 "schema_warn": []
             },
             "IUSG": {
-                "quantity": 8,
-                "avg_cost_usd": 162.57,
+                "quantity": 15.84,
+                "avg_cost_usd": 163.92,
                 "asset_type": "etf",
                 "venue": "NYSEARCA",
                 "symbol_canonical": "NYSEARCA:IUSG",
@@ -668,7 +668,7 @@
         }
     },
     "binance": {
-        "usdt": 6858.21309871,
+        "usdt": 5970.84976621,
         "positions": {
             "BTC": {
                 "quantity": 0.04161251,
@@ -736,11 +736,37 @@
                 ]
             },
             "FET": {
-                "quantity": 1159.439704,
-                "avg_cost_usd": 0.65753262,
+                "quantity": 2041.85852019,
+                "avg_cost_usd": 0.48993082,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
                 "symbol_canonical": "BINANCE:FETUSDT",
+                "currency": "USD",
+                "vendor_profile": [
+                    "c1",
+                    "c2",
+                    "c3"
+                ]
+            },
+            "ADA": {
+                "quantity": 1055.01668479,
+                "avg_cost_usd": 0.44549,
+                "asset_type": "crypto",
+                "venue": "BINANCE",
+                "symbol_canonical": "BINANCE:ADAUSDT",
+                "currency": "USD",
+                "vendor_profile": [
+                    "c1",
+                    "c2",
+                    "c3"
+                ]
+            },
+            "AAVE": {
+                "quantity": 1,
+                "avg_cost_usd": 179.3633325,
+                "asset_type": "crypto",
+                "venue": "BINANCE",
+                "symbol_canonical": "BINANCE:AAVEUSDT",
                 "currency": "USD",
                 "vendor_profile": [
                     "c1",
@@ -1008,6 +1034,56 @@
             "proceeds_usd": 266.82,
             "timestamp_utc": "2025-10-31T17:16:00Z",
             "reason": "winner_25pct"
+        },
+        {
+            "platform": "binance",
+            "symbol": "AAVE",
+            "side": "buy",
+            "quantity": 1,
+            "price_usd": 179.363333,
+            "cost_usdt": 179.3633325,
+            "timestamp_utc": "2025-11-18T23:34:12Z",
+            "reason": "spot_convert_from_usdt"
+        },
+        {
+            "platform": "binance",
+            "symbol": "ADA",
+            "side": "buy",
+            "quantity": 314.27457457,
+            "price_usd": 0.47729,
+            "cost_usdt": 150,
+            "timestamp_utc": "2025-11-18T23:34:47Z",
+            "reason": "spot_convert_from_usdt"
+        },
+        {
+            "platform": "binance",
+            "symbol": "ADA",
+            "side": "buy",
+            "quantity": 740.74211022,
+            "price_usd": 0.431999,
+            "cost_usdt": 320,
+            "timestamp_utc": "2025-11-24T19:15:00Z",
+            "reason": "spot_convert_from_usdt"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "IUSG",
+            "side": "buy",
+            "quantity": 7.84,
+            "price_usd": 165.3,
+            "cost_usd": 1295.95,
+            "timestamp_utc": "2025-11-24T19:16:00Z",
+            "reason": "spot_buy_core"
+        },
+        {
+            "platform": "binance",
+            "symbol": "FET",
+            "side": "buy",
+            "quantity": 882.41881619,
+            "price_usd": 0.269713,
+            "cost_usdt": 238,
+            "timestamp_utc": "2025-11-25T17:22:00Z",
+            "reason": "spot_convert_from_usdt"
         }
     ]
 }
