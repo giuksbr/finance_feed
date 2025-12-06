@@ -477,11 +477,11 @@
         "position_floors_enabled": true
     },
     "avenue": {
-        "cash_usd": 7291.49,
+        "cash_usd": 11731.92,
         "positions": {
             "VUG": {
-                "quantity": 6.2597,
-                "avg_cost_usd": 464.45,
+                "quantity": 8.5197,
+                "avg_cost_usd": 471.64,
                 "asset_type": "etf",
                 "venue": "NYSEARCA",
                 "symbol_canonical": "NYSEARCA:VUG",
@@ -512,8 +512,8 @@
                 ]
             },
             "IVW": {
-                "quantity": 21.12158,
-                "avg_cost_usd": 117.14,
+                "quantity": 28.68158,
+                "avg_cost_usd": 118.93,
                 "asset_type": "etf",
                 "venue": "NYSEARCA",
                 "symbol_canonical": "NYSEARCA:IVW",
@@ -527,8 +527,8 @@
                 "schema_warn": []
             },
             "IUSG": {
-                "quantity": 15.84,
-                "avg_cost_usd": 163.92,
+                "quantity": 21.51,
+                "avg_cost_usd": 165.24,
                 "asset_type": "etf",
                 "venue": "NYSEARCA",
                 "symbol_canonical": "NYSEARCA:IUSG",
@@ -574,7 +574,7 @@
                 "schema_warn": []
             },
             "AVGO": {
-                "quantity": 5.94157,
+                "quantity": 4.94157,
                 "avg_cost_usd": 293.59,
                 "asset_type": "equity",
                 "venue": "NASDAQ",
@@ -649,21 +649,6 @@
                 "schema_warn": [
                     "missing_isin_or_figi"
                 ]
-            },
-            "SMCI": {
-                "quantity": 5.01761,
-                "avg_cost_usd": 45.68,
-                "asset_type": "equity",
-                "venue": "NASDAQ",
-                "symbol_canonical": "NASDAQ:SMCI",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": "US86800U1043",
-                "schema_warn": []
             }
         }
     },
@@ -1084,6 +1069,56 @@
             "cost_usdt": 238,
             "timestamp_utc": "2025-11-25T17:22:00Z",
             "reason": "spot_convert_from_usdt"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "VUG",
+            "side": "buy",
+            "quantity": 2.26,
+            "price_usd": 491.56,
+            "cost_usd": 1110.93,
+            "timestamp_utc": "2025-12-03T20:55:00Z",
+            "reason": "rebalance_core"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "IVW",
+            "side": "buy",
+            "quantity": 7.56,
+            "price_usd": 123.6,
+            "cost_usd": 936.92,
+            "timestamp_utc": "2025-12-03T20:56:00Z",
+            "reason": "rebalance_core"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "IUSG",
+            "side": "buy",
+            "quantity": 5.67,
+            "price_usd": 168.47,
+            "cost_usd": 957.72,
+            "timestamp_utc": "2025-12-03T20:56:00Z",
+            "reason": "rebalance_core"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "AVGO",
+            "side": "sell",
+            "quantity": 1,
+            "price_usd": 380.12,
+            "proceeds_usd": 377.62,
+            "timestamp_utc": "2025-12-04T20:29:00Z",
+            "reason": "rebalance_core"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "SMCI",
+            "side": "sell",
+            "quantity": 5.01761,
+            "price_usd": 33.69,
+            "proceeds_usd": 166.54,
+            "timestamp_utc": "2025-12-03T20:59:00Z",
+            "reason": "rebalance_core"
         }
     ]
 }
