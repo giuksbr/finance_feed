@@ -477,7 +477,7 @@
         "position_floors_enabled": true
     },
     "avenue": {
-        "cash_usd": 11731.92,
+        "cash_usd": 10164.61,
         "positions": {
             "VUG": {
                 "quantity": 8.5197,
@@ -542,8 +542,8 @@
                 "schema_warn": []
             },
             "SOXX": {
-                "quantity": 13.23952,
-                "avg_cost_usd": 253.04,
+                "quantity": 14.89952,
+                "avg_cost_usd": 259.83,
                 "asset_type": "etf",
                 "venue": "NASDAQ",
                 "symbol_canonical": "NASDAQ:SOXX",
@@ -574,8 +574,8 @@
                 "schema_warn": []
             },
             "AVGO": {
-                "quantity": 4.94157,
-                "avg_cost_usd": 293.59,
+                "quantity": 6.22157,
+                "avg_cost_usd": 317.06,
                 "asset_type": "equity",
                 "venue": "NASDAQ",
                 "symbol_canonical": "NASDAQ:AVGO",
@@ -634,8 +634,8 @@
                 "schema_warn": []
             },
             "ARGT": {
-                "quantity": 15.84,
-                "avg_cost_usd": 75.16,
+                "quantity": 21.55,
+                "avg_cost_usd": 79.57,
                 "asset_type": "etf",
                 "venue": "NYSEARCA",
                 "symbol_canonical": "NYSEARCA:ARGT",
@@ -653,11 +653,11 @@
         }
     },
     "binance": {
-        "usdt": 5970.84976621,
+        "usdt": 7813.27804455,
         "positions": {
             "BTC": {
-                "quantity": 0.04161251,
-                "avg_cost_usd": 113950.09,
+                "quantity": 0.04426519,
+                "avg_cost_usd": 112769.18,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
                 "symbol_canonical": "BINANCE:BTCUSDT",
@@ -669,8 +669,8 @@
                 ]
             },
             "ETH": {
-                "quantity": 0.54185606,
-                "avg_cost_usd": 3717.18,
+                "quantity": 0.61564676,
+                "avg_cost_usd": 3677.72,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
                 "symbol_canonical": "BINANCE:ETHUSDT",
@@ -1119,6 +1119,56 @@
             "proceeds_usd": 166.54,
             "timestamp_utc": "2025-12-03T20:59:00Z",
             "reason": "rebalance_core"
+        },
+        {
+            "platform": "binance",
+            "symbol": "BTC",
+            "side": "buy",
+            "quantity": 0.00265268,
+            "price_usd": 94244,
+            "cost_usd": 250,
+            "timestamp_utc": "2025-12-09T17:53:00Z",
+            "reason": "spot_convert_from_usdt"
+        },
+        {
+            "platform": "binance",
+            "symbol": "ETH",
+            "side": "buy",
+            "quantity": 0.0737907,
+            "price_usd": 3387.96,
+            "cost_usd": 250,
+            "timestamp_utc": "2025-12-09T17:53:00Z",
+            "reason": "spot_convert_from_usdt"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "SOXX",
+            "side": "buy",
+            "quantity": 1.66,
+            "price_usd": 312.47,
+            "cost_usd": 521.2,
+            "timestamp_utc": "2025-12-09T17:55:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "AVGO",
+            "side": "buy",
+            "quantity": 1.28,
+            "price_usd": 405.73,
+            "cost_usd": 521.83,
+            "timestamp_utc": "2025-12-09T17:56:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "ARGT",
+            "side": "buy",
+            "quantity": 5.71,
+            "price_usd": 91.38,
+            "cost_usd": 524.28,
+            "timestamp_utc": "2025-12-09T17:57:00Z",
+            "reason": "spot_buy"
         }
     ]
 }
