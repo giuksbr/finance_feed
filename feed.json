@@ -462,7 +462,7 @@
         "position_floors_enabled": true
     },
     "avenue": {
-        "cash_usd": 7516.73,
+        "cash_usd": 5791.94,
         "positions": {
             "VUG": {
                 "quantity": 8.5197,
@@ -559,8 +559,8 @@
                 "schema_warn": []
             },
             "AVGO": {
-                "quantity": 6.22157,
-                "avg_cost_usd": 317.06,
+                "quantity": 7.13346,
+                "avg_cost_usd": 320.14,
                 "asset_type": "equity",
                 "venue": "NASDAQ",
                 "symbol_canonical": "NASDAQ:AVGO",
@@ -588,24 +588,9 @@
                 "isin": "US92840M1027",
                 "schema_warn": []
             },
-            "NVDA": {
-                "quantity": 1.98138,
-                "avg_cost_usd": 141.59,
-                "asset_type": "equity",
-                "venue": "NASDAQ",
-                "symbol_canonical": "NASDAQ:NVDA",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": "US67066G1040",
-                "schema_warn": []
-            },
             "PLTR": {
-                "quantity": 3.05967,
-                "avg_cost_usd": 145.6,
+                "quantity": 5.64453,
+                "avg_cost_usd": 167.09,
                 "asset_type": "equity",
                 "venue": "NYSE",
                 "symbol_canonical": "NYSE:PLTR",
@@ -653,8 +638,8 @@
                 ]
             },
             "XLV": {
-                "quantity": 6.44,
-                "avg_cost_usd": 156.37,
+                "quantity": 9.022,
+                "avg_cost_usd": 156.02,
                 "asset_type": "etf",
                 "venue": "NYSEARCA",
                 "symbol_canonical": "NYSEARCA:XLV",
@@ -704,8 +689,8 @@
                 ]
             },
             "LLY": {
-                "quantity": 0.47,
-                "avg_cost_usd": 1074.6,
+                "quantity": 0.93895,
+                "avg_cost_usd": 1074.62,
                 "asset_type": "equity",
                 "venue": "NYSE",
                 "symbol_canonical": "NYSE:LLY",
@@ -720,7 +705,7 @@
         }
     },
     "binance": {
-        "usdt": 6723.27804455,
+        "usdt": 4973.27804455,
         "positions": {
             "BTC": {
                 "quantity": 0.05452139,
@@ -736,8 +721,8 @@
                 ]
             },
             "ETH": {
-                "quantity": 0.68047388,
-                "avg_cost_usd": 3606.57,
+                "quantity": 0.79547554,
+                "avg_cost_usd": 3525.15764519,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
                 "symbol_canonical": "BINANCE:ETHUSDT",
@@ -762,8 +747,8 @@
                 ]
             },
             "LINK": {
-                "quantity": 64.72744086,
-                "avg_cost_usd": 19.26145084,
+                "quantity": 92.04735737,
+                "avg_cost_usd": 17.45,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
                 "symbol_canonical": "BINANCE:LINKUSDT",
@@ -775,8 +760,8 @@
                 ]
             },
             "XRP": {
-                "quantity": 467.76420643,
-                "avg_cost_usd": 2.50084538,
+                "quantity": 647.4226933,
+                "avg_cost_usd": 2.34747093,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
                 "symbol_canonical": "BINANCE:XRPUSDT",
@@ -801,8 +786,8 @@
                 ]
             },
             "ADA": {
-                "quantity": 1055.01668479,
-                "avg_cost_usd": 0.44549,
+                "quantity": 1975.025097,
+                "avg_cost_usd": 0.41250718,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
                 "symbol_canonical": "BINANCE:ADAUSDT",
@@ -814,8 +799,8 @@
                 ]
             },
             "AAVE": {
-                "quantity": 1,
-                "avg_cost_usd": 179.3633325,
+                "quantity": 3.20098389,
+                "avg_cost_usd": 164.26,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
                 "symbol_canonical": "BINANCE:AAVEUSDT",
@@ -1356,6 +1341,96 @@
             "price_usd": 88221.21,
             "cost_usdt": 700,
             "reason": "spot_buy"
+        },
+        {
+            "timestamp_utc": "2025-12-22T18:08:00Z",
+            "platform": "AVENUE",
+            "symbol": "AVENUE:PLTR",
+            "side": "BUY",
+            "quantity": 2.58486,
+            "price_usd": 193.09,
+            "cost_usd": 501.61,
+            "reason": "manual_trade"
+        },
+        {
+            "timestamp_utc": "2025-12-22T18:09:00Z",
+            "platform": "AVENUE",
+            "symbol": "AVENUE:LLY",
+            "side": "BUY",
+            "quantity": 0.46895,
+            "price_usd": 1069.3,
+            "cost_usd": 503.95,
+            "reason": "manual_trade"
+        },
+        {
+            "timestamp_utc": "2025-12-22T18:09:00Z",
+            "platform": "AVENUE",
+            "symbol": "AVENUE:XLV",
+            "side": "BUY",
+            "quantity": 2.582,
+            "price_usd": 155.16,
+            "cost_usd": 403.12,
+            "reason": "manual_trade"
+        },
+        {
+            "timestamp_utc": "2025-12-22T18:10:00Z",
+            "platform": "AVENUE",
+            "symbol": "AVENUE:AVGO",
+            "side": "BUY",
+            "quantity": 0.91189,
+            "price_usd": 341.17,
+            "cost_usd": 313.61,
+            "reason": "manual_trade"
+        },
+        {
+            "timestamp_utc": "2025-12-22T18:11:41Z",
+            "platform": "BINANCE",
+            "symbol": "BINANCE:ETHUSDT",
+            "side": "BUY",
+            "quantity": 0.11500166,
+            "price_usd": 3043.43,
+            "cost_usdt": 350,
+            "reason": "manual_trade"
+        },
+        {
+            "timestamp_utc": "2025-12-22T18:12:05Z",
+            "platform": "BINANCE",
+            "symbol": "BINANCE:LINKUSDT",
+            "side": "BUY",
+            "quantity": 27.31991651,
+            "price_usd": 12.81,
+            "cost_usdt": 350,
+            "reason": "manual_trade"
+        },
+        {
+            "timestamp_utc": "2025-12-22T18:12:37Z",
+            "platform": "BINANCE",
+            "symbol": "BINANCE:XRPUSDT",
+            "side": "BUY",
+            "quantity": 179.65848687,
+            "price_usd": 1.95,
+            "cost_usdt": 350,
+            "reason": "manual_trade"
+        },
+        {
+            "timestamp_utc": "2025-12-22T18:13:32Z",
+            "platform": "BINANCE",
+            "symbol": "BINANCE:ADAUSDT",
+            "side": "BUY",
+            "quantity": 920.00841221,
+            "price_usd": 0.38,
+            "cost_usdt": 350,
+            "reason": "manual_trade"
+        },
+        {
+            "timestamp_utc": "2025-12-22T18:13:52Z",
+            "platform": "BINANCE",
+            "symbol": "BINANCE:AAVEUSDT",
+            "side": "BUY",
+            "quantity": 2.20098389,
+            "price_usd": 159.02,
+            "cost_usdt": 350,
+            "reason": "manual_trade"
         }
     ]
 }
