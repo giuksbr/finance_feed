@@ -1,7 +1,7 @@
 {
     "schema_version": "2.0",
     "generated_at_brt": "2025-10-29T14:41:00-03:00",
-    "strategy_version": "v20251029A",
+    "strategy_version": "v20251215A",
     "patches_active": [],
     "meta": {
         "version_timestamp": "2025-09-24T12:00:00-03:00",
