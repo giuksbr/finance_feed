@@ -462,7 +462,7 @@
         "position_floors_enabled": true
     },
     "avenue": {
-        "cash_usd": 5254.61,
+        "cash_usd": 11564.16,
         "positions": {
             "VUG": {
                 "quantity": 8.5197,
@@ -527,8 +527,8 @@
                 "schema_warn": []
             },
             "SOXX": {
-                "quantity": 14.89952,
-                "avg_cost_usd": 259.83,
+                "quantity": 15.89952,
+                "avg_cost_usd": 263.25,
                 "asset_type": "etf",
                 "venue": "NASDAQ",
                 "symbol_canonical": "NASDAQ:SOXX",
@@ -544,7 +544,7 @@
                 ]
             },
             "TSM": {
-                "quantity": 6.18418,
+                "quantity": 4.63818,
                 "avg_cost_usd": 230.17,
                 "asset_type": "equity",
                 "venue": "NYSE",
@@ -700,6 +700,42 @@
                     "alpha",
                     "beta",
                     "gamma"
+                ]
+            },
+            "CVX": {
+                "symbol": "CVX",
+                "symbol_canonical": "NYSE:CVX",
+                "asset_type": "equity",
+                "venue": "NYSE",
+                "currency": "USD",
+                "quantity": 3.63,
+                "avg_cost_usd": 165.25,
+                "isin": null,
+                "vendor_profile": [
+                    "yfinance",
+                    "stooq",
+                    "tiingo"
+                ],
+                "schema_warn": [
+                    "missing_isin"
+                ]
+            },
+            "SLB": {
+                "symbol": "SLB",
+                "symbol_canonical": "NYSE:SLB",
+                "asset_type": "equity",
+                "venue": "NYSE",
+                "currency": "USD",
+                "quantity": 6.66,
+                "avg_cost_usd": 45.39,
+                "isin": null,
+                "vendor_profile": [
+                    "yfinance",
+                    "stooq",
+                    "tiingo"
+                ],
+                "schema_warn": [
+                    "missing_isin"
                 ]
             }
         }
@@ -1461,6 +1497,46 @@
             "price_usd": 126.632,
             "cost_usdt": 343,
             "reason": "manual_trade"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "TSM",
+            "side": "sell",
+            "quantity": 1.546,
+            "price_usd": 314.92,
+            "proceeds_usd": 486.86,
+            "timestamp_utc": "2026-01-02T16:14:00Z",
+            "reason": "rebalance_core"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "SOXX",
+            "side": "buy",
+            "quantity": 1,
+            "price_usd": 311.78,
+            "cost_usd": 314.28,
+            "timestamp_utc": "2026-01-02T18:13:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "CVX",
+            "side": "buy",
+            "quantity": 3.63,
+            "price_usd": 164.56,
+            "cost_usd": 599.85,
+            "timestamp_utc": "2026-01-05T19:07:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "SLB",
+            "side": "buy",
+            "quantity": 6.66,
+            "price_usd": 45.01,
+            "cost_usd": 302.27,
+            "timestamp_utc": "2026-01-05T19:09:00Z",
+            "reason": "spot_buy"
         }
     ]
 }
