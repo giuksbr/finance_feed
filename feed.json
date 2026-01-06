@@ -846,19 +846,6 @@
                     "c2",
                     "c3"
                 ]
-            },
-            "ETHW": {
-                "quantity": 0.2331806,
-                "avg_cost_usd": 0.37124134,
-                "asset_type": "crypto",
-                "venue": "BINANCE",
-                "symbol_canonical": "BINANCE:ETHWUSDT",
-                "currency": "USD",
-                "vendor_profile": [
-                    "c1",
-                    "c2",
-                    "c3"
-                ]
             }
         }
     },
