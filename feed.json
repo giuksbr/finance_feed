@@ -112,28 +112,10 @@
                 ],
                 "candidate_pool": [
                     {
-                        "symbol_canonical": "NYSEARCA:SPY",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "S&P 500"
-                    },
-                    {
                         "symbol_canonical": "NYSEARCA:VOO",
                         "asset_type": "etf",
                         "venue": "NYSEARCA",
                         "notes": "S&P 500 (baixo custo)"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:VTI",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "US total market"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:QQQ",
-                        "asset_type": "etf",
-                        "venue": "NASDAQ",
-                        "notes": "Nasdaq-100"
                     },
                     {
                         "symbol_canonical": "NYSEARCA:XLK",
@@ -266,6 +248,39 @@
                         "asset_type": "equity",
                         "venue": "NYSE",
                         "notes": "farma"
+                    },
+                    {
+                        "symbol_canonical": "NYSE:CVX",
+                        "asset_type": "EQUITY",
+                        "venue": "Avenue",
+                        "notes": [
+                            "position_coverage"
+                        ]
+                    },
+                    {
+                        "symbol_canonical": "NYSEARCA:ECH",
+                        "asset_type": "ETF",
+                        "venue": "Avenue",
+                        "notes": [
+                            "position_coverage"
+                        ]
+                    },
+                    {
+                        "symbol_canonical": "NYSE:SLB",
+                        "asset_type": "EQUITY",
+                        "venue": "Avenue",
+                        "notes": [
+                            "position_coverage"
+                        ]
+                    },
+                    {
+                        "symbol_canonical": "NASDAQ:VXUS",
+                        "asset_type": "ETF",
+                        "venue": "Avenue",
+                        "notes": [
+                            "regional_diversification",
+                            "broad_ex_us"
+                        ]
                     }
                 ]
             },
@@ -368,13 +383,26 @@
                         "symbol_canonical": "BINANCE:INJUSDT",
                         "asset_type": "crypto",
                         "venue": "BINANCE"
+                    },
+                    {
+                        "symbol_canonical": "BINANCE:ETHWUSDT",
+                        "asset_type": "CRYPTO",
+                        "venue": "Binance",
+                        "notes": [
+                            "position_coverage",
+                            "ban_zero_only"
+                        ]
                     }
                 ]
             },
             "maintenance": {
-                "whitelist_review_cadence": "quarterly",
-                "candidate_pool_refresh": "weekly",
-                "notes": "engine pode ajustar automaticamente o pool conforme filtros de liquidez/risco; Whitelist só muda quando perfil/mandato mudar."
+                "whitelist_review_cadence": "semiannual_or_event",
+                "candidate_pool_refresh": "monthly",
+                "notes": "low-touch: candidate_pool revisado mensalmente; whitelist só muda por evento estrutural/mandato ou revisão semestral. Cobertura de posições é obrigatória.",
+                "created_at_utc": "2026-01-07T20:37:47.015491+00:00",
+                "updated_at_utc": "2026-01-07T20:37:47.015491+00:00",
+                "updated_at_brt": "2026-01-07T17:37:47.015491-03:00",
+                "next_update_reco_brt": "2026-02-02T10:00:00-03:00"
             }
         },
         "binance": {
@@ -389,7 +417,172 @@
             "DXY",
             "PTAX_5d",
             "PF_BRL_composite"
-        ]
+        ],
+        "watchlists_meta": {
+            "strategy_watchlists_version_applied": "v20251228H+v20251228K+v20251228L+v20251228M",
+            "run_at_utc": "2026-01-07T20:37:47.015491+00:00",
+            "run_at_brt": "2026-01-07T17:37:47.015491-03:00",
+            "next_update_reco_brt": "2026-02-02T10:00:00-03:00",
+            "external_overlay": {
+                "policy": "best-effort com fail-switch (quorum) — sem quorum: nao adiciona simbolos novos (exceto cobertura de posicao), apenas remocoes obrigatorias + metadados.",
+                "curated_sources": {
+                    "avenue": {
+                        "target_count_y": 6,
+                        "min_required_x": 4,
+                        "sources": [
+                            {
+                                "name": "Vanguard — VXUS factsheet (PDF)",
+                                "url": "https://fund-docs.vanguard.com/F3369.pdf",
+                                "type": "issuer_factsheet",
+                                "status": "OK"
+                            },
+                            {
+                                "name": "Vanguard — VUG investment option profile (PDF)",
+                                "url": "https://fund-docs.vanguard.com/Vanguard_Growth_ETF_Investment_Option_Profile.pdf",
+                                "type": "issuer_factsheet",
+                                "status": "OK"
+                            },
+                            {
+                                "name": "BlackRock iShares — IXUS product page",
+                                "url": "https://www.ishares.com/us/products/239623/ishares-core-msci-total-international-stock-etf",
+                                "type": "issuer_profile",
+                                "status": "OK"
+                            },
+                            {
+                                "name": "iShares — IVV factsheet (PDF)",
+                                "url": "https://www.scbam.com/medias/fund-doc/master-fund/SCBSP500-SSF_MASTER.pdf",
+                                "type": "issuer_factsheet",
+                                "status": "OK"
+                            },
+                            {
+                                "name": "Investopedia — ex-US ETF overview (VXUS/VEU)",
+                                "url": "https://www.investopedia.com/articles/etfs-mutual-funds/042816/3-largest-global-exus-etfs-veu-vxus.asp",
+                                "type": "curated_editorial",
+                                "status": "OK"
+                            },
+                            {
+                                "name": "Schwab — Intelligent Portfolios ETFs",
+                                "url": "https://www.schwab.com/intelligent-portfolios/etfs",
+                                "type": "methodology",
+                                "status": "FAIL"
+                            }
+                        ]
+                    },
+                    "binance": {
+                        "target_count_y": 2,
+                        "min_required_x": 1,
+                        "sources": [
+                            {
+                                "name": "Binance — exchangeInfo (symbol validation)",
+                                "url": "https://data-api.binance.vision/api/v3/exchangeInfo?symbol=BTCUSDT",
+                                "type": "primary_endpoint",
+                                "status": "OK"
+                            },
+                            {
+                                "name": "Binance — ticker/24hr (volume)",
+                                "url": "https://data-api.binance.vision/api/v3/ticker/24hr?symbol=BTCUSDT",
+                                "type": "primary_endpoint",
+                                "status": "OK"
+                            }
+                        ],
+                        "optional_bonus": [
+                            {
+                                "name": "CoinGecko markets (best-effort)",
+                                "url": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd",
+                                "type": "optional"
+                            }
+                        ]
+                    }
+                },
+                "quorum_result": {
+                    "avenue": {
+                        "attempted_y": 6,
+                        "ok": 5,
+                        "min_required_x": 4,
+                        "status": "OK"
+                    },
+                    "binance": {
+                        "attempted_y": 2,
+                        "ok": 2,
+                        "min_required_x": 1,
+                        "status": "OK"
+                    }
+                },
+                "sources_used_summary": {
+                    "avenue": [
+                        "Quorum 5/6 OK; permitido adicionar 1 broad ex-US (VXUS) e remover redundâncias broad US (SPY/VTI)"
+                    ],
+                    "binance": [
+                        "Quorum 2/2 OK; endpoints exchangeInfo e ticker/24hr acessíveis via data-api.binance.vision"
+                    ]
+                }
+            },
+            "changes": {
+                "added_symbols": [
+                    "BINANCE:ETHWUSDT",
+                    "NASDAQ:VXUS",
+                    "NYSE:CVX",
+                    "NYSE:SLB",
+                    "NYSEARCA:ECH"
+                ],
+                "removed_symbols": [
+                    "NASDAQ:QQQ",
+                    "NYSEARCA:SPY",
+                    "NYSEARCA:VTI"
+                ],
+                "removed_count": 3
+            },
+            "integrity": {
+                "counts_from_json": {
+                    "avenue": {
+                        "whitelist": 12,
+                        "candidate_pool": 27,
+                        "total": 39
+                    },
+                    "binance": {
+                        "whitelist": 6,
+                        "candidate_pool": 13,
+                        "total": 19
+                    }
+                },
+                "invariants": {
+                    "position_coverage_ok": true,
+                    "broad_us_redundancy_ok": true,
+                    "broad_ex_us_redundancy_ok": true,
+                    "no_duplicates_ok": true
+                },
+                "details": {
+                    "broad_us_kept": [
+                        "NYSEARCA:VOO"
+                    ],
+                    "broad_ex_us_kept": [
+                        "NASDAQ:VXUS"
+                    ],
+                    "duplicates": {
+                        "avenue_whitelist": [],
+                        "avenue_candidate_pool": [],
+                        "binance_whitelist": [],
+                        "binance_candidate_pool": []
+                    },
+                    "position_missing_after_update": {
+                        "avenue": [],
+                        "binance": []
+                    }
+                }
+            },
+            "AUDITORIA_WATCHLISTS": [
+                "Cobertura_posicoes: OK (Avenue 17 / Binance 9)",
+                "Avenue counts (JSON): whitelist=12 candidate_pool=27 total=39",
+                "Binance counts (JSON): whitelist=6 candidate_pool=13 total=19",
+                "Redundancia broad (Avenue): US=['NYSEARCA:VOO'] ex-US=['NASDAQ:VXUS']",
+                "Overlay quorum: Avenue 5/6 (min 4) • Binance 2/2 (min 1)",
+                "Alteracoes: adicionados=['BINANCE:ETHWUSDT', 'NASDAQ:VXUS', 'NYSE:CVX', 'NYSE:SLB', 'NYSEARCA:ECH'] removidos=['NASDAQ:QQQ', 'NYSEARCA:SPY', 'NYSEARCA:VTI']"
+            ],
+            "Gate": {
+                "Gate": "OK",
+                "Motivo": "—"
+            }
+        }
     },
     "controls": {
         "quiet_hours_brt": "09:00-21:00",
