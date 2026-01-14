@@ -655,7 +655,7 @@
         "position_floors_enabled": true
     },
     "avenue": {
-        "cash_usd": 11564.16,
+        "cash_usd": 10669.87,
         "positions": {
             "VUG": {
                 "quantity": 8.5197,
@@ -690,8 +690,8 @@
                 ]
             },
             "IVW": {
-                "quantity": 28.68158,
-                "avg_cost_usd": 118.93,
+                "quantity": 33.52158,
+                "avg_cost_usd": 119.83,
                 "asset_type": "etf",
                 "venue": "NYSEARCA",
                 "symbol_canonical": "NYSEARCA:IVW",
@@ -767,8 +767,8 @@
                 "schema_warn": []
             },
             "VST": {
-                "quantity": 10.16565,
-                "avg_cost_usd": 169.59,
+                "quantity": 11.89565,
+                "avg_cost_usd": 170.4,
                 "asset_type": "equity",
                 "venue": "NYSE",
                 "symbol_canonical": "NYSE:VST",
@@ -934,11 +934,11 @@
         }
     },
     "binance": {
-        "usdt": 3530.27804455,
+        "usdt": 3230.27804455,
         "positions": {
             "BTC": {
-                "quantity": 0.05452139,
-                "avg_cost_usd": 108063.08,
+                "quantity": 0.06432968,
+                "avg_cost_usd": 98414.31,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
                 "symbol_canonical": "BINANCE:BTCUSDT",
@@ -950,7 +950,7 @@
                 ]
             },
             "ETH": {
-                "quantity": 1.16213934,
+                "quantity": 0.96933289,
                 "avg_cost_usd": 3359.47381438,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
@@ -1716,6 +1716,36 @@
             "price_usd": 45.01,
             "cost_usd": 302.27,
             "timestamp_utc": "2026-01-05T19:09:00Z",
+            "reason": "spot_buy"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "IVW",
+            "side": "buy",
+            "quantity": 4.84,
+            "price_usd": 124.65,
+            "cost_usd": 605.81,
+            "timestamp_utc": "2026-01-13T19:23:00Z",
+            "reason": "manual_trade"
+        },
+        {
+            "platform": "avenue",
+            "symbol": "VST",
+            "side": "buy",
+            "quantity": 1.73,
+            "price_usd": 173.74,
+            "cost_usd": 303.07,
+            "timestamp_utc": "2026-01-13T19:24:00Z",
+            "reason": "manual_trade"
+        },
+        {
+            "platform": "BINANCE",
+            "symbol": "BTC",
+            "side": "buy",
+            "quantity": 0.00329893,
+            "price_usd": 90938.58,
+            "cost_usdt": 300,
+            "timestamp_utc": "2026-01-09T23:13:49Z",
             "reason": "spot_buy"
         }
     ]
