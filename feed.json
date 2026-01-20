@@ -655,7 +655,7 @@
         "position_floors_enabled": true
     },
     "avenue": {
-        "cash_usd": 10669.87,
+        "cash_usd": 9673.02,
         "positions": {
             "VUG": {
                 "quantity": 8.5197,
@@ -767,8 +767,8 @@
                 "schema_warn": []
             },
             "VST": {
-                "quantity": 11.89565,
-                "avg_cost_usd": 170.4,
+                "quantity": 18.25565,
+                "avg_cost_usd": 165.64,
                 "asset_type": "equity",
                 "venue": "NYSE",
                 "symbol_canonical": "NYSE:VST",
@@ -934,7 +934,7 @@
         }
     },
     "binance": {
-        "usdt": 3230.27804455,
+        "usdt": 2390.27804455,
         "positions": {
             "BTC": {
                 "quantity": 0.06432968,
@@ -989,8 +989,8 @@
                 ]
             },
             "XRP": {
-                "quantity": 647.4226933,
-                "avg_cost_usd": 2.34747093,
+                "quantity": 922.74125048,
+                "avg_cost_usd": 2.24310548,
                 "asset_type": "crypto",
                 "venue": "BINANCE",
                 "symbol_canonical": "BINANCE:XRPUSDT",
@@ -1747,6 +1747,26 @@
             "cost_usdt": 300,
             "timestamp_utc": "2026-01-09T23:13:49Z",
             "reason": "spot_buy"
-        }
+        },
+        {
+      "platform": "avenue",
+      "symbol": "VST",
+      "side": "buy",
+      "quantity": 6.36,
+      "price_usd": 156.34,
+      "cost_usd": 996.85,
+      "timestamp_utc": "2026-01-20T20:17:00Z",
+      "reason": "manual_trade"
+    },
+    {
+      "platform": "binance",
+      "symbol": "XRP",
+      "side": "buy",
+      "quantity": 275.31855718,
+      "price_usd": 1.99769,
+      "cost_usdt": 550,
+      "timestamp_utc": "2026-01-19T15:10:55Z",
+      "reason": "manual_trade"
+    }
     ]
 }
