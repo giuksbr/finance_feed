@@ -1749,24 +1749,24 @@
             "reason": "spot_buy"
         },
         {
-      "platform": "avenue",
-      "symbol": "VST",
-      "side": "buy",
-      "quantity": 6.36,
-      "price_usd": 156.34,
-      "cost_usd": 996.85,
-      "timestamp_utc": "2026-01-20T20:17:00Z",
-      "reason": "manual_trade"
-    },
-    {
-      "platform": "binance",
-      "symbol": "XRP",
-      "side": "buy",
-      "quantity": 275.31855718,
-      "price_usd": 1.99769,
-      "cost_usdt": 550,
-      "timestamp_utc": "2026-01-19T15:10:55Z",
-      "reason": "manual_trade"
-    }
+            "platform": "avenue",
+            "symbol": "VST",
+            "side": "buy",
+            "quantity": 6.36,
+            "price_usd": 156.34,
+            "cost_usd": 996.85,
+            "timestamp_utc": "2026-01-20T20:17:00Z",
+            "reason": "manual_trade"
+        },
+        {
+            "platform": "binance",
+            "symbol": "XRP",
+            "side": "buy",
+            "quantity": 275.31855718,
+            "price_usd": 1.99769,
+            "cost_usdt": 550,
+            "timestamp_utc": "2026-01-19T15:10:55Z",
+            "reason": "manual_trade"
+        }
     ]
 }
