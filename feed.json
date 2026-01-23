@@ -1,1772 +1,1809 @@
 {
-    "schema_version": "2.0",
-    "generated_at_brt": "2025-10-29T14:41:00-03:00",
-    "strategy_version": "v20251215A",
-    "patches_active": [],
-    "meta": {
-        "version_timestamp": "2025-09-24T12:00:00-03:00",
-        "hwm_portfolio_start_date": "2025-09-12",
-        "prints_valid_days": 3,
-        "notes": "Estratégia Consolidada ATIVA v20251017A; winners/giveback usam avg_cost_usd do feed."
-    },
-    "data_sources": {
-        "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
-        "feed_fallbacks": [
-            "https://raw.githubusercontent.com/giuksbr/finance_feed/main/feed.json",
-            "https://cdn.jsdelivr.net/gh/giuksbr/finance_feed@main/feed.json",
-            "https://api.github.com/repos/giuksbr/finance_feed/contents/feed.json?ref=main"
-        ]
-    },
-    "universe": {
-        "mode": "AMPLIADO",
-        "avenue": {
-            "filters": {
-                "adv_usd_min": 50000000,
-                "price_min_usd": 5,
-                "beta_max": 1.6,
-                "dd12m_max_pct": 50
-            },
-            "exclude": [
-                "alavancados",
-                "inversos",
-                "microcaps",
-                "pre-receita",
-                "temáticos_ultra"
-            ]
-        },
-        "watchlists": {
-            "avenue": {
-                "whitelist": [
-                    {
-                        "symbol_canonical": "NYSEARCA:VUG",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "núcleo growth EUA"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:IVW",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "núcleo growth S&P"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:IUSG",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "núcleo growth amplo"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:SGOV",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "renda/caixa USD"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:QQQM",
-                        "asset_type": "etf",
-                        "venue": "NASDAQ",
-                        "notes": "core satélite Nasdaq-100 (baixo custo)"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:SOXX",
-                        "asset_type": "etf",
-                        "venue": "NASDAQ",
-                        "notes": "semicondutores (setorial)"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:NVDA",
-                        "asset_type": "equity",
-                        "venue": "NASDAQ",
-                        "notes": "AI/semis"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:AVGO",
-                        "asset_type": "equity",
-                        "venue": "NASDAQ",
-                        "notes": "semis/infra"
-                    },
-                    {
-                        "symbol_canonical": "NYSE:TSM",
-                        "asset_type": "equity",
-                        "venue": "NYSE",
-                        "notes": "foundry líder"
-                    },
-                    {
-                        "symbol_canonical": "NYSE:PLTR",
-                        "asset_type": "equity",
-                        "venue": "NYSE",
-                        "notes": "software/AI"
-                    },
-                    {
-                        "symbol_canonical": "NYSE:VST",
-                        "asset_type": "equity",
-                        "venue": "NYSE",
-                        "notes": "utilities/energia"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:ARGT",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "satélite single-country (teto baixo)"
-                    }
-                ],
-                "candidate_pool": [
-                    {
-                        "symbol_canonical": "NYSEARCA:VOO",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "S&P 500 (baixo custo)"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:XLK",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "setor tecnologia"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:SMH",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "semis (VanEck)"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:IJR",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "small caps S&P 600"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:IWF",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "Russell 1000 Growth"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:IWD",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "Russell 1000 Value"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:XLV",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "saúde"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:XLF",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "financeiro"
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:XLE",
-                        "asset_type": "etf",
-                        "venue": "NYSEARCA",
-                        "notes": "energia"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:MSFT",
-                        "asset_type": "equity",
-                        "venue": "NASDAQ",
-                        "notes": "megacap qualidade"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:AAPL",
-                        "asset_type": "equity",
-                        "venue": "NASDAQ",
-                        "notes": "megacap qualidade"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:GOOGL",
-                        "asset_type": "equity",
-                        "venue": "NASDAQ",
-                        "notes": "megacap qualidade"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:AMZN",
-                        "asset_type": "equity",
-                        "venue": "NASDAQ",
-                        "notes": "megacap qualidade"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:META",
-                        "asset_type": "equity",
-                        "venue": "NASDAQ",
-                        "notes": "megacap qualidade"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:AMD",
-                        "asset_type": "equity",
-                        "venue": "NASDAQ",
-                        "notes": "semis"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:LRCX",
-                        "asset_type": "equity",
-                        "venue": "NASDAQ",
-                        "notes": "equip. semis"
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:ASML",
-                        "asset_type": "equity",
-                        "venue": "NASDAQ",
-                        "notes": "lithography"
-                    },
-                    {
-                        "symbol_canonical": "NYSE:COST",
-                        "asset_type": "equity",
-                        "venue": "NYSE",
-                        "notes": "qualidade/defensivo"
-                    },
-                    {
-                        "symbol_canonical": "NYSE:UNH",
-                        "asset_type": "equity",
-                        "venue": "NYSE",
-                        "notes": "saúde"
-                    },
-                    {
-                        "symbol_canonical": "NYSE:JPM",
-                        "asset_type": "equity",
-                        "venue": "NYSE",
-                        "notes": "bancos"
-                    },
-                    {
-                        "symbol_canonical": "NYSE:BRK.B",
-                        "asset_type": "equity",
-                        "venue": "NYSE",
-                        "notes": "holding"
-                    },
-                    {
-                        "symbol_canonical": "NYSE:NVO",
-                        "asset_type": "equity",
-                        "venue": "NYSE",
-                        "notes": "farma"
-                    },
-                    {
-                        "symbol_canonical": "NYSE:LLY",
-                        "asset_type": "equity",
-                        "venue": "NYSE",
-                        "notes": "farma"
-                    },
-                    {
-                        "symbol_canonical": "NYSE:CVX",
-                        "asset_type": "EQUITY",
-                        "venue": "Avenue",
-                        "notes": [
-                            "position_coverage"
-                        ]
-                    },
-                    {
-                        "symbol_canonical": "NYSEARCA:ECH",
-                        "asset_type": "ETF",
-                        "venue": "Avenue",
-                        "notes": [
-                            "position_coverage"
-                        ]
-                    },
-                    {
-                        "symbol_canonical": "NYSE:SLB",
-                        "asset_type": "EQUITY",
-                        "venue": "Avenue",
-                        "notes": [
-                            "position_coverage"
-                        ]
-                    },
-                    {
-                        "symbol_canonical": "NASDAQ:VXUS",
-                        "asset_type": "ETF",
-                        "venue": "Avenue",
-                        "notes": [
-                            "regional_diversification",
-                            "broad_ex_us"
-                        ]
-                    }
-                ]
-            },
-            "binance": {
-                "whitelist": [
-                    {
-                        "symbol_canonical": "BINANCE:BTCUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE",
-                        "notes": "núcleo"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:ETHUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE",
-                        "notes": "núcleo"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:SOLUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE",
-                        "notes": "núcleo"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:LINKUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE",
-                        "notes": "tático"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:XRPUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE",
-                        "notes": "tático"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:FETUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE",
-                        "notes": "tático"
-                    }
-                ],
-                "candidate_pool": [
-                    {
-                        "symbol_canonical": "BINANCE:ADAUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:DOTUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:ATOMUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:ARBUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:OPUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:AAVEUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:UNIUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:LTCUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:TRXUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:TONUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:NEARUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:INJUSDT",
-                        "asset_type": "crypto",
-                        "venue": "BINANCE"
-                    },
-                    {
-                        "symbol_canonical": "BINANCE:ETHWUSDT",
-                        "asset_type": "CRYPTO",
-                        "venue": "Binance",
-                        "notes": [
-                            "position_coverage",
-                            "ban_zero_only"
-                        ]
-                    }
-                ]
-            },
-            "maintenance": {
-                "whitelist_review_cadence": "semiannual_or_event",
-                "candidate_pool_refresh": "monthly",
-                "notes": "low-touch: candidate_pool revisado mensalmente; whitelist só muda por evento estrutural/mandato ou revisão semestral. Cobertura de posições é obrigatória.",
-                "created_at_utc": "2026-01-07T20:37:47.015491+00:00",
-                "updated_at_utc": "2026-01-07T20:37:47.015491+00:00",
-                "updated_at_brt": "2026-01-07T17:37:47.015491-03:00",
-                "next_update_reco_brt": "2026-02-02T10:00:00-03:00"
-            }
-        },
-        "binance": {
-            "filters": {
-                "top_n": 50,
-                "hist_days_min": 90,
-                "depth_mult_min": 20,
-                "spread_max_pct": 0.35
-            }
-        },
-        "fx_refs": [
-            "DXY",
-            "PTAX_5d",
-            "PF_BRL_composite"
-        ],
-        "watchlists_meta": {
-            "strategy_watchlists_version_applied": "v20251228H+v20251228K+v20251228L+v20251228M",
-            "run_at_utc": "2026-01-07T20:37:47.015491+00:00",
-            "run_at_brt": "2026-01-07T17:37:47.015491-03:00",
-            "next_update_reco_brt": "2026-02-02T10:00:00-03:00",
-            "external_overlay": {
-                "policy": "best-effort com fail-switch (quorum) — sem quorum: nao adiciona simbolos novos (exceto cobertura de posicao), apenas remocoes obrigatorias + metadados.",
-                "curated_sources": {
-                    "avenue": {
-                        "target_count_y": 6,
-                        "min_required_x": 4,
-                        "sources": [
-                            {
-                                "name": "Vanguard — VXUS factsheet (PDF)",
-                                "url": "https://fund-docs.vanguard.com/F3369.pdf",
-                                "type": "issuer_factsheet",
-                                "status": "OK"
-                            },
-                            {
-                                "name": "Vanguard — VUG investment option profile (PDF)",
-                                "url": "https://fund-docs.vanguard.com/Vanguard_Growth_ETF_Investment_Option_Profile.pdf",
-                                "type": "issuer_factsheet",
-                                "status": "OK"
-                            },
-                            {
-                                "name": "BlackRock iShares — IXUS product page",
-                                "url": "https://www.ishares.com/us/products/239623/ishares-core-msci-total-international-stock-etf",
-                                "type": "issuer_profile",
-                                "status": "OK"
-                            },
-                            {
-                                "name": "iShares — IVV factsheet (PDF)",
-                                "url": "https://www.scbam.com/medias/fund-doc/master-fund/SCBSP500-SSF_MASTER.pdf",
-                                "type": "issuer_factsheet",
-                                "status": "OK"
-                            },
-                            {
-                                "name": "Investopedia — ex-US ETF overview (VXUS/VEU)",
-                                "url": "https://www.investopedia.com/articles/etfs-mutual-funds/042816/3-largest-global-exus-etfs-veu-vxus.asp",
-                                "type": "curated_editorial",
-                                "status": "OK"
-                            },
-                            {
-                                "name": "Schwab — Intelligent Portfolios ETFs",
-                                "url": "https://www.schwab.com/intelligent-portfolios/etfs",
-                                "type": "methodology",
-                                "status": "FAIL"
-                            }
-                        ]
-                    },
-                    "binance": {
-                        "target_count_y": 2,
-                        "min_required_x": 1,
-                        "sources": [
-                            {
-                                "name": "Binance — exchangeInfo (symbol validation)",
-                                "url": "https://data-api.binance.vision/api/v3/exchangeInfo?symbol=BTCUSDT",
-                                "type": "primary_endpoint",
-                                "status": "OK"
-                            },
-                            {
-                                "name": "Binance — ticker/24hr (volume)",
-                                "url": "https://data-api.binance.vision/api/v3/ticker/24hr?symbol=BTCUSDT",
-                                "type": "primary_endpoint",
-                                "status": "OK"
-                            }
-                        ],
-                        "optional_bonus": [
-                            {
-                                "name": "CoinGecko markets (best-effort)",
-                                "url": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd",
-                                "type": "optional"
-                            }
-                        ]
-                    }
-                },
-                "quorum_result": {
-                    "avenue": {
-                        "attempted_y": 6,
-                        "ok": 5,
-                        "min_required_x": 4,
-                        "status": "OK"
-                    },
-                    "binance": {
-                        "attempted_y": 2,
-                        "ok": 2,
-                        "min_required_x": 1,
-                        "status": "OK"
-                    }
-                },
-                "sources_used_summary": {
-                    "avenue": [
-                        "Quorum 5/6 OK; permitido adicionar 1 broad ex-US (VXUS) e remover redundâncias broad US (SPY/VTI)"
-                    ],
-                    "binance": [
-                        "Quorum 2/2 OK; endpoints exchangeInfo e ticker/24hr acessíveis via data-api.binance.vision"
-                    ]
-                }
-            },
-            "changes": {
-                "added_symbols": [
-                    "BINANCE:ETHWUSDT",
-                    "NASDAQ:VXUS",
-                    "NYSE:CVX",
-                    "NYSE:SLB",
-                    "NYSEARCA:ECH"
-                ],
-                "removed_symbols": [
-                    "NASDAQ:QQQ",
-                    "NYSEARCA:SPY",
-                    "NYSEARCA:VTI"
-                ],
-                "removed_count": 3
-            },
-            "integrity": {
-                "counts_from_json": {
-                    "avenue": {
-                        "whitelist": 12,
-                        "candidate_pool": 27,
-                        "total": 39
-                    },
-                    "binance": {
-                        "whitelist": 6,
-                        "candidate_pool": 13,
-                        "total": 19
-                    }
-                },
-                "invariants": {
-                    "position_coverage_ok": true,
-                    "broad_us_redundancy_ok": true,
-                    "broad_ex_us_redundancy_ok": true,
-                    "no_duplicates_ok": true
-                },
-                "details": {
-                    "broad_us_kept": [
-                        "NYSEARCA:VOO"
-                    ],
-                    "broad_ex_us_kept": [
-                        "NASDAQ:VXUS"
-                    ],
-                    "duplicates": {
-                        "avenue_whitelist": [],
-                        "avenue_candidate_pool": [],
-                        "binance_whitelist": [],
-                        "binance_candidate_pool": []
-                    },
-                    "position_missing_after_update": {
-                        "avenue": [],
-                        "binance": []
-                    }
-                }
-            },
-            "AUDITORIA_WATCHLISTS": [
-                "Cobertura_posicoes: OK (Avenue 17 / Binance 9)",
-                "Avenue counts (JSON): whitelist=12 candidate_pool=27 total=39",
-                "Binance counts (JSON): whitelist=6 candidate_pool=13 total=19",
-                "Redundancia broad (Avenue): US=['NYSEARCA:VOO'] ex-US=['NASDAQ:VXUS']",
-                "Overlay quorum: Avenue 5/6 (min 4) • Binance 2/2 (min 1)",
-                "Alteracoes: adicionados=['BINANCE:ETHWUSDT', 'NASDAQ:VXUS', 'NYSE:CVX', 'NYSE:SLB', 'NYSEARCA:ECH'] removidos=['NASDAQ:QQQ', 'NYSEARCA:SPY', 'NYSEARCA:VTI']"
-            ],
-            "Gate": {
-                "Gate": "OK",
-                "Motivo": "—"
-            }
-        }
-    },
-    "controls": {
-        "quiet_hours_brt": "09:00-21:00",
-        "notify_only_on_action": true,
-        "pre_alerts": false,
-        "winners_basis": "avg_cost_usd",
-        "giveback_hwm_basis": "portfolio_hwm",
-        "compute_lockout_from_timestamps": true,
-        "reentry_modes": [
-            "N_level",
-            "structural_rebalance"
-        ]
-    },
-    "automation_rules": {
-        "n_levels": [
-            "N1",
-            "N2",
-            "N3",
-            "N3C"
-        ],
-        "apply_precedence": [
-            "winners_giveback",
-            "btc_cap_40pct",
-            "usdt_band_min"
-        ],
-        "throttle": {
-            "max_tactical_positions": 5,
-            "entries_per_week_per_platform": 2
-        },
-        "post_event_macro": {
-            "wait_close_if_lt_24h": true
-        },
-        "winners": {
-            "take_pct_on_30pct_profit": 25
-        },
-        "giveback": {
-            "sell_pct_on_25pct_profit_and_minus12pct_dd": 20
-        },
-        "rebalance_window_business_days": [
-            1,
-            5
-        ],
-        "cash_bands": {
-            "avenue_target_pct": 10,
-            "avenue_band_pct": [
-                8,
-                12
-            ],
-            "binance_usdt_min_pct": 5
-        },
-        "btc_cap_guideline_pct_ex_usdt": 40,
-        "lockout_logic": {
-            "scope": "global",
-            "threshold_pct": 20,
-            "tolerance_pct": 30,
-            "duration_business_days": 2,
-            "reentry_modes": [
-                "N_level",
-                "structural_rebalance"
-            ]
-        }
-    },
-    "policy_overlays": {
-        "risk": {
-            "dxy_3d_pct": 0.8,
-            "vix_gt": 25,
-            "usdt_depeg_pct": -0.5
-        },
-        "order_min_avenue_usd": 300,
-        "position_floors_enabled": true
-    },
+  "schema_version": "2.0",
+  "generated_at_brt": "2025-10-29T14:41:00-03:00",
+  "strategy_version": "v20251215A",
+  "patches_active": [],
+  "meta": {
+    "version_timestamp": "2025-09-24T12:00:00-03:00",
+    "hwm_portfolio_start_date": "2025-09-12",
+    "prints_valid_days": 3,
+    "notes": "Estratégia Consolidada ATIVA v20251017A; winners/giveback usam avg_cost_usd do feed."
+  },
+  "data_sources": {
+    "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
+    "feed_fallbacks": [
+      "https://raw.githubusercontent.com/giuksbr/finance_feed/main/feed.json",
+      "https://cdn.jsdelivr.net/gh/giuksbr/finance_feed@main/feed.json",
+      "https://api.github.com/repos/giuksbr/finance_feed/contents/feed.json?ref=main"
+    ]
+  },
+  "universe": {
+    "mode": "AMPLIADO",
     "avenue": {
-        "cash_usd": 9673.02,
-        "positions": {
-            "VUG": {
-                "quantity": 8.5197,
-                "avg_cost_usd": 471.64,
-                "asset_type": "etf",
-                "venue": "NYSEARCA",
-                "symbol_canonical": "NYSEARCA:VUG",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": "US9229087360",
-                "schema_warn": []
-            },
-            "SGOV": {
-                "quantity": 5.37556,
-                "avg_cost_usd": 100.45,
-                "asset_type": "etf",
-                "venue": "NYSEARCA",
-                "symbol_canonical": "NYSEARCA:SGOV",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": null,
-                "schema_warn": [
-                    "missing_isin_or_figi"
-                ]
-            },
-            "IVW": {
-                "quantity": 33.52158,
-                "avg_cost_usd": 119.83,
-                "asset_type": "etf",
-                "venue": "NYSEARCA",
-                "symbol_canonical": "NYSEARCA:IVW",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": "US4642873099",
-                "schema_warn": []
-            },
-            "IUSG": {
-                "quantity": 21.51,
-                "avg_cost_usd": 165.24,
-                "asset_type": "etf",
-                "venue": "NYSEARCA",
-                "symbol_canonical": "NYSEARCA:IUSG",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": "US4642878791",
-                "schema_warn": []
-            },
-            "SOXX": {
-                "quantity": 15.89952,
-                "avg_cost_usd": 263.25,
-                "asset_type": "etf",
-                "venue": "NASDAQ",
-                "symbol_canonical": "NASDAQ:SOXX",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": null,
-                "schema_warn": [
-                    "missing_isin_or_figi"
-                ]
-            },
-            "TSM": {
-                "quantity": 4.63818,
-                "avg_cost_usd": 230.17,
-                "asset_type": "equity",
-                "venue": "NYSE",
-                "symbol_canonical": "NYSE:TSM",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": "US8740391003",
-                "schema_warn": []
-            },
-            "AVGO": {
-                "quantity": 7.13346,
-                "avg_cost_usd": 320.14,
-                "asset_type": "equity",
-                "venue": "NASDAQ",
-                "symbol_canonical": "NASDAQ:AVGO",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": "US11135F1012",
-                "schema_warn": []
-            },
-            "VST": {
-                "quantity": 18.25565,
-                "avg_cost_usd": 165.64,
-                "asset_type": "equity",
-                "venue": "NYSE",
-                "symbol_canonical": "NYSE:VST",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": "US92840M1027",
-                "schema_warn": []
-            },
-            "PLTR": {
-                "quantity": 5.64453,
-                "avg_cost_usd": 167.09,
-                "asset_type": "equity",
-                "venue": "NYSE",
-                "symbol_canonical": "NYSE:PLTR",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": "US69608A1088",
-                "schema_warn": []
-            },
-            "ARGT": {
-                "quantity": 21.55,
-                "avg_cost_usd": 79.57,
-                "asset_type": "etf",
-                "venue": "NYSEARCA",
-                "symbol_canonical": "NYSEARCA:ARGT",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": null,
-                "schema_warn": [
-                    "missing_isin_or_figi"
-                ]
-            },
-            "IJR": {
-                "quantity": 3.62,
-                "avg_cost_usd": 124.42,
-                "asset_type": "etf",
-                "venue": "NYSEARCA",
-                "symbol_canonical": "NYSEARCA:IJR",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": null,
-                "schema_warn": [
-                    "isin_missing"
-                ]
-            },
-            "XLV": {
-                "quantity": 9.022,
-                "avg_cost_usd": 156.02,
-                "asset_type": "etf",
-                "venue": "NYSEARCA",
-                "symbol_canonical": "NYSEARCA:XLV",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": null,
-                "schema_warn": [
-                    "isin_missing"
-                ]
-            },
-            "XLF": {
-                "quantity": 7.27,
-                "avg_cost_usd": 55.26,
-                "asset_type": "etf",
-                "venue": "NYSEARCA",
-                "symbol_canonical": "NYSEARCA:XLF",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": null,
-                "schema_warn": [
-                    "isin_missing"
-                ]
-            },
-            "ECH": {
-                "quantity": 7.6,
-                "avg_cost_usd": 39.51,
-                "asset_type": "etf",
-                "venue": "NYSEARCA",
-                "symbol_canonical": "NYSEARCA:ECH",
-                "currency": "USD",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ],
-                "isin": null,
-                "schema_warn": [
-                    "isin_missing"
-                ]
-            },
-            "LLY": {
-                "quantity": 0.93895,
-                "avg_cost_usd": 1074.62,
-                "asset_type": "equity",
-                "venue": "NYSE",
-                "symbol_canonical": "NYSE:LLY",
-                "currency": "USD",
-                "isin": "US5324571083",
-                "vendor_profile": [
-                    "alpha",
-                    "beta",
-                    "gamma"
-                ]
-            },
-            "CVX": {
-                "symbol": "CVX",
-                "symbol_canonical": "NYSE:CVX",
-                "asset_type": "equity",
-                "venue": "NYSE",
-                "currency": "USD",
-                "quantity": 3.63,
-                "avg_cost_usd": 165.25,
-                "isin": null,
-                "vendor_profile": [
-                    "yfinance",
-                    "stooq",
-                    "tiingo"
-                ],
-                "schema_warn": [
-                    "missing_isin"
-                ]
-            },
-            "SLB": {
-                "symbol": "SLB",
-                "symbol_canonical": "NYSE:SLB",
-                "asset_type": "equity",
-                "venue": "NYSE",
-                "currency": "USD",
-                "quantity": 6.66,
-                "avg_cost_usd": 45.39,
-                "isin": null,
-                "vendor_profile": [
-                    "yfinance",
-                    "stooq",
-                    "tiingo"
-                ],
-                "schema_warn": [
-                    "missing_isin"
-                ]
-            }
-        }
+      "filters": {
+        "adv_usd_min": 50000000,
+        "price_min_usd": 5,
+        "beta_max": 1.6,
+        "dd12m_max_pct": 50
+      },
+      "exclude": [
+        "alavancados",
+        "inversos",
+        "microcaps",
+        "pre-receita",
+        "temáticos_ultra"
+      ]
+    },
+    "watchlists": {
+      "avenue": {
+        "whitelist": [
+          {
+            "symbol_canonical": "NYSEARCA:VUG",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "núcleo growth EUA"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:IVW",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "núcleo growth S&P"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:IUSG",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "núcleo growth amplo"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:SGOV",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "renda/caixa USD"
+          },
+          {
+            "symbol_canonical": "NASDAQ:QQQM",
+            "asset_type": "etf",
+            "venue": "NASDAQ",
+            "notes": "core satélite Nasdaq-100 (baixo custo)"
+          },
+          {
+            "symbol_canonical": "NASDAQ:SOXX",
+            "asset_type": "etf",
+            "venue": "NASDAQ",
+            "notes": "semicondutores (setorial)"
+          },
+          {
+            "symbol_canonical": "NASDAQ:NVDA",
+            "asset_type": "equity",
+            "venue": "NASDAQ",
+            "notes": "AI/semis"
+          },
+          {
+            "symbol_canonical": "NASDAQ:AVGO",
+            "asset_type": "equity",
+            "venue": "NASDAQ",
+            "notes": "semis/infra"
+          },
+          {
+            "symbol_canonical": "NYSE:TSM",
+            "asset_type": "equity",
+            "venue": "NYSE",
+            "notes": "foundry líder"
+          },
+          {
+            "symbol_canonical": "NYSE:PLTR",
+            "asset_type": "equity",
+            "venue": "NYSE",
+            "notes": "software/AI"
+          },
+          {
+            "symbol_canonical": "NYSE:VST",
+            "asset_type": "equity",
+            "venue": "NYSE",
+            "notes": "utilities/energia"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:ARGT",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "satélite single-country (teto baixo)"
+          }
+        ],
+        "candidate_pool": [
+          {
+            "symbol_canonical": "NYSEARCA:VOO",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "S&P 500 (baixo custo)"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:XLK",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "setor tecnologia"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:SMH",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "semis (VanEck)"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:IJR",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "small caps S&P 600"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:IWF",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "Russell 1000 Growth"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:IWD",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "Russell 1000 Value"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:XLV",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "saúde"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:XLF",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "financeiro"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:XLE",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "energia"
+          },
+          {
+            "symbol_canonical": "NASDAQ:MSFT",
+            "asset_type": "equity",
+            "venue": "NASDAQ",
+            "notes": "megacap qualidade"
+          },
+          {
+            "symbol_canonical": "NASDAQ:AAPL",
+            "asset_type": "equity",
+            "venue": "NASDAQ",
+            "notes": "megacap qualidade"
+          },
+          {
+            "symbol_canonical": "NASDAQ:GOOGL",
+            "asset_type": "equity",
+            "venue": "NASDAQ",
+            "notes": "megacap qualidade"
+          },
+          {
+            "symbol_canonical": "NASDAQ:AMZN",
+            "asset_type": "equity",
+            "venue": "NASDAQ",
+            "notes": "megacap qualidade"
+          },
+          {
+            "symbol_canonical": "NASDAQ:META",
+            "asset_type": "equity",
+            "venue": "NASDAQ",
+            "notes": "megacap qualidade"
+          },
+          {
+            "symbol_canonical": "NASDAQ:AMD",
+            "asset_type": "equity",
+            "venue": "NASDAQ",
+            "notes": "semis"
+          },
+          {
+            "symbol_canonical": "NASDAQ:LRCX",
+            "asset_type": "equity",
+            "venue": "NASDAQ",
+            "notes": "equip. semis"
+          },
+          {
+            "symbol_canonical": "NASDAQ:ASML",
+            "asset_type": "equity",
+            "venue": "NASDAQ",
+            "notes": "lithography"
+          },
+          {
+            "symbol_canonical": "NYSE:COST",
+            "asset_type": "equity",
+            "venue": "NYSE",
+            "notes": "qualidade/defensivo"
+          },
+          {
+            "symbol_canonical": "NYSE:UNH",
+            "asset_type": "equity",
+            "venue": "NYSE",
+            "notes": "saúde"
+          },
+          {
+            "symbol_canonical": "NYSE:JPM",
+            "asset_type": "equity",
+            "venue": "NYSE",
+            "notes": "bancos"
+          },
+          {
+            "symbol_canonical": "NYSE:BRK.B",
+            "asset_type": "equity",
+            "venue": "NYSE",
+            "notes": "holding"
+          },
+          {
+            "symbol_canonical": "NYSE:NVO",
+            "asset_type": "equity",
+            "venue": "NYSE",
+            "notes": "farma"
+          },
+          {
+            "symbol_canonical": "NYSE:LLY",
+            "asset_type": "equity",
+            "venue": "NYSE",
+            "notes": "farma"
+          },
+          {
+            "symbol_canonical": "NYSE:CVX",
+            "asset_type": "EQUITY",
+            "venue": "Avenue",
+            "notes": [
+              "position_coverage"
+            ]
+          },
+          {
+            "symbol_canonical": "NYSEARCA:ECH",
+            "asset_type": "ETF",
+            "venue": "Avenue",
+            "notes": [
+              "position_coverage"
+            ]
+          },
+          {
+            "symbol_canonical": "NYSE:SLB",
+            "asset_type": "EQUITY",
+            "venue": "Avenue",
+            "notes": [
+              "position_coverage"
+            ]
+          },
+          {
+            "symbol_canonical": "NASDAQ:VXUS",
+            "asset_type": "ETF",
+            "venue": "Avenue",
+            "notes": [
+              "regional_diversification",
+              "broad_ex_us"
+            ]
+          }
+        ]
+      },
+      "binance": {
+        "whitelist": [
+          {
+            "symbol_canonical": "BINANCE:BTCUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE",
+            "notes": "núcleo"
+          },
+          {
+            "symbol_canonical": "BINANCE:ETHUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE",
+            "notes": "núcleo"
+          },
+          {
+            "symbol_canonical": "BINANCE:SOLUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE",
+            "notes": "núcleo"
+          },
+          {
+            "symbol_canonical": "BINANCE:LINKUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE",
+            "notes": "tático"
+          },
+          {
+            "symbol_canonical": "BINANCE:XRPUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE",
+            "notes": "tático"
+          },
+          {
+            "symbol_canonical": "BINANCE:FETUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE",
+            "notes": "tático"
+          }
+        ],
+        "candidate_pool": [
+          {
+            "symbol_canonical": "BINANCE:ADAUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:DOTUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:ATOMUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:ARBUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:OPUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:AAVEUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:UNIUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:LTCUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:TRXUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:TONUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:NEARUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:INJUSDT",
+            "asset_type": "crypto",
+            "venue": "BINANCE"
+          },
+          {
+            "symbol_canonical": "BINANCE:ETHWUSDT",
+            "asset_type": "CRYPTO",
+            "venue": "Binance",
+            "notes": [
+              "position_coverage",
+              "ban_zero_only"
+            ]
+          }
+        ]
+      },
+      "maintenance": {
+        "whitelist_review_cadence": "semiannual_or_event",
+        "candidate_pool_refresh": "monthly",
+        "notes": "low-touch: candidate_pool revisado mensalmente; whitelist só muda por evento estrutural/mandato ou revisão semestral. Cobertura de posições é obrigatória.",
+        "created_at_utc": "2026-01-07T20:37:47.015491+00:00",
+        "updated_at_utc": "2026-01-07T20:37:47.015491+00:00",
+        "updated_at_brt": "2026-01-07T17:37:47.015491-03:00",
+        "next_update_reco_brt": "2026-02-02T10:00:00-03:00"
+      }
     },
     "binance": {
-        "usdt": 2390.27804455,
-        "positions": {
-            "BTC": {
-                "quantity": 0.06432968,
-                "avg_cost_usd": 98414.31,
-                "asset_type": "crypto",
-                "venue": "BINANCE",
-                "symbol_canonical": "BINANCE:BTCUSDT",
-                "currency": "USD",
-                "vendor_profile": [
-                    "c1",
-                    "c2",
-                    "c3"
-                ]
-            },
-            "ETH": {
-                "quantity": 0.96933289,
-                "avg_cost_usd": 3359.47381438,
-                "asset_type": "crypto",
-                "venue": "BINANCE",
-                "symbol_canonical": "BINANCE:ETHUSDT",
-                "currency": "USD",
-                "vendor_profile": [
-                    "c1",
-                    "c2",
-                    "c3"
-                ]
-            },
-            "SOL": {
-                "quantity": 14.59101269,
-                "avg_cost_usd": 156.62,
-                "asset_type": "crypto",
-                "venue": "BINANCE",
-                "symbol_canonical": "BINANCE:SOLUSDT",
-                "currency": "USD",
-                "vendor_profile": [
-                    "c1",
-                    "c2",
-                    "c3"
-                ]
-            },
-            "LINK": {
-                "quantity": 92.04735737,
-                "avg_cost_usd": 17.45,
-                "asset_type": "crypto",
-                "venue": "BINANCE",
-                "symbol_canonical": "BINANCE:LINKUSDT",
-                "currency": "USD",
-                "vendor_profile": [
-                    "c1",
-                    "c2",
-                    "c3"
-                ]
-            },
-            "XRP": {
-                "quantity": 922.74125048,
-                "avg_cost_usd": 2.24310548,
-                "asset_type": "crypto",
-                "venue": "BINANCE",
-                "symbol_canonical": "BINANCE:XRPUSDT",
-                "currency": "USD",
-                "vendor_profile": [
-                    "c1",
-                    "c2",
-                    "c3"
-                ]
-            },
-            "FET": {
-                "quantity": 2041.85852019,
-                "avg_cost_usd": 0.48993082,
-                "asset_type": "crypto",
-                "venue": "BINANCE",
-                "symbol_canonical": "BINANCE:FETUSDT",
-                "currency": "USD",
-                "vendor_profile": [
-                    "c1",
-                    "c2",
-                    "c3"
-                ]
-            },
-            "ADA": {
-                "quantity": 1975.025097,
-                "avg_cost_usd": 0.41250718,
-                "asset_type": "crypto",
-                "venue": "BINANCE",
-                "symbol_canonical": "BINANCE:ADAUSDT",
-                "currency": "USD",
-                "vendor_profile": [
-                    "c1",
-                    "c2",
-                    "c3"
-                ]
-            },
-            "AAVE": {
-                "quantity": 3.20098389,
-                "avg_cost_usd": 164.26,
-                "asset_type": "crypto",
-                "venue": "BINANCE",
-                "symbol_canonical": "BINANCE:AAVEUSDT",
-                "currency": "USD",
-                "vendor_profile": [
-                    "c1",
-                    "c2",
-                    "c3"
-                ]
-            }
-        }
+      "filters": {
+        "top_n": 50,
+        "hist_days_min": 90,
+        "depth_mult_min": 20,
+        "spread_max_pct": 0.35
+      }
     },
-    "lockouts": {
-        "binance_usdt": {
-            "scope": "global",
-            "threshold_pct": 20,
-            "tolerance_pct": 30,
-            "duration_business_days": 2,
-            "state": {
-                "last_trigger": "winners/giveback",
-                "activated_utc": "2025-09-19T20:09:00Z",
-                "expires_utc": "2025-09-23T23:59:59Z",
-                "usdt_pct_snapshot": 22.4,
-                "note": "STATUS DERIVADO: ativo = (now_utc < expires_utc)."
-            }
+    "fx_refs": [
+      "DXY",
+      "PTAX_5d",
+      "PF_BRL_composite"
+    ],
+    "watchlists_meta": {
+      "strategy_watchlists_version_applied": "v20251228H+v20251228K+v20251228L+v20251228M",
+      "run_at_utc": "2026-01-07T20:37:47.015491+00:00",
+      "run_at_brt": "2026-01-07T17:37:47.015491-03:00",
+      "next_update_reco_brt": "2026-02-02T10:00:00-03:00",
+      "external_overlay": {
+        "policy": "best-effort com fail-switch (quorum) — sem quorum: nao adiciona simbolos novos (exceto cobertura de posicao), apenas remocoes obrigatorias + metadados.",
+        "curated_sources": {
+          "avenue": {
+            "target_count_y": 6,
+            "min_required_x": 4,
+            "sources": [
+              {
+                "name": "Vanguard — VXUS factsheet (PDF)",
+                "url": "https://fund-docs.vanguard.com/F3369.pdf",
+                "type": "issuer_factsheet",
+                "status": "OK"
+              },
+              {
+                "name": "Vanguard — VUG investment option profile (PDF)",
+                "url": "https://fund-docs.vanguard.com/Vanguard_Growth_ETF_Investment_Option_Profile.pdf",
+                "type": "issuer_factsheet",
+                "status": "OK"
+              },
+              {
+                "name": "BlackRock iShares — IXUS product page",
+                "url": "https://www.ishares.com/us/products/239623/ishares-core-msci-total-international-stock-etf",
+                "type": "issuer_profile",
+                "status": "OK"
+              },
+              {
+                "name": "iShares — IVV factsheet (PDF)",
+                "url": "https://www.scbam.com/medias/fund-doc/master-fund/SCBSP500-SSF_MASTER.pdf",
+                "type": "issuer_factsheet",
+                "status": "OK"
+              },
+              {
+                "name": "Investopedia — ex-US ETF overview (VXUS/VEU)",
+                "url": "https://www.investopedia.com/articles/etfs-mutual-funds/042816/3-largest-global-exus-etfs-veu-vxus.asp",
+                "type": "curated_editorial",
+                "status": "OK"
+              },
+              {
+                "name": "Schwab — Intelligent Portfolios ETFs",
+                "url": "https://www.schwab.com/intelligent-portfolios/etfs",
+                "type": "methodology",
+                "status": "FAIL"
+              }
+            ]
+          },
+          "binance": {
+            "target_count_y": 2,
+            "min_required_x": 1,
+            "sources": [
+              {
+                "name": "Binance — exchangeInfo (symbol validation)",
+                "url": "https://data-api.binance.vision/api/v3/exchangeInfo?symbol=BTCUSDT",
+                "type": "primary_endpoint",
+                "status": "OK"
+              },
+              {
+                "name": "Binance — ticker/24hr (volume)",
+                "url": "https://data-api.binance.vision/api/v3/ticker/24hr?symbol=BTCUSDT",
+                "type": "primary_endpoint",
+                "status": "OK"
+              }
+            ],
+            "optional_bonus": [
+              {
+                "name": "CoinGecko markets (best-effort)",
+                "url": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd",
+                "type": "optional"
+              }
+            ]
+          }
+        },
+        "quorum_result": {
+          "avenue": {
+            "attempted_y": 6,
+            "ok": 5,
+            "min_required_x": 4,
+            "status": "OK"
+          },
+          "binance": {
+            "attempted_y": 2,
+            "ok": 2,
+            "min_required_x": 1,
+            "status": "OK"
+          }
+        },
+        "sources_used_summary": {
+          "avenue": [
+            "Quorum 5/6 OK; permitido adicionar 1 broad ex-US (VXUS) e remover redundâncias broad US (SPY/VTI)"
+          ],
+          "binance": [
+            "Quorum 2/2 OK; endpoints exchangeInfo e ticker/24hr acessíveis via data-api.binance.vision"
+          ]
         }
-    },
-    "ledger": [
-        {
-            "platform": "binance",
-            "symbol": "ETH",
-            "side": "buy",
-            "quantity": 0.16699864,
-            "price_usd": 4610.82,
-            "cost_usdt": 770,
-            "timestamp_utc": "2025-09-18T21:16:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "binance",
-            "symbol": "SOL",
-            "side": "buy",
-            "quantity": 2.06245215,
-            "price_usd": 249.703,
-            "cost_usdt": 515,
-            "timestamp_utc": "2025-09-18T21:16:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "binance",
-            "symbol": "LINK",
-            "side": "buy",
-            "quantity": 10.51484482,
-            "price_usd": 24.7269,
-            "cost_usdt": 260,
-            "timestamp_utc": "2025-09-18T21:17:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "binance",
-            "symbol": "FET",
-            "side": "buy",
-            "quantity": 250.03947883,
-            "price_usd": 0.679893,
-            "cost_usdt": 170,
-            "timestamp_utc": "2025-09-18T21:17:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "binance",
-            "symbol": "SOL",
-            "side": "sell",
-            "quantity": 2.33261969,
-            "price_usd": 235.358,
-            "proceeds_usdt": 549,
-            "timestamp_utc": "2025-09-19T20:08:00Z",
-            "reason": "winner_25pct"
-        },
-        {
-            "platform": "binance",
-            "symbol": "LINK",
-            "side": "sell",
-            "quantity": 15.90032073,
-            "price_usd": 23.27,
-            "proceeds_usdt": 370,
-            "timestamp_utc": "2025-09-19T20:09:00Z",
-            "reason": "winner_25pct"
-        },
-        {
-            "platform": "binance",
-            "symbol": "SOL",
-            "side": "buy",
-            "quantity": 1.23859617,
-            "price_usd": 201.841,
-            "cost_usdt": 250,
-            "timestamp_utc": "2025-09-25T15:53:00Z",
-            "reason": "spot_buy_N2"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "VUG",
-            "side": "buy",
-            "quantity": 2.9,
-            "price_usd": 482.3,
-            "cost_usd": 1398.67,
-            "timestamp_utc": "2025-10-01T18:18:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "IVW",
-            "side": "buy",
-            "quantity": 9.89,
-            "price_usd": 121.37,
-            "cost_usd": 1200.35,
-            "timestamp_utc": "2025-10-01T18:19:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "IUSG",
-            "side": "buy",
-            "quantity": 4.83,
-            "price_usd": 165.42,
-            "cost_usd": 801.48,
-            "timestamp_utc": "2025-10-01T18:19:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "SOXX",
-            "side": "buy",
-            "quantity": 4.37,
-            "price_usd": 274.57,
-            "cost_usd": 1204.89,
-            "timestamp_utc": "2025-10-01T18:20:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "binance",
-            "symbol": "SOL",
-            "side": "buy",
-            "quantity": 3.18573022,
-            "price_usd": 219.73,
-            "cost_usdt": 700,
-            "timestamp_utc": "2025-10-01T18:24:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "binance",
-            "symbol": "LINK",
-            "side": "buy",
-            "quantity": 17.71220137,
-            "price_usd": 22.5833,
-            "cost_usdt": 400,
-            "timestamp_utc": "2025-10-01T18:24:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "binance",
-            "symbol": "XRP",
-            "side": "buy",
-            "quantity": 135.95132764,
-            "price_usd": 2.94223,
-            "cost_usdt": 400,
-            "timestamp_utc": "2025-10-01T18:25:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "binance",
-            "symbol": "FET",
-            "side": "buy",
-            "quantity": 300,
-            "price_usd": 0.596328,
-            "cost_usdt": 178.89845875,
-            "timestamp_utc": "2025-10-01T18:25:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "id": "ldg-binance-BTC-2025-10-06T16:03:00Z",
-            "platform": "binance",
-            "account": "spot",
-            "asset": "BTC",
-            "delta": 0.00239407,
-            "reason": "trade",
-            "ref": "binance-spot-BTC-2025-10-06T16:03:00Z",
-            "timestamp_utc": "2025-10-06T16:03:00Z"
-        },
-        {
-            "id": "ldg-binance-ETH-2025-10-06T16:03:30Z",
-            "platform": "binance",
-            "account": "spot",
-            "asset": "ETH",
-            "delta": 0.03715447,
-            "reason": "trade",
-            "ref": "binance-spot-ETH-2025-10-06T16:03:30Z",
-            "timestamp_utc": "2025-10-06T16:03:30Z"
-        },
-        {
-            "id": "ldg-binance-SOL-2025-10-06T16:04:00Z",
-            "platform": "binance",
-            "account": "spot",
-            "asset": "SOL",
-            "delta": 0.52519038,
-            "reason": "trade",
-            "ref": "binance-spot-SOL-2025-10-06T16:04:00Z",
-            "timestamp_utc": "2025-10-06T16:04:00Z"
-        },
-        {
-            "platform": "binance",
-            "symbol": "BTC",
-            "side": "sell",
-            "quantity": 0.00496641,
-            "price_usd": 120811.7,
-            "proceeds_usdt": 600,
-            "timestamp_utc": "2025-10-07T18:08:13Z",
-            "reason": "spot_convert_to_usdt"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "TSM",
-            "side": "sell",
-            "quantity": 2.06,
-            "price_usd": 305.24,
-            "proceeds_usd": 626.29,
-            "timestamp_utc": "2025-10-29T17:38:00Z",
-            "reason": "winner_25pct"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "PLTR",
-            "side": "sell",
-            "quantity": 1.78,
-            "price_usd": 197.4,
-            "proceeds_usd": 348.87,
-            "timestamp_utc": "2025-10-29T17:39:00Z",
-            "reason": "winner_25pct"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "NVDA",
-            "side": "sell",
-            "quantity": 0.89,
-            "price_usd": 202.68,
-            "proceeds_usd": 177.89,
-            "timestamp_utc": "2025-10-31T17:17:00Z",
-            "reason": "winner_25pct"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "PLTR",
-            "side": "sell",
-            "quantity": 1.36,
-            "price_usd": 198.03,
-            "proceeds_usd": 266.82,
-            "timestamp_utc": "2025-10-31T17:16:00Z",
-            "reason": "winner_25pct"
-        },
-        {
-            "platform": "binance",
-            "symbol": "AAVE",
-            "side": "buy",
-            "quantity": 1,
-            "price_usd": 179.363333,
-            "cost_usdt": 179.3633325,
-            "timestamp_utc": "2025-11-18T23:34:12Z",
-            "reason": "spot_convert_from_usdt"
-        },
-        {
-            "platform": "binance",
-            "symbol": "ADA",
-            "side": "buy",
-            "quantity": 314.27457457,
-            "price_usd": 0.47729,
-            "cost_usdt": 150,
-            "timestamp_utc": "2025-11-18T23:34:47Z",
-            "reason": "spot_convert_from_usdt"
-        },
-        {
-            "platform": "binance",
-            "symbol": "ADA",
-            "side": "buy",
-            "quantity": 740.74211022,
-            "price_usd": 0.431999,
-            "cost_usdt": 320,
-            "timestamp_utc": "2025-11-24T19:15:00Z",
-            "reason": "spot_convert_from_usdt"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "IUSG",
-            "side": "buy",
-            "quantity": 7.84,
-            "price_usd": 165.3,
-            "cost_usd": 1295.95,
-            "timestamp_utc": "2025-11-24T19:16:00Z",
-            "reason": "spot_buy_core"
-        },
-        {
-            "platform": "binance",
-            "symbol": "FET",
-            "side": "buy",
-            "quantity": 882.41881619,
-            "price_usd": 0.269713,
-            "cost_usdt": 238,
-            "timestamp_utc": "2025-11-25T17:22:00Z",
-            "reason": "spot_convert_from_usdt"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "VUG",
-            "side": "buy",
-            "quantity": 2.26,
-            "price_usd": 491.56,
-            "cost_usd": 1110.93,
-            "timestamp_utc": "2025-12-03T20:55:00Z",
-            "reason": "rebalance_core"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "IVW",
-            "side": "buy",
-            "quantity": 7.56,
-            "price_usd": 123.6,
-            "cost_usd": 936.92,
-            "timestamp_utc": "2025-12-03T20:56:00Z",
-            "reason": "rebalance_core"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "IUSG",
-            "side": "buy",
-            "quantity": 5.67,
-            "price_usd": 168.47,
-            "cost_usd": 957.72,
-            "timestamp_utc": "2025-12-03T20:56:00Z",
-            "reason": "rebalance_core"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "AVGO",
-            "side": "sell",
-            "quantity": 1,
-            "price_usd": 380.12,
-            "proceeds_usd": 377.62,
-            "timestamp_utc": "2025-12-04T20:29:00Z",
-            "reason": "rebalance_core"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "SMCI",
-            "side": "sell",
-            "quantity": 5.01761,
-            "price_usd": 33.69,
-            "proceeds_usd": 166.54,
-            "timestamp_utc": "2025-12-03T20:59:00Z",
-            "reason": "rebalance_core"
-        },
-        {
-            "platform": "binance",
-            "symbol": "BTC",
-            "side": "buy",
-            "quantity": 0.00265268,
-            "price_usd": 94244,
-            "cost_usd": 250,
-            "timestamp_utc": "2025-12-09T17:53:00Z",
-            "reason": "spot_convert_from_usdt"
-        },
-        {
-            "platform": "binance",
-            "symbol": "ETH",
-            "side": "buy",
-            "quantity": 0.0737907,
-            "price_usd": 3387.96,
-            "cost_usd": 250,
-            "timestamp_utc": "2025-12-09T17:53:00Z",
-            "reason": "spot_convert_from_usdt"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "SOXX",
-            "side": "buy",
-            "quantity": 1.66,
-            "price_usd": 312.47,
-            "cost_usd": 521.2,
-            "timestamp_utc": "2025-12-09T17:55:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "AVGO",
-            "side": "buy",
-            "quantity": 1.28,
-            "price_usd": 405.73,
-            "cost_usd": 521.83,
-            "timestamp_utc": "2025-12-09T17:56:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "ARGT",
-            "side": "buy",
-            "quantity": 5.71,
-            "price_usd": 91.38,
-            "cost_usd": 524.28,
-            "timestamp_utc": "2025-12-09T17:57:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "timestamp_utc": "2025-12-15T18:48:00Z",
-            "platform": "avenue",
-            "symbol": "IJR",
-            "side": "buy",
-            "quantity": 3.62,
-            "price_usd": 123.73,
-            "cost_usd": 450.4,
-            "reason": "spot_buy"
-        },
-        {
-            "timestamp_utc": "2025-12-15T18:49:00Z",
-            "platform": "avenue",
-            "symbol": "XLV",
-            "side": "buy",
-            "quantity": 2.58,
-            "price_usd": 155.65,
-            "cost_usd": 404.06,
-            "reason": "spot_buy"
-        },
-        {
-            "timestamp_utc": "2025-12-15T18:50:00Z",
-            "platform": "avenue",
-            "symbol": "XLF",
-            "side": "buy",
-            "quantity": 7.27,
-            "price_usd": 54.92,
-            "cost_usd": 401.77,
-            "reason": "spot_buy"
-        },
-        {
-            "timestamp_utc": "2025-12-15T18:55:00Z",
-            "platform": "binance",
-            "symbol": "ETH",
-            "side": "buy",
-            "quantity": 0.06482712,
-            "price_usd": 2930.87,
-            "cost_usdt": 190,
-            "reason": "spot_buy"
-        },
-        {
-            "timestamp_utc": "2025-12-15T18:57:00Z",
-            "platform": "avenue",
-            "symbol": "ECH",
-            "side": "buy",
-            "quantity": 7.6,
-            "price_usd": 39.18,
-            "cost_usd": 300.27,
-            "reason": "spot_buy"
-        },
-        {
-            "timestamp_utc": "2025-12-15T19:10:00Z",
-            "platform": "binance",
-            "symbol": "BTC",
-            "side": "buy",
-            "quantity": 0.0023216,
-            "price_usd": 86147.4,
-            "cost_usdt": 200,
-            "reason": "spot_buy"
-        },
-        {
-            "timestamp_utc": "2025-12-19T19:42:00Z",
-            "platform": "AVENUE",
-            "symbol": "PLTR",
-            "side": "sell",
-            "quantity": 1,
-            "price_usd": 190.67,
-            "proceeds_usd": 188.17,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-19T19:43:00Z",
-            "platform": "AVENUE",
-            "symbol": "NVDA",
-            "side": "sell",
-            "quantity": 0.66,
-            "price_usd": 180.92,
-            "proceeds_usd": 116.91,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-19T19:44:00Z",
-            "platform": "AVENUE",
-            "symbol": "XLV",
-            "side": "buy",
-            "quantity": 3.86,
-            "price_usd": 155.56,
-            "cost_usd": 602.98,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-19T19:44:30Z",
-            "platform": "AVENUE",
-            "symbol": "VST",
-            "side": "buy",
-            "quantity": 1.82,
-            "price_usd": 164.21,
-            "cost_usd": 301.36,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-19T19:45:00Z",
-            "platform": "AVENUE",
-            "symbol": "LLY",
-            "side": "buy",
-            "quantity": 0.47,
-            "price_usd": 1069.27,
-            "cost_usd": 505.06,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-19T19:51:36Z",
-            "platform": "BINANCE",
-            "symbol": "BTC",
-            "side": "buy",
-            "quantity": 0.0079346,
-            "price_usd": 88221.21,
-            "cost_usdt": 700,
-            "reason": "spot_buy"
-        },
-        {
-            "timestamp_utc": "2025-12-22T18:08:00Z",
-            "platform": "AVENUE",
-            "symbol": "AVENUE:PLTR",
-            "side": "BUY",
-            "quantity": 2.58486,
-            "price_usd": 193.09,
-            "cost_usd": 501.61,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-22T18:09:00Z",
-            "platform": "AVENUE",
-            "symbol": "AVENUE:LLY",
-            "side": "BUY",
-            "quantity": 0.46895,
-            "price_usd": 1069.3,
-            "cost_usd": 503.95,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-22T18:09:00Z",
-            "platform": "AVENUE",
-            "symbol": "AVENUE:XLV",
-            "side": "BUY",
-            "quantity": 2.582,
-            "price_usd": 155.16,
-            "cost_usd": 403.12,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-22T18:10:00Z",
-            "platform": "AVENUE",
-            "symbol": "AVENUE:AVGO",
-            "side": "BUY",
-            "quantity": 0.91189,
-            "price_usd": 341.17,
-            "cost_usd": 313.61,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-22T18:11:41Z",
-            "platform": "BINANCE",
-            "symbol": "BINANCE:ETHUSDT",
-            "side": "BUY",
-            "quantity": 0.11500166,
-            "price_usd": 3043.43,
-            "cost_usdt": 350,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-22T18:12:05Z",
-            "platform": "BINANCE",
-            "symbol": "BINANCE:LINKUSDT",
-            "side": "BUY",
-            "quantity": 27.31991651,
-            "price_usd": 12.81,
-            "cost_usdt": 350,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-22T18:12:37Z",
-            "platform": "BINANCE",
-            "symbol": "BINANCE:XRPUSDT",
-            "side": "BUY",
-            "quantity": 179.65848687,
-            "price_usd": 1.95,
-            "cost_usdt": 350,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-22T18:13:32Z",
-            "platform": "BINANCE",
-            "symbol": "BINANCE:ADAUSDT",
-            "side": "BUY",
-            "quantity": 920.00841221,
-            "price_usd": 0.38,
-            "cost_usdt": 350,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-22T18:13:52Z",
-            "platform": "BINANCE",
-            "symbol": "BINANCE:AAVEUSDT",
-            "side": "BUY",
-            "quantity": 2.20098389,
-            "price_usd": 159.02,
-            "cost_usdt": 350,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-30T17:16:00Z",
-            "platform": "AVENUE",
-            "symbol": "AVENUE:VST",
-            "side": "BUY",
-            "quantity": 5.59,
-            "price_usd": 162.08,
-            "cost_usd": 908.53,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-30T17:12:00Z",
-            "platform": "BINANCE",
-            "symbol": "BINANCE:ETHUSDT",
-            "side": "BUY",
-            "quantity": 0.3666638,
-            "price_usd": 3000.02,
-            "cost_usdt": 1100,
-            "reason": "manual_trade"
-        },
-        {
-            "timestamp_utc": "2025-12-30T17:13:00Z",
-            "platform": "BINANCE",
-            "symbol": "BINANCE:SOLUSDT",
-            "side": "BUY",
-            "quantity": 2.70863295,
-            "price_usd": 126.632,
-            "cost_usdt": 343,
-            "reason": "manual_trade"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "TSM",
-            "side": "sell",
-            "quantity": 1.546,
-            "price_usd": 314.92,
-            "proceeds_usd": 486.86,
-            "timestamp_utc": "2026-01-02T16:14:00Z",
-            "reason": "rebalance_core"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "SOXX",
-            "side": "buy",
-            "quantity": 1,
-            "price_usd": 311.78,
-            "cost_usd": 314.28,
-            "timestamp_utc": "2026-01-02T18:13:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "CVX",
-            "side": "buy",
-            "quantity": 3.63,
-            "price_usd": 164.56,
-            "cost_usd": 599.85,
-            "timestamp_utc": "2026-01-05T19:07:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "SLB",
-            "side": "buy",
-            "quantity": 6.66,
-            "price_usd": 45.01,
-            "cost_usd": 302.27,
-            "timestamp_utc": "2026-01-05T19:09:00Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "IVW",
-            "side": "buy",
-            "quantity": 4.84,
-            "price_usd": 124.65,
-            "cost_usd": 605.81,
-            "timestamp_utc": "2026-01-13T19:23:00Z",
-            "reason": "manual_trade"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "VST",
-            "side": "buy",
-            "quantity": 1.73,
-            "price_usd": 173.74,
-            "cost_usd": 303.07,
-            "timestamp_utc": "2026-01-13T19:24:00Z",
-            "reason": "manual_trade"
-        },
-        {
-            "platform": "BINANCE",
-            "symbol": "BTC",
-            "side": "buy",
-            "quantity": 0.00329893,
-            "price_usd": 90938.58,
-            "cost_usdt": 300,
-            "timestamp_utc": "2026-01-09T23:13:49Z",
-            "reason": "spot_buy"
-        },
-        {
-            "platform": "avenue",
-            "symbol": "VST",
-            "side": "buy",
-            "quantity": 6.36,
-            "price_usd": 156.34,
-            "cost_usd": 996.85,
-            "timestamp_utc": "2026-01-20T20:17:00Z",
-            "reason": "manual_trade"
-        },
-        {
-            "platform": "binance",
-            "symbol": "XRP",
-            "side": "buy",
-            "quantity": 275.31855718,
-            "price_usd": 1.99769,
-            "cost_usdt": 550,
-            "timestamp_utc": "2026-01-19T15:10:55Z",
-            "reason": "manual_trade"
+      },
+      "changes": {
+        "added_symbols": [
+          "BINANCE:ETHWUSDT",
+          "NASDAQ:VXUS",
+          "NYSE:CVX",
+          "NYSE:SLB",
+          "NYSEARCA:ECH"
+        ],
+        "removed_symbols": [
+          "NASDAQ:QQQ",
+          "NYSEARCA:SPY",
+          "NYSEARCA:VTI"
+        ],
+        "removed_count": 3
+      },
+      "integrity": {
+        "counts_from_json": {
+          "avenue": {
+            "whitelist": 12,
+            "candidate_pool": 27,
+            "total": 39
+          },
+          "binance": {
+            "whitelist": 6,
+            "candidate_pool": 13,
+            "total": 19
+          }
+        },
+        "invariants": {
+          "position_coverage_ok": true,
+          "broad_us_redundancy_ok": true,
+          "broad_ex_us_redundancy_ok": true,
+          "no_duplicates_ok": true
+        },
+        "details": {
+          "broad_us_kept": [
+            "NYSEARCA:VOO"
+          ],
+          "broad_ex_us_kept": [
+            "NASDAQ:VXUS"
+          ],
+          "duplicates": {
+            "avenue_whitelist": [],
+            "avenue_candidate_pool": [],
+            "binance_whitelist": [],
+            "binance_candidate_pool": []
+          },
+          "position_missing_after_update": {
+            "avenue": [],
+            "binance": []
+          }
         }
+      },
+      "AUDITORIA_WATCHLISTS": [
+        "Cobertura_posicoes: OK (Avenue 17 / Binance 9)",
+        "Avenue counts (JSON): whitelist=12 candidate_pool=27 total=39",
+        "Binance counts (JSON): whitelist=6 candidate_pool=13 total=19",
+        "Redundancia broad (Avenue): US=['NYSEARCA:VOO'] ex-US=['NASDAQ:VXUS']",
+        "Overlay quorum: Avenue 5/6 (min 4) • Binance 2/2 (min 1)",
+        "Alteracoes: adicionados=['BINANCE:ETHWUSDT', 'NASDAQ:VXUS', 'NYSE:CVX', 'NYSE:SLB', 'NYSEARCA:ECH'] removidos=['NASDAQ:QQQ', 'NYSEARCA:SPY', 'NYSEARCA:VTI']"
+      ],
+      "Gate": {
+        "Gate": "OK",
+        "Motivo": "—"
+      }
+    }
+  },
+  "controls": {
+    "quiet_hours_brt": "09:00-21:00",
+    "notify_only_on_action": true,
+    "pre_alerts": false,
+    "winners_basis": "avg_cost_usd",
+    "giveback_hwm_basis": "portfolio_hwm",
+    "compute_lockout_from_timestamps": true,
+    "reentry_modes": [
+      "N_level",
+      "structural_rebalance"
     ]
+  },
+  "automation_rules": {
+    "n_levels": [
+      "N1",
+      "N2",
+      "N3",
+      "N3C"
+    ],
+    "apply_precedence": [
+      "winners_giveback",
+      "btc_cap_40pct",
+      "usdt_band_min"
+    ],
+    "throttle": {
+      "max_tactical_positions": 5,
+      "entries_per_week_per_platform": 2
+    },
+    "post_event_macro": {
+      "wait_close_if_lt_24h": true
+    },
+    "winners": {
+      "take_pct_on_30pct_profit": 25
+    },
+    "giveback": {
+      "sell_pct_on_25pct_profit_and_minus12pct_dd": 20
+    },
+    "rebalance_window_business_days": [
+      1,
+      5
+    ],
+    "cash_bands": {
+      "avenue_target_pct": 10,
+      "avenue_band_pct": [
+        8,
+        12
+      ],
+      "binance_usdt_min_pct": 5
+    },
+    "btc_cap_guideline_pct_ex_usdt": 40,
+    "lockout_logic": {
+      "scope": "global",
+      "threshold_pct": 20,
+      "tolerance_pct": 30,
+      "duration_business_days": 2,
+      "reentry_modes": [
+        "N_level",
+        "structural_rebalance"
+      ]
+    }
+  },
+  "policy_overlays": {
+    "risk": {
+      "dxy_3d_pct": 0.8,
+      "vix_gt": 25,
+      "usdt_depeg_pct": -0.5
+    },
+    "order_min_avenue_usd": 300,
+    "position_floors_enabled": true
+  },
+  "avenue": {
+    "cash_usd": 7474.62,
+    "positions": {
+      "VUG": {
+        "quantity": 8.5197,
+        "avg_cost_usd": 471.64,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA:VUG",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": "US9229087360",
+        "schema_warn": []
+      },
+      "SGOV": {
+        "quantity": 5.37556,
+        "avg_cost_usd": 100.45,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA:SGOV",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": null,
+        "schema_warn": [
+          "missing_isin_or_figi"
+        ]
+      },
+      "IVW": {
+        "quantity": 33.52158,
+        "avg_cost_usd": 119.83,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA:IVW",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": "US4642873099",
+        "schema_warn": []
+      },
+      "IUSG": {
+        "quantity": 32.21,
+        "avg_cost_usd": 166.09,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA:IUSG",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": "US4642878791",
+        "schema_warn": []
+      },
+      "SOXX": {
+        "quantity": 15.89952,
+        "avg_cost_usd": 263.25,
+        "asset_type": "etf",
+        "venue": "NASDAQ",
+        "symbol_canonical": "NASDAQ:SOXX",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": null,
+        "schema_warn": [
+          "missing_isin_or_figi"
+        ]
+      },
+      "TSM": {
+        "quantity": 4.63818,
+        "avg_cost_usd": 230.17,
+        "asset_type": "equity",
+        "venue": "NYSE",
+        "symbol_canonical": "NYSE:TSM",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": "US8740391003",
+        "schema_warn": []
+      },
+      "AVGO": {
+        "quantity": 7.13346,
+        "avg_cost_usd": 320.14,
+        "asset_type": "equity",
+        "venue": "NASDAQ",
+        "symbol_canonical": "NASDAQ:AVGO",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": "US11135F1012",
+        "schema_warn": []
+      },
+      "VST": {
+        "quantity": 18.25565,
+        "avg_cost_usd": 165.64,
+        "asset_type": "equity",
+        "venue": "NYSE",
+        "symbol_canonical": "NYSE:VST",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": "US92840M1027",
+        "schema_warn": []
+      },
+      "PLTR": {
+        "quantity": 5.64453,
+        "avg_cost_usd": 167.09,
+        "asset_type": "equity",
+        "venue": "NYSE",
+        "symbol_canonical": "NYSE:PLTR",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": "US69608A1088",
+        "schema_warn": []
+      },
+      "ARGT": {
+        "quantity": 21.55,
+        "avg_cost_usd": 79.57,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA:ARGT",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": null,
+        "schema_warn": [
+          "missing_isin_or_figi"
+        ]
+      },
+      "IJR": {
+        "quantity": 3.62,
+        "avg_cost_usd": 124.42,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA:IJR",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": null,
+        "schema_warn": [
+          "isin_missing"
+        ]
+      },
+      "XLV": {
+        "quantity": 9.022,
+        "avg_cost_usd": 156.02,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA:XLV",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": null,
+        "schema_warn": [
+          "isin_missing"
+        ]
+      },
+      "XLF": {
+        "quantity": 7.27,
+        "avg_cost_usd": 55.26,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA:XLF",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": null,
+        "schema_warn": [
+          "isin_missing"
+        ]
+      },
+      "ECH": {
+        "quantity": 7.6,
+        "avg_cost_usd": 39.51,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA:ECH",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": null,
+        "schema_warn": [
+          "isin_missing"
+        ]
+      },
+      "LLY": {
+        "quantity": 0.93895,
+        "avg_cost_usd": 1074.62,
+        "asset_type": "equity",
+        "venue": "NYSE",
+        "symbol_canonical": "NYSE:LLY",
+        "currency": "USD",
+        "isin": "US5324571083",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ]
+      },
+      "CVX": {
+        "symbol": "CVX",
+        "symbol_canonical": "NYSE:CVX",
+        "asset_type": "equity",
+        "venue": "NYSE",
+        "currency": "USD",
+        "quantity": 3.63,
+        "avg_cost_usd": 165.25,
+        "isin": null,
+        "vendor_profile": [
+          "yfinance",
+          "stooq",
+          "tiingo"
+        ],
+        "schema_warn": [
+          "missing_isin"
+        ]
+      },
+      "SLB": {
+        "symbol": "SLB",
+        "symbol_canonical": "NYSE:SLB",
+        "asset_type": "equity",
+        "venue": "NYSE",
+        "currency": "USD",
+        "quantity": 6.66,
+        "avg_cost_usd": 45.39,
+        "isin": null,
+        "vendor_profile": [
+          "yfinance",
+          "stooq",
+          "tiingo"
+        ],
+        "schema_warn": [
+          "missing_isin"
+        ]
+      },
+      "NVDA": {
+        "quantity": 2.17,
+        "avg_cost_usd": 185.7,
+        "asset_type": "equity",
+        "venue": "NASDAQ",
+        "symbol_canonical": "NASDAQ:NVDA",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": null,
+        "schema_warn": [
+          "missing_isin"
+        ]
+      }
+    }
+  },
+  "binance": {
+    "usdt": 2390.27804455,
+    "positions": {
+      "BTC": {
+        "quantity": 0.06432968,
+        "avg_cost_usd": 98414.31,
+        "asset_type": "crypto",
+        "venue": "BINANCE",
+        "symbol_canonical": "BINANCE:BTCUSDT",
+        "currency": "USD",
+        "vendor_profile": [
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "ETH": {
+        "quantity": 0.96933289,
+        "avg_cost_usd": 3359.47381438,
+        "asset_type": "crypto",
+        "venue": "BINANCE",
+        "symbol_canonical": "BINANCE:ETHUSDT",
+        "currency": "USD",
+        "vendor_profile": [
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "SOL": {
+        "quantity": 14.59101269,
+        "avg_cost_usd": 156.62,
+        "asset_type": "crypto",
+        "venue": "BINANCE",
+        "symbol_canonical": "BINANCE:SOLUSDT",
+        "currency": "USD",
+        "vendor_profile": [
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "LINK": {
+        "quantity": 92.04735737,
+        "avg_cost_usd": 17.45,
+        "asset_type": "crypto",
+        "venue": "BINANCE",
+        "symbol_canonical": "BINANCE:LINKUSDT",
+        "currency": "USD",
+        "vendor_profile": [
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "XRP": {
+        "quantity": 922.74125048,
+        "avg_cost_usd": 2.24310548,
+        "asset_type": "crypto",
+        "venue": "BINANCE",
+        "symbol_canonical": "BINANCE:XRPUSDT",
+        "currency": "USD",
+        "vendor_profile": [
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "FET": {
+        "quantity": 2041.85852019,
+        "avg_cost_usd": 0.48993082,
+        "asset_type": "crypto",
+        "venue": "BINANCE",
+        "symbol_canonical": "BINANCE:FETUSDT",
+        "currency": "USD",
+        "vendor_profile": [
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "ADA": {
+        "quantity": 1975.025097,
+        "avg_cost_usd": 0.41250718,
+        "asset_type": "crypto",
+        "venue": "BINANCE",
+        "symbol_canonical": "BINANCE:ADAUSDT",
+        "currency": "USD",
+        "vendor_profile": [
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "AAVE": {
+        "quantity": 3.20098389,
+        "avg_cost_usd": 164.26,
+        "asset_type": "crypto",
+        "venue": "BINANCE",
+        "symbol_canonical": "BINANCE:AAVEUSDT",
+        "currency": "USD",
+        "vendor_profile": [
+          "c1",
+          "c2",
+          "c3"
+        ]
+      }
+    }
+  },
+  "lockouts": {
+    "binance_usdt": {
+      "scope": "global",
+      "threshold_pct": 20,
+      "tolerance_pct": 30,
+      "duration_business_days": 2,
+      "state": {
+        "last_trigger": "winners/giveback",
+        "activated_utc": "2025-09-19T20:09:00Z",
+        "expires_utc": "2025-09-23T23:59:59Z",
+        "usdt_pct_snapshot": 22.4,
+        "note": "STATUS DERIVADO: ativo = (now_utc < expires_utc)."
+      }
+    }
+  },
+  "ledger": [
+    {
+      "platform": "binance",
+      "symbol": "ETH",
+      "side": "buy",
+      "quantity": 0.16699864,
+      "price_usd": 4610.82,
+      "cost_usdt": 770,
+      "timestamp_utc": "2025-09-18T21:16:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "binance",
+      "symbol": "SOL",
+      "side": "buy",
+      "quantity": 2.06245215,
+      "price_usd": 249.703,
+      "cost_usdt": 515,
+      "timestamp_utc": "2025-09-18T21:16:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "binance",
+      "symbol": "LINK",
+      "side": "buy",
+      "quantity": 10.51484482,
+      "price_usd": 24.7269,
+      "cost_usdt": 260,
+      "timestamp_utc": "2025-09-18T21:17:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "binance",
+      "symbol": "FET",
+      "side": "buy",
+      "quantity": 250.03947883,
+      "price_usd": 0.679893,
+      "cost_usdt": 170,
+      "timestamp_utc": "2025-09-18T21:17:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "binance",
+      "symbol": "SOL",
+      "side": "sell",
+      "quantity": 2.33261969,
+      "price_usd": 235.358,
+      "proceeds_usdt": 549,
+      "timestamp_utc": "2025-09-19T20:08:00Z",
+      "reason": "winner_25pct"
+    },
+    {
+      "platform": "binance",
+      "symbol": "LINK",
+      "side": "sell",
+      "quantity": 15.90032073,
+      "price_usd": 23.27,
+      "proceeds_usdt": 370,
+      "timestamp_utc": "2025-09-19T20:09:00Z",
+      "reason": "winner_25pct"
+    },
+    {
+      "platform": "binance",
+      "symbol": "SOL",
+      "side": "buy",
+      "quantity": 1.23859617,
+      "price_usd": 201.841,
+      "cost_usdt": 250,
+      "timestamp_utc": "2025-09-25T15:53:00Z",
+      "reason": "spot_buy_N2"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "VUG",
+      "side": "buy",
+      "quantity": 2.9,
+      "price_usd": 482.3,
+      "cost_usd": 1398.67,
+      "timestamp_utc": "2025-10-01T18:18:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "IVW",
+      "side": "buy",
+      "quantity": 9.89,
+      "price_usd": 121.37,
+      "cost_usd": 1200.35,
+      "timestamp_utc": "2025-10-01T18:19:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "IUSG",
+      "side": "buy",
+      "quantity": 4.83,
+      "price_usd": 165.42,
+      "cost_usd": 801.48,
+      "timestamp_utc": "2025-10-01T18:19:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "SOXX",
+      "side": "buy",
+      "quantity": 4.37,
+      "price_usd": 274.57,
+      "cost_usd": 1204.89,
+      "timestamp_utc": "2025-10-01T18:20:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "binance",
+      "symbol": "SOL",
+      "side": "buy",
+      "quantity": 3.18573022,
+      "price_usd": 219.73,
+      "cost_usdt": 700,
+      "timestamp_utc": "2025-10-01T18:24:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "binance",
+      "symbol": "LINK",
+      "side": "buy",
+      "quantity": 17.71220137,
+      "price_usd": 22.5833,
+      "cost_usdt": 400,
+      "timestamp_utc": "2025-10-01T18:24:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "binance",
+      "symbol": "XRP",
+      "side": "buy",
+      "quantity": 135.95132764,
+      "price_usd": 2.94223,
+      "cost_usdt": 400,
+      "timestamp_utc": "2025-10-01T18:25:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "binance",
+      "symbol": "FET",
+      "side": "buy",
+      "quantity": 300,
+      "price_usd": 0.596328,
+      "cost_usdt": 178.89845875,
+      "timestamp_utc": "2025-10-01T18:25:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "id": "ldg-binance-BTC-2025-10-06T16:03:00Z",
+      "platform": "binance",
+      "account": "spot",
+      "asset": "BTC",
+      "delta": 0.00239407,
+      "reason": "trade",
+      "ref": "binance-spot-BTC-2025-10-06T16:03:00Z",
+      "timestamp_utc": "2025-10-06T16:03:00Z"
+    },
+    {
+      "id": "ldg-binance-ETH-2025-10-06T16:03:30Z",
+      "platform": "binance",
+      "account": "spot",
+      "asset": "ETH",
+      "delta": 0.03715447,
+      "reason": "trade",
+      "ref": "binance-spot-ETH-2025-10-06T16:03:30Z",
+      "timestamp_utc": "2025-10-06T16:03:30Z"
+    },
+    {
+      "id": "ldg-binance-SOL-2025-10-06T16:04:00Z",
+      "platform": "binance",
+      "account": "spot",
+      "asset": "SOL",
+      "delta": 0.52519038,
+      "reason": "trade",
+      "ref": "binance-spot-SOL-2025-10-06T16:04:00Z",
+      "timestamp_utc": "2025-10-06T16:04:00Z"
+    },
+    {
+      "platform": "binance",
+      "symbol": "BTC",
+      "side": "sell",
+      "quantity": 0.00496641,
+      "price_usd": 120811.7,
+      "proceeds_usdt": 600,
+      "timestamp_utc": "2025-10-07T18:08:13Z",
+      "reason": "spot_convert_to_usdt"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "TSM",
+      "side": "sell",
+      "quantity": 2.06,
+      "price_usd": 305.24,
+      "proceeds_usd": 626.29,
+      "timestamp_utc": "2025-10-29T17:38:00Z",
+      "reason": "winner_25pct"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 1.78,
+      "price_usd": 197.4,
+      "proceeds_usd": 348.87,
+      "timestamp_utc": "2025-10-29T17:39:00Z",
+      "reason": "winner_25pct"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "NVDA",
+      "side": "sell",
+      "quantity": 0.89,
+      "price_usd": 202.68,
+      "proceeds_usd": 177.89,
+      "timestamp_utc": "2025-10-31T17:17:00Z",
+      "reason": "winner_25pct"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 1.36,
+      "price_usd": 198.03,
+      "proceeds_usd": 266.82,
+      "timestamp_utc": "2025-10-31T17:16:00Z",
+      "reason": "winner_25pct"
+    },
+    {
+      "platform": "binance",
+      "symbol": "AAVE",
+      "side": "buy",
+      "quantity": 1,
+      "price_usd": 179.363333,
+      "cost_usdt": 179.3633325,
+      "timestamp_utc": "2025-11-18T23:34:12Z",
+      "reason": "spot_convert_from_usdt"
+    },
+    {
+      "platform": "binance",
+      "symbol": "ADA",
+      "side": "buy",
+      "quantity": 314.27457457,
+      "price_usd": 0.47729,
+      "cost_usdt": 150,
+      "timestamp_utc": "2025-11-18T23:34:47Z",
+      "reason": "spot_convert_from_usdt"
+    },
+    {
+      "platform": "binance",
+      "symbol": "ADA",
+      "side": "buy",
+      "quantity": 740.74211022,
+      "price_usd": 0.431999,
+      "cost_usdt": 320,
+      "timestamp_utc": "2025-11-24T19:15:00Z",
+      "reason": "spot_convert_from_usdt"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "IUSG",
+      "side": "buy",
+      "quantity": 7.84,
+      "price_usd": 165.3,
+      "cost_usd": 1295.95,
+      "timestamp_utc": "2025-11-24T19:16:00Z",
+      "reason": "spot_buy_core"
+    },
+    {
+      "platform": "binance",
+      "symbol": "FET",
+      "side": "buy",
+      "quantity": 882.41881619,
+      "price_usd": 0.269713,
+      "cost_usdt": 238,
+      "timestamp_utc": "2025-11-25T17:22:00Z",
+      "reason": "spot_convert_from_usdt"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "VUG",
+      "side": "buy",
+      "quantity": 2.26,
+      "price_usd": 491.56,
+      "cost_usd": 1110.93,
+      "timestamp_utc": "2025-12-03T20:55:00Z",
+      "reason": "rebalance_core"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "IVW",
+      "side": "buy",
+      "quantity": 7.56,
+      "price_usd": 123.6,
+      "cost_usd": 936.92,
+      "timestamp_utc": "2025-12-03T20:56:00Z",
+      "reason": "rebalance_core"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "IUSG",
+      "side": "buy",
+      "quantity": 5.67,
+      "price_usd": 168.47,
+      "cost_usd": 957.72,
+      "timestamp_utc": "2025-12-03T20:56:00Z",
+      "reason": "rebalance_core"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "AVGO",
+      "side": "sell",
+      "quantity": 1,
+      "price_usd": 380.12,
+      "proceeds_usd": 377.62,
+      "timestamp_utc": "2025-12-04T20:29:00Z",
+      "reason": "rebalance_core"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "SMCI",
+      "side": "sell",
+      "quantity": 5.01761,
+      "price_usd": 33.69,
+      "proceeds_usd": 166.54,
+      "timestamp_utc": "2025-12-03T20:59:00Z",
+      "reason": "rebalance_core"
+    },
+    {
+      "platform": "binance",
+      "symbol": "BTC",
+      "side": "buy",
+      "quantity": 0.00265268,
+      "price_usd": 94244,
+      "cost_usd": 250,
+      "timestamp_utc": "2025-12-09T17:53:00Z",
+      "reason": "spot_convert_from_usdt"
+    },
+    {
+      "platform": "binance",
+      "symbol": "ETH",
+      "side": "buy",
+      "quantity": 0.0737907,
+      "price_usd": 3387.96,
+      "cost_usd": 250,
+      "timestamp_utc": "2025-12-09T17:53:00Z",
+      "reason": "spot_convert_from_usdt"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "SOXX",
+      "side": "buy",
+      "quantity": 1.66,
+      "price_usd": 312.47,
+      "cost_usd": 521.2,
+      "timestamp_utc": "2025-12-09T17:55:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "AVGO",
+      "side": "buy",
+      "quantity": 1.28,
+      "price_usd": 405.73,
+      "cost_usd": 521.83,
+      "timestamp_utc": "2025-12-09T17:56:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "ARGT",
+      "side": "buy",
+      "quantity": 5.71,
+      "price_usd": 91.38,
+      "cost_usd": 524.28,
+      "timestamp_utc": "2025-12-09T17:57:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "timestamp_utc": "2025-12-15T18:48:00Z",
+      "platform": "avenue",
+      "symbol": "IJR",
+      "side": "buy",
+      "quantity": 3.62,
+      "price_usd": 123.73,
+      "cost_usd": 450.4,
+      "reason": "spot_buy"
+    },
+    {
+      "timestamp_utc": "2025-12-15T18:49:00Z",
+      "platform": "avenue",
+      "symbol": "XLV",
+      "side": "buy",
+      "quantity": 2.58,
+      "price_usd": 155.65,
+      "cost_usd": 404.06,
+      "reason": "spot_buy"
+    },
+    {
+      "timestamp_utc": "2025-12-15T18:50:00Z",
+      "platform": "avenue",
+      "symbol": "XLF",
+      "side": "buy",
+      "quantity": 7.27,
+      "price_usd": 54.92,
+      "cost_usd": 401.77,
+      "reason": "spot_buy"
+    },
+    {
+      "timestamp_utc": "2025-12-15T18:55:00Z",
+      "platform": "binance",
+      "symbol": "ETH",
+      "side": "buy",
+      "quantity": 0.06482712,
+      "price_usd": 2930.87,
+      "cost_usdt": 190,
+      "reason": "spot_buy"
+    },
+    {
+      "timestamp_utc": "2025-12-15T18:57:00Z",
+      "platform": "avenue",
+      "symbol": "ECH",
+      "side": "buy",
+      "quantity": 7.6,
+      "price_usd": 39.18,
+      "cost_usd": 300.27,
+      "reason": "spot_buy"
+    },
+    {
+      "timestamp_utc": "2025-12-15T19:10:00Z",
+      "platform": "binance",
+      "symbol": "BTC",
+      "side": "buy",
+      "quantity": 0.0023216,
+      "price_usd": 86147.4,
+      "cost_usdt": 200,
+      "reason": "spot_buy"
+    },
+    {
+      "timestamp_utc": "2025-12-19T19:42:00Z",
+      "platform": "AVENUE",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 1,
+      "price_usd": 190.67,
+      "proceeds_usd": 188.17,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-19T19:43:00Z",
+      "platform": "AVENUE",
+      "symbol": "NVDA",
+      "side": "sell",
+      "quantity": 0.66,
+      "price_usd": 180.92,
+      "proceeds_usd": 116.91,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-19T19:44:00Z",
+      "platform": "AVENUE",
+      "symbol": "XLV",
+      "side": "buy",
+      "quantity": 3.86,
+      "price_usd": 155.56,
+      "cost_usd": 602.98,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-19T19:44:30Z",
+      "platform": "AVENUE",
+      "symbol": "VST",
+      "side": "buy",
+      "quantity": 1.82,
+      "price_usd": 164.21,
+      "cost_usd": 301.36,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-19T19:45:00Z",
+      "platform": "AVENUE",
+      "symbol": "LLY",
+      "side": "buy",
+      "quantity": 0.47,
+      "price_usd": 1069.27,
+      "cost_usd": 505.06,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-19T19:51:36Z",
+      "platform": "BINANCE",
+      "symbol": "BTC",
+      "side": "buy",
+      "quantity": 0.0079346,
+      "price_usd": 88221.21,
+      "cost_usdt": 700,
+      "reason": "spot_buy"
+    },
+    {
+      "timestamp_utc": "2025-12-22T18:08:00Z",
+      "platform": "AVENUE",
+      "symbol": "AVENUE:PLTR",
+      "side": "BUY",
+      "quantity": 2.58486,
+      "price_usd": 193.09,
+      "cost_usd": 501.61,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-22T18:09:00Z",
+      "platform": "AVENUE",
+      "symbol": "AVENUE:LLY",
+      "side": "BUY",
+      "quantity": 0.46895,
+      "price_usd": 1069.3,
+      "cost_usd": 503.95,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-22T18:09:00Z",
+      "platform": "AVENUE",
+      "symbol": "AVENUE:XLV",
+      "side": "BUY",
+      "quantity": 2.582,
+      "price_usd": 155.16,
+      "cost_usd": 403.12,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-22T18:10:00Z",
+      "platform": "AVENUE",
+      "symbol": "AVENUE:AVGO",
+      "side": "BUY",
+      "quantity": 0.91189,
+      "price_usd": 341.17,
+      "cost_usd": 313.61,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-22T18:11:41Z",
+      "platform": "BINANCE",
+      "symbol": "BINANCE:ETHUSDT",
+      "side": "BUY",
+      "quantity": 0.11500166,
+      "price_usd": 3043.43,
+      "cost_usdt": 350,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-22T18:12:05Z",
+      "platform": "BINANCE",
+      "symbol": "BINANCE:LINKUSDT",
+      "side": "BUY",
+      "quantity": 27.31991651,
+      "price_usd": 12.81,
+      "cost_usdt": 350,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-22T18:12:37Z",
+      "platform": "BINANCE",
+      "symbol": "BINANCE:XRPUSDT",
+      "side": "BUY",
+      "quantity": 179.65848687,
+      "price_usd": 1.95,
+      "cost_usdt": 350,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-22T18:13:32Z",
+      "platform": "BINANCE",
+      "symbol": "BINANCE:ADAUSDT",
+      "side": "BUY",
+      "quantity": 920.00841221,
+      "price_usd": 0.38,
+      "cost_usdt": 350,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-22T18:13:52Z",
+      "platform": "BINANCE",
+      "symbol": "BINANCE:AAVEUSDT",
+      "side": "BUY",
+      "quantity": 2.20098389,
+      "price_usd": 159.02,
+      "cost_usdt": 350,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-30T17:16:00Z",
+      "platform": "AVENUE",
+      "symbol": "AVENUE:VST",
+      "side": "BUY",
+      "quantity": 5.59,
+      "price_usd": 162.08,
+      "cost_usd": 908.53,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-30T17:12:00Z",
+      "platform": "BINANCE",
+      "symbol": "BINANCE:ETHUSDT",
+      "side": "BUY",
+      "quantity": 0.3666638,
+      "price_usd": 3000.02,
+      "cost_usdt": 1100,
+      "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2025-12-30T17:13:00Z",
+      "platform": "BINANCE",
+      "symbol": "BINANCE:SOLUSDT",
+      "side": "BUY",
+      "quantity": 2.70863295,
+      "price_usd": 126.632,
+      "cost_usdt": 343,
+      "reason": "manual_trade"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "TSM",
+      "side": "sell",
+      "quantity": 1.546,
+      "price_usd": 314.92,
+      "proceeds_usd": 486.86,
+      "timestamp_utc": "2026-01-02T16:14:00Z",
+      "reason": "rebalance_core"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "SOXX",
+      "side": "buy",
+      "quantity": 1,
+      "price_usd": 311.78,
+      "cost_usd": 314.28,
+      "timestamp_utc": "2026-01-02T18:13:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "CVX",
+      "side": "buy",
+      "quantity": 3.63,
+      "price_usd": 164.56,
+      "cost_usd": 599.85,
+      "timestamp_utc": "2026-01-05T19:07:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "SLB",
+      "side": "buy",
+      "quantity": 6.66,
+      "price_usd": 45.01,
+      "cost_usd": 302.27,
+      "timestamp_utc": "2026-01-05T19:09:00Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "IVW",
+      "side": "buy",
+      "quantity": 4.84,
+      "price_usd": 124.65,
+      "cost_usd": 605.81,
+      "timestamp_utc": "2026-01-13T19:23:00Z",
+      "reason": "manual_trade"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "VST",
+      "side": "buy",
+      "quantity": 1.73,
+      "price_usd": 173.74,
+      "cost_usd": 303.07,
+      "timestamp_utc": "2026-01-13T19:24:00Z",
+      "reason": "manual_trade"
+    },
+    {
+      "platform": "BINANCE",
+      "symbol": "BTC",
+      "side": "buy",
+      "quantity": 0.00329893,
+      "price_usd": 90938.58,
+      "cost_usdt": 300,
+      "timestamp_utc": "2026-01-09T23:13:49Z",
+      "reason": "spot_buy"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "VST",
+      "side": "buy",
+      "quantity": 6.36,
+      "price_usd": 156.34,
+      "cost_usd": 996.85,
+      "timestamp_utc": "2026-01-20T20:17:00Z",
+      "reason": "manual_trade"
+    },
+    {
+      "platform": "binance",
+      "symbol": "XRP",
+      "side": "buy",
+      "quantity": 275.31855718,
+      "price_usd": 1.99769,
+      "cost_usdt": 550,
+      "timestamp_utc": "2026-01-19T15:10:55Z",
+      "reason": "manual_trade"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "IUSG",
+      "side": "buy",
+      "quantity": 10.7,
+      "price_usd": 167.33,
+      "cost_usd": 1795.43,
+      "timestamp_utc": "2026-01-21T15:55:00Z",
+      "reason": "manual_trade"
+    },
+    {
+      "platform": "avenue",
+      "symbol": "NVDA",
+      "side": "buy",
+      "quantity": 2.17,
+      "price_usd": 184.55,
+      "cost_usd": 402.97,
+      "timestamp_utc": "2026-01-22T15:09:00Z",
+      "reason": "manual_trade"
+    }
+  ]
 }
