@@ -281,6 +281,17 @@
               "regional_diversification",
               "broad_ex_us"
             ]
+          },
+          {
+            "symbol_canonical": "NYSEARCA:GLDM",
+            "asset_type": "ETF",
+            "venue": "Avenue",
+            "notes": [
+              "gold_physical",
+              "defensive_hedge",
+              "satellite",
+              "low_fee"
+            ]
           }
         ]
       },
