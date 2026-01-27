@@ -666,7 +666,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 7474.62,
+    "cash_usd": 7069.48,
     "positions": {
       "VUG": {
         "quantity": 8.5197,
@@ -958,15 +958,29 @@
         "schema_warn": [
           "missing_isin"
         ]
+      },
+      "GLDM": {
+        "quantity": 4,
+        "avg_cost_usd": 101.285,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA:GLDM",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "schema_warn": []
       }
     }
   },
   "binance": {
-    "usdt": 2390.27804455,
+    "usdt": 1890.278,
     "positions": {
       "BTC": {
-        "quantity": 0.06432968,
-        "avg_cost_usd": 98414.31,
+        "quantity": 0.07001327,
+        "avg_cost_usd": 97566.66,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:BTCUSDT",
@@ -1815,6 +1829,54 @@
       "cost_usd": 402.97,
       "timestamp_utc": "2026-01-22T15:09:00Z",
       "reason": "manual_trade"
+    },
+    {
+      "timestamp_utc": "2026-01-26T16:36:07Z",
+      "platform": "Binance",
+      "symbol": "BTC",
+      "side": "BUY",
+      "quantity": 0.00227367,
+      "price_usd": 87973.61,
+      "cost_usd": 200,
+      "reason": "[MANUAL] user_exec_convert",
+      "run_id": "manual_20260126",
+      "notes": [
+        "market",
+        "convert",
+        "fee_0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-01-27T15:25:06Z",
+      "platform": "Binance",
+      "symbol": "BTC",
+      "side": "BUY",
+      "quantity": 0.00340992,
+      "price_usd": 87986.42,
+      "cost_usd": 300,
+      "reason": "[MANUAL] user_exec_convert",
+      "run_id": "manual_20260127",
+      "notes": [
+        "market",
+        "convert",
+        "fee_0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-01-27T17:03:00Z",
+      "platform": "Avenue",
+      "symbol": "GLDM",
+      "side": "BUY",
+      "quantity": 4,
+      "price_usd": 100.66,
+      "cost_usd": 405.14,
+      "reason": "[MANUAL] user_exec_order",
+      "run_id": "manual_20260127",
+      "notes": [
+        "etf",
+        "gold",
+        "commission_in_cost"
+      ]
     }
   ]
 }
