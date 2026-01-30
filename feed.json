@@ -292,6 +292,16 @@
               "satellite",
               "low_fee"
             ]
+          },
+          {
+            "symbol_canonical": "NYSEARCA:SLV",
+            "asset_type": "ETF",
+            "venue": "Avenue",
+            "notes": [
+              "silver",
+              "metals",
+              "satellite"
+            ]
           }
         ]
       },
@@ -666,7 +676,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 7069.48,
+    "cash_usd": 12477.87,
     "positions": {
       "VUG": {
         "quantity": 8.5197,
@@ -960,8 +970,8 @@
         ]
       },
       "GLDM": {
-        "quantity": 4,
-        "avg_cost_usd": 101.285,
+        "quantity": 24,
+        "avg_cost_usd": 107.81,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:GLDM",
@@ -972,15 +982,29 @@
           "gamma"
         ],
         "schema_warn": []
+      },
+      "SLV": {
+        "symbol_canonical": "NYSEARCA:SLV",
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "currency": "USD",
+        "quantity": 10,
+        "avg_cost_usd": 101.498,
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "schema_warn": []
       }
     }
   },
   "binance": {
-    "usdt": 1890.278,
+    "usdt": 1390.278,
     "positions": {
       "BTC": {
-        "quantity": 0.07001327,
-        "avg_cost_usd": 97566.66,
+        "quantity": 0.07594497,
+        "avg_cost_usd": 96529.91,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:BTCUSDT",
@@ -1876,6 +1900,53 @@
         "etf",
         "gold",
         "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-01-29T14:59:00Z",
+      "platform": "Avenue",
+      "symbol": "GLDM",
+      "side": "BUY",
+      "quantity": 20,
+      "price_usd": 108.74,
+      "cost_usd": 2182.3,
+      "reason": "[MANUAL] user_exec_order",
+      "run_id": "manual_20260129",
+      "notes": [
+        "etf",
+        "gold",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-01-29T16:57:00Z",
+      "platform": "Avenue",
+      "symbol": "SLV",
+      "side": "BUY",
+      "quantity": 10,
+      "price_usd": 101,
+      "cost_usd": 1014.98,
+      "reason": "[MANUAL] user_exec_order",
+      "run_id": "manual_20260129",
+      "notes": [
+        "etf",
+        "silver",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-01-29T20:42:18Z",
+      "platform": "Binance",
+      "symbol": "BTC",
+      "side": "BUY",
+      "quantity": 0.0059317,
+      "price_usd": 84294.9,
+      "cost_usdt": 500,
+      "reason": "[MANUAL] user_exec_order",
+      "run_id": "manual_20260129",
+      "notes": [
+        "spot_buy",
+        "usdt_spent"
       ]
     }
   ]
