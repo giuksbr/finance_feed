@@ -676,7 +676,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 12477.87,
+    "cash_usd": 14564.12,
     "positions": {
       "VUG": {
         "quantity": 8.5197,
@@ -741,7 +741,7 @@
         "schema_warn": []
       },
       "SOXX": {
-        "quantity": 15.89952,
+        "quantity": 11.87952,
         "avg_cost_usd": 263.25,
         "asset_type": "etf",
         "venue": "NASDAQ",
@@ -868,23 +868,6 @@
           "isin_missing"
         ]
       },
-      "XLF": {
-        "quantity": 7.27,
-        "avg_cost_usd": 55.26,
-        "asset_type": "etf",
-        "venue": "NYSEARCA",
-        "symbol_canonical": "NYSEARCA:XLF",
-        "currency": "USD",
-        "vendor_profile": [
-          "alpha",
-          "beta",
-          "gamma"
-        ],
-        "isin": null,
-        "schema_warn": [
-          "isin_missing"
-        ]
-      },
       "ECH": {
         "quantity": 7.6,
         "avg_cost_usd": 39.51,
@@ -952,23 +935,6 @@
           "missing_isin"
         ]
       },
-      "NVDA": {
-        "quantity": 2.17,
-        "avg_cost_usd": 185.7,
-        "asset_type": "equity",
-        "venue": "NASDAQ",
-        "symbol_canonical": "NASDAQ:NVDA",
-        "currency": "USD",
-        "vendor_profile": [
-          "alpha",
-          "beta",
-          "gamma"
-        ],
-        "isin": null,
-        "schema_warn": [
-          "missing_isin"
-        ]
-      },
       "GLDM": {
         "quantity": 24,
         "avg_cost_usd": 107.81,
@@ -1000,11 +966,11 @@
     }
   },
   "binance": {
-    "usdt": 1390.278,
+    "usdt": 830.27804455,
     "positions": {
       "BTC": {
-        "quantity": 0.07594497,
-        "avg_cost_usd": 96529.91,
+        "quantity": 0.07971843,
+        "avg_cost_usd": 95723.93068677,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:BTCUSDT",
@@ -1016,8 +982,8 @@
         ]
       },
       "ETH": {
-        "quantity": 0.96933289,
-        "avg_cost_usd": 3359.47381438,
+        "quantity": 1.09483882,
+        "avg_cost_usd": 3248.37628736,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:ETHUSDT",
@@ -1081,7 +1047,7 @@
         ]
       },
       "ADA": {
-        "quantity": 1975.025097,
+        "quantity": 1489.98488361,
         "avg_cost_usd": 0.41250718,
         "asset_type": "crypto",
         "venue": "BINANCE",
@@ -1094,7 +1060,7 @@
         ]
       },
       "AAVE": {
-        "quantity": 3.20098389,
+        "quantity": 4.08063352,
         "avg_cost_usd": 164.26,
         "asset_type": "crypto",
         "venue": "BINANCE",
@@ -1947,6 +1913,115 @@
       "notes": [
         "spot_buy",
         "usdt_spent"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-02T16:32:27Z",
+      "platform": "Binance",
+      "symbol": "ETH",
+      "side": "BUY",
+      "quantity": 0.12550593,
+      "price_usd": 2390.32530176,
+      "cost_usdt": 300,
+      "reason": "[MANUAL] convert buy (user exec)",
+      "run_id": "manual_20260202",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-02T16:35:05Z",
+      "platform": "Binance",
+      "symbol": "BTC",
+      "side": "BUY",
+      "quantity": 0.00377346,
+      "price_usd": 79502.631537,
+      "cost_usdt": 300,
+      "reason": "[MANUAL] convert buy (user exec)",
+      "run_id": "manual_20260202",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-04T18:44:24Z",
+      "platform": "Binance",
+      "symbol": "ADA",
+      "side": "SELL",
+      "quantity": 485.04021339,
+      "price_usd": 0.288636,
+      "proceeds_usdt": 140,
+      "reason": "[MANUAL] convert sell (user exec)",
+      "run_id": "manual_20260204",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-04T18:44:44Z",
+      "platform": "Binance",
+      "symbol": "AAVE",
+      "side": "SELL",
+      "quantity": 0.81390036,
+      "price_usd": 122.865,
+      "proceeds_usdt": 100,
+      "reason": "[MANUAL] convert sell (user exec)",
+      "run_id": "manual_20260204",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-04T15:23:00Z",
+      "platform": "Avenue",
+      "symbol": "NVDA",
+      "side": "SELL",
+      "quantity": 2.17,
+      "price_usd": 177.49,
+      "proceeds_usd": 385.15,
+      "reason": "[MANUAL] sell market (user exec)",
+      "run_id": "manual_20260204",
+      "notes": [
+        "market",
+        "fee_usd=0.00"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-04T15:24:00Z",
+      "platform": "Avenue",
+      "symbol": "XLF",
+      "side": "SELL",
+      "quantity": 7.27,
+      "price_usd": 53.9,
+      "proceeds_usd": 389.35,
+      "reason": "[MANUAL] sell market (user exec)",
+      "run_id": "manual_20260204",
+      "notes": [
+        "market",
+        "fee_usd=2.50"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-05T15:09:00Z",
+      "platform": "Avenue",
+      "symbol": "SOXX",
+      "side": "SELL",
+      "quantity": 4.02,
+      "price_usd": 327.26,
+      "proceeds_usd": 1310.59,
+      "reason": "[MANUAL] sell market (user exec)",
+      "run_id": "manual_20260205",
+      "notes": [
+        "market",
+        "fee_usd=5.00"
       ]
     }
   ]
