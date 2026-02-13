@@ -676,7 +676,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 14564.12,
+    "cash_usd": 12486.59,
     "positions": {
       "VUG": {
         "quantity": 8.5197,
@@ -741,8 +741,8 @@
         "schema_warn": []
       },
       "SOXX": {
-        "quantity": 11.87952,
-        "avg_cost_usd": 263.25,
+        "quantity": 14.42952,
+        "avg_cost_usd": 279.28,
         "asset_type": "etf",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:SOXX",
@@ -758,8 +758,8 @@
         ]
       },
       "TSM": {
-        "quantity": 4.63818,
-        "avg_cost_usd": 230.17,
+        "quantity": 6.13818,
+        "avg_cost_usd": 264.49,
         "asset_type": "equity",
         "venue": "NYSE",
         "symbol_canonical": "NYSE:TSM",
@@ -869,8 +869,8 @@
         ]
       },
       "ECH": {
-        "quantity": 7.6,
-        "avg_cost_usd": 39.51,
+        "quantity": 14.6,
+        "avg_cost_usd": 42.18,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:ECH",
@@ -923,8 +923,8 @@
         "asset_type": "equity",
         "venue": "NYSE",
         "currency": "USD",
-        "quantity": 6.66,
-        "avg_cost_usd": 45.39,
+        "quantity": 12.66,
+        "avg_cost_usd": 47.86,
         "isin": null,
         "vendor_profile": [
           "yfinance",
@@ -966,7 +966,7 @@
     }
   },
   "binance": {
-    "usdt": 830.27804455,
+    "usdt": 1161.68336854,
     "positions": {
       "BTC": {
         "quantity": 0.07971843,
@@ -1026,19 +1026,6 @@
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:XRPUSDT",
-        "currency": "USD",
-        "vendor_profile": [
-          "c1",
-          "c2",
-          "c3"
-        ]
-      },
-      "FET": {
-        "quantity": 2041.85852019,
-        "avg_cost_usd": 0.48993082,
-        "asset_type": "crypto",
-        "venue": "BINANCE",
-        "symbol_canonical": "BINANCE:FETUSDT",
         "currency": "USD",
         "vendor_profile": [
           "c1",
@@ -2022,6 +2009,82 @@
       "notes": [
         "market",
         "fee_usd=5.00"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-10T17:51:00Z",
+      "platform": "Avenue",
+      "symbol": "ECH",
+      "side": "BUY",
+      "quantity": 7,
+      "price_usd": 44.72,
+      "cost_usd": 315.5,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260210",
+      "notes": [
+        "etf",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-10T17:52:00Z",
+      "platform": "Avenue",
+      "symbol": "SLB",
+      "side": "BUY",
+      "quantity": 6,
+      "price_usd": 50.19,
+      "cost_usd": 303.64,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260210",
+      "notes": [
+        "equity",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-13T15:21:00Z",
+      "platform": "Avenue",
+      "symbol": "TSM",
+      "side": "BUY",
+      "quantity": 1.5,
+      "price_usd": 368.93,
+      "cost_usd": 555.89,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260213",
+      "notes": [
+        "equity",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-13T15:22:00Z",
+      "platform": "Avenue",
+      "symbol": "SOXX",
+      "side": "BUY",
+      "quantity": 2.55,
+      "price_usd": 352.97,
+      "cost_usd": 902.57,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260213",
+      "notes": [
+        "etf",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-13T15:19:42Z",
+      "platform": "Binance",
+      "symbol": "FET",
+      "side": "SELL",
+      "quantity": 2041.85852019,
+      "price_usd": 0.162306,
+      "proceeds_usdt": 331.40532399,
+      "reason": "[MANUAL] convert sell (user exec)",
+      "run_id": "manual_20260213",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0"
       ]
     }
   ]
