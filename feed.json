@@ -966,7 +966,7 @@
     }
   },
   "binance": {
-    "usdt": 1161.68336854,
+    "usdt": 2703.9428431,
     "positions": {
       "BTC": {
         "quantity": 0.07971843,
@@ -982,8 +982,8 @@
         ]
       },
       "ETH": {
-        "quantity": 1.09483882,
-        "avg_cost_usd": 3248.37628736,
+        "quantity": 1.18229245,
+        "avg_cost_usd": 3160.34197915,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:ETHUSDT",
@@ -995,8 +995,8 @@
         ]
       },
       "SOL": {
-        "quantity": 14.59101269,
-        "avg_cost_usd": 156.62,
+        "quantity": 16.71210166,
+        "avg_cost_usd": 147.5125306,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:SOLUSDT",
@@ -2080,6 +2080,38 @@
       "price_usd": 0.162306,
       "proceeds_usdt": 331.40532399,
       "reason": "[MANUAL] convert sell (user exec)",
+      "run_id": "manual_20260213",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-13T23:17:09Z",
+      "platform": "Binance",
+      "symbol": "ETH",
+      "side": "BUY",
+      "quantity": 0.08745363,
+      "price_usd": 2058.23360334,
+      "cost_usdt": 180,
+      "reason": "[MANUAL] convert buy (user exec)",
+      "run_id": "manual_20260213",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-13T23:17:27Z",
+      "platform": "Binance",
+      "symbol": "SOL",
+      "side": "BUY",
+      "quantity": 2.12108897,
+      "price_usd": 84.86206969,
+      "cost_usdt": 180,
+      "reason": "[MANUAL] convert buy (user exec)",
       "run_id": "manual_20260213",
       "notes": [
         "market",
