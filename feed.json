@@ -676,11 +676,11 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 12486.59,
+    "cash_usd": 9985,
     "positions": {
       "VUG": {
-        "quantity": 8.5197,
-        "avg_cost_usd": 471.64,
+        "quantity": 10.2197,
+        "avg_cost_usd": 470.51,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:VUG",
@@ -711,8 +711,8 @@
         ]
       },
       "IVW": {
-        "quantity": 33.52158,
-        "avg_cost_usd": 119.83,
+        "quantity": 38.52158,
+        "avg_cost_usd": 120,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:IVW",
@@ -773,8 +773,8 @@
         "schema_warn": []
       },
       "AVGO": {
-        "quantity": 7.13346,
-        "avg_cost_usd": 320.14,
+        "quantity": 8.93346,
+        "avg_cost_usd": 323.03,
         "asset_type": "equity",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:AVGO",
@@ -936,8 +936,8 @@
         ]
       },
       "GLDM": {
-        "quantity": 24,
-        "avg_cost_usd": 107.81,
+        "quantity": 29,
+        "avg_cost_usd": 106.59,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:GLDM",
@@ -2117,6 +2117,66 @@
         "market",
         "convert",
         "fee=0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-20T18:20:00Z",
+      "platform": "Avenue",
+      "symbol": "GLDM",
+      "side": "BUY",
+      "quantity": 5,
+      "price_usd": 100.23,
+      "cost_usd": 503.65,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260220",
+      "notes": [
+        "etf",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-20T18:21:00Z",
+      "platform": "Avenue",
+      "symbol": "AVGO",
+      "side": "BUY",
+      "quantity": 1.8,
+      "price_usd": 333.1,
+      "cost_usd": 602.08,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260220",
+      "notes": [
+        "equity",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-20T18:21:00Z",
+      "platform": "Avenue",
+      "symbol": "IVW",
+      "side": "BUY",
+      "quantity": 5,
+      "price_usd": 120.62,
+      "cost_usd": 605.6,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260220",
+      "notes": [
+        "etf",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-02-20T18:22:00Z",
+      "platform": "Avenue",
+      "symbol": "VUG",
+      "side": "BUY",
+      "quantity": 1.7,
+      "price_usd": 463.39,
+      "cost_usd": 790.26,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260220",
+      "notes": [
+        "etf",
+        "commission_in_cost"
       ]
     }
   ]
