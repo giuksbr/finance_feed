@@ -1159,7 +1159,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 9985,
+    "cash_usd": 14471.45,
     "positions": {
       "VUG": {
         "quantity": 10.2197,
@@ -1194,8 +1194,8 @@
         ]
       },
       "IVW": {
-        "quantity": 38.52158,
-        "avg_cost_usd": 120,
+        "quantity": 51.02158,
+        "avg_cost_usd": 119.91,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:IVW",
@@ -1241,8 +1241,8 @@
         ]
       },
       "TSM": {
-        "quantity": 6.13818,
-        "avg_cost_usd": 264.49,
+        "quantity": 8.58818,
+        "avg_cost_usd": 295.14,
         "asset_type": "equity",
         "venue": "NYSE",
         "symbol_canonical": "NYSE:TSM",
@@ -2659,6 +2659,40 @@
       "run_id": "manual_20260220",
       "notes": [
         "etf",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-03-02T16:12:00Z",
+      "platform": "Avenue",
+      "symbol": "IVW",
+      "side": "BUY",
+      "quantity": 12.5,
+      "price_usd": 119.63,
+      "cost_usd": 1495.37,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260302",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=0.00",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-03-02T16:13:00Z",
+      "platform": "Avenue",
+      "symbol": "TSM",
+      "side": "BUY",
+      "quantity": 2.45,
+      "price_usd": 370.92,
+      "cost_usd": 911.24,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260302",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
         "commission_in_cost"
       ]
     }
