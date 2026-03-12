@@ -1159,7 +1159,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 14471.45,
+    "cash_usd": 14914.72,
     "positions": {
       "VUG": {
         "quantity": 10.2197,
@@ -1315,23 +1315,6 @@
         "isin": null,
         "schema_warn": [
           "missing_isin_or_figi"
-        ]
-      },
-      "IJR": {
-        "quantity": 3.62,
-        "avg_cost_usd": 124.42,
-        "asset_type": "etf",
-        "venue": "NYSEARCA",
-        "symbol_canonical": "NYSEARCA:IJR",
-        "currency": "USD",
-        "vendor_profile": [
-          "alpha",
-          "beta",
-          "gamma"
-        ],
-        "isin": null,
-        "schema_warn": [
-          "isin_missing"
         ]
       },
       "XLV": {
@@ -2694,6 +2677,21 @@
         "market",
         "fee_usd=2.50",
         "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-03-09T17:05:00Z",
+      "platform": "Avenue",
+      "symbol": "IJR",
+      "side": "SELL",
+      "quantity": 3.62,
+      "price_usd": 123.14,
+      "proceeds_usd": 443.27,
+      "reason": "[MANUAL] sell market (user exec)",
+      "run_id": "manual_20260309",
+      "notes": [
+        "market",
+        "fee_usd=2.50"
       ]
     }
   ]
