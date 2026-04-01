@@ -1159,11 +1159,11 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 14914.72,
+    "cash_usd": 10586.75,
     "positions": {
       "VUG": {
-        "quantity": 10.2197,
-        "avg_cost_usd": 470.51,
+        "quantity": 18.24565,
+        "avg_cost_usd": 458.51866,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:VUG",
@@ -1371,8 +1371,8 @@
         "asset_type": "equity",
         "venue": "NYSE",
         "currency": "USD",
-        "quantity": 3.63,
-        "avg_cost_usd": 165.25,
+        "quantity": 5.63,
+        "avg_cost_usd": 177.69405,
         "isin": null,
         "vendor_profile": [
           "yfinance",
@@ -1389,8 +1389,8 @@
         "asset_type": "equity",
         "venue": "NYSE",
         "currency": "USD",
-        "quantity": 12.66,
-        "avg_cost_usd": 47.86,
+        "quantity": 20.28631,
+        "avg_cost_usd": 49.70877,
         "isin": null,
         "vendor_profile": [
           "yfinance",
@@ -2692,6 +2692,70 @@
       "notes": [
         "market",
         "fee_usd=2.50"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-03-18T14:25:00Z",
+      "platform": "Avenue",
+      "symbol": "CVX",
+      "side": "BUY",
+      "quantity": 2,
+      "price_usd": 199.03,
+      "cost_usd": 400.56,
+      "reason": "[MANUAL] buy market (user exec)",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-03-20T14:02:00Z",
+      "platform": "Avenue",
+      "symbol": "VUG",
+      "side": "BUY",
+      "quantity": 6.20858,
+      "price_usd": 442.94,
+      "cost_usd": 2757.5,
+      "reason": "[MANUAL] buy market (user exec)",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=7.50",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-03-31T14:23:00Z",
+      "platform": "Avenue",
+      "symbol": "SLB",
+      "side": "BUY",
+      "quantity": 7.62631,
+      "price_usd": 52.45,
+      "cost_usd": 402.5,
+      "reason": "[MANUAL] buy market (user exec)",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-04-01T13:58:00Z",
+      "platform": "Avenue",
+      "symbol": "VUG",
+      "side": "BUY",
+      "quantity": 1.81737,
+      "price_usd": 440.19,
+      "cost_usd": 800,
+      "reason": "[MANUAL] buy market (user exec)",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=0.00",
+        "commission_in_cost"
       ]
     }
   ]
