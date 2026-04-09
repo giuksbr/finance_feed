@@ -1159,7 +1159,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 10586.75,
+    "cash_usd": 9239.78,
     "positions": {
       "VUG": {
         "quantity": 18.24565,
@@ -1271,8 +1271,8 @@
         "schema_warn": []
       },
       "VST": {
-        "quantity": 18.25565,
-        "avg_cost_usd": 165.64,
+        "quantity": 26.85547,
+        "avg_cost_usd": 163.05303,
         "asset_type": "equity",
         "venue": "NYSE",
         "symbol_canonical": "NYSE:VST",
@@ -2755,6 +2755,22 @@
         "etf",
         "market",
         "fee_usd=0.00",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-04-08T16:15:00Z",
+      "platform": "Avenue",
+      "symbol": "VST",
+      "side": "BUY",
+      "quantity": 8.59982,
+      "price_usd": 156.98,
+      "cost_usd": 1355.0,
+      "reason": "[MANUAL] buy market (user exec)",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=5.00",
         "commission_in_cost"
       ]
     }
