@@ -282,6 +282,18 @@
               "metals",
               "satellite"
             ]
+          },
+          {
+            "symbol_canonical": "NYSEARCA:COLO",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "single-country Colombia"
+          },
+          {
+            "symbol_canonical": "NYSEARCA:EPU",
+            "asset_type": "etf",
+            "venue": "NYSEARCA",
+            "notes": "single-country Peru"
           }
         ]
       },
