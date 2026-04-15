@@ -1164,7 +1164,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 9239.78,
+    "cash_usd": 8609.16,
     "positions": {
       "VUG": {
         "quantity": 18.24565,
@@ -1433,6 +1433,23 @@
           "gamma"
         ],
         "schema_warn": []
+      },
+      "COLO": {
+        "quantity": 15,
+        "avg_cost_usd": 42.46666667,
+        "asset_type": "etf",
+        "venue": "NYSEARCA",
+        "symbol_canonical": "NYSEARCA",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": null,
+        "schema_warn": [
+          "missing_isin_or_figi"
+        ]
       }
     }
   },
@@ -2776,6 +2793,22 @@
         "equity",
         "market",
         "fee_usd=5.00",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-04-14T14:50:00Z",
+      "platform": "Avenue",
+      "symbol": "COLO",
+      "side": "BUY",
+      "quantity": 15,
+      "price_usd": 42.3,
+      "cost_usd": 637,
+      "reason": "[MANUAL] buy market (user exec)",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=2.50",
         "commission_in_cost"
       ]
     }
