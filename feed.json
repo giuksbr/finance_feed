@@ -1,3 +1,4 @@
+
 {
   "schema_version": "2.0",
   "generated_at_brt": "2025-10-29T14:41:00-03:00",
@@ -1435,12 +1436,12 @@
         "schema_warn": []
       },
       "COLO": {
-        "quantity": 15,
-        "avg_cost_usd": 42.46666667,
+        "symbol_canonical": "NYSEARCA:COLO",
         "asset_type": "etf",
         "venue": "NYSEARCA",
-        "symbol_canonical": "NYSEARCA",
         "currency": "USD",
+        "quantity": 15,
+        "avg_cost_usd": 42.46666667,
         "vendor_profile": [
           "alpha",
           "beta",
