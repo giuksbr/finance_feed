@@ -1164,7 +1164,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 8609.16,
+    "cash_usd": 7404.16,
     "positions": {
       "VUG": {
         "quantity": 18.24565,
@@ -1229,8 +1229,8 @@
         "schema_warn": []
       },
       "SOXX": {
-        "quantity": 14.42952,
-        "avg_cost_usd": 279.28,
+        "quantity": 15.92935,
+        "avg_cost_usd": 290.80761899,
         "asset_type": "etf",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:SOXX",
@@ -1246,8 +1246,8 @@
         ]
       },
       "TSM": {
-        "quantity": 8.58818,
-        "avg_cost_usd": 295.14,
+        "quantity": 10.16459,
+        "avg_cost_usd": 308.64161222,
         "asset_type": "equity",
         "venue": "NYSE",
         "symbol_canonical": "NYSE:TSM",
@@ -1454,7 +1454,7 @@
     }
   },
   "binance": {
-    "usdt": 2703.9428431,
+    "usdt": 2403.9428431,
     "positions": {
       "BTC": {
         "quantity": 0.07971843,
@@ -1470,7 +1470,7 @@
         ]
       },
       "ETH": {
-        "quantity": 1.18229245,
+        "quantity": 1.23337847,
         "avg_cost_usd": 3160.34197915,
         "asset_type": "crypto",
         "venue": "BINANCE",
@@ -1540,6 +1540,19 @@
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:AAVEUSDT",
+        "currency": "USD",
+        "vendor_profile": [
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "FET": {
+        "quantity": 871.01005461,
+        "avg_cost_usd": 0.22961847,
+        "asset_type": "crypto",
+        "venue": "BINANCE",
+        "symbol_canonical": "BINANCE:FETUSDT",
         "currency": "USD",
         "vendor_profile": [
           "c1",
@@ -2810,6 +2823,53 @@
         "market",
         "fee_usd=2.50",
         "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-04-15T12:15:00Z",
+      "platform": "Avenue",
+      "symbol": "TSM",
+      "side": "BUY",
+      "quantity": 1.57641,
+      "price_usd": 380.61,
+      "cost_usd": 602.5,
+      "reason": "[MANUAL] buy market (user exec)",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-04-15T12:16:00Z",
+      "platform": "Avenue",
+      "symbol": "SOXX",
+      "side": "BUY",
+      "quantity": 1.49983,
+      "price_usd": 400.05,
+      "cost_usd": 602.5,
+      "reason": "[MANUAL] buy market (user exec)",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-04-15T12:19:25Z",
+      "platform": "Binance",
+      "symbol": "FET",
+      "side": "BUY",
+      "quantity": 871.01005461,
+      "price_usd": 0.22961847,
+      "cost_usdt": 200,
+      "reason": "[MANUAL] convert buy (user exec)",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0"
       ]
     }
   ]
