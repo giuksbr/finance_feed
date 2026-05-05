@@ -1167,8 +1167,8 @@
     "cash_usd": 6681.66,
     "positions": {
       "VUG": {
-        "quantity": 18.24565,
-        "avg_cost_usd": 458.51866,
+        "quantity": 109.47390,
+        "avg_cost_usd": 76.41977,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:VUG",
