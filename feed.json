@@ -1164,10 +1164,10 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 6681.66,
+    "cash_usd": 8618.95,
     "positions": {
       "VUG": {
-        "quantity": 109.47390,
+        "quantity": 109.4739,
         "avg_cost_usd": 76.41977,
         "asset_type": "etf",
         "venue": "NYSEARCA",
@@ -1229,7 +1229,7 @@
         "schema_warn": []
       },
       "SOXX": {
-        "quantity": 15.92935,
+        "quantity": 11.92935,
         "avg_cost_usd": 290.80761899,
         "asset_type": "etf",
         "venue": "NASDAQ",
@@ -1454,7 +1454,7 @@
     }
   },
   "binance": {
-    "usdt": 2153.9428431,
+    "usdt": 2003.9428431,
     "positions": {
       "BTC": {
         "quantity": 0.07971843,
@@ -1496,8 +1496,8 @@
         ]
       },
       "LINK": {
-        "quantity": 92.04735737,
-        "avg_cost_usd": 17.45,
+        "quantity": 106.50667669,
+        "avg_cost_usd": 16.48935485254319,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:LINKUSDT",
@@ -2917,6 +2917,38 @@
         "market",
         "convert",
         "fee=0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-05-14T13:56:00Z",
+      "platform": "Binance",
+      "symbol": "LINK",
+      "side": "BUY",
+      "quantity": 14.45931932,
+      "price_usd": 10.3739,
+      "cost_usdt": 150,
+      "reason": "[MANUAL] convert buy (user exec)",
+      "run_id": "manual_20260514",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-05-19T15:02:00Z",
+      "platform": "Avenue",
+      "symbol": "SOXX",
+      "side": "SELL",
+      "quantity": 4,
+      "price_usd": 486.56,
+      "proceeds_usd": 1941.22,
+      "reason": "[MANUAL] sell market (user exec)",
+      "run_id": "manual_20260519",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=5.00"
       ]
     }
   ]
