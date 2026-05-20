@@ -1164,7 +1164,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 8618.95,
+    "cash_usd": 7613.95,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1246,8 +1246,8 @@
         ]
       },
       "TSM": {
-        "quantity": 11.16596,
-        "avg_cost_usd": 316.78560958,
+        "quantity": 12.41102,
+        "avg_cost_usd": 325.49423377,
         "asset_type": "equity",
         "venue": "NYSE",
         "symbol_canonical": "NYSE:TSM",
@@ -1261,8 +1261,8 @@
         "schema_warn": []
       },
       "AVGO": {
-        "quantity": 9.70267,
-        "avg_cost_usd": 330.65904373,
+        "quantity": 10.89141,
+        "avg_cost_usd": 340.70662879,
         "asset_type": "equity",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:AVGO",
@@ -2949,6 +2949,40 @@
         "etf",
         "market",
         "fee_usd=5.00"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-05-20T15:03:00Z",
+      "platform": "Avenue",
+      "symbol": "AVGO",
+      "side": "BUY",
+      "quantity": 1.18874,
+      "price_usd": 420.61,
+      "cost_usd": 502.5,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260520",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-05-20T15:03:00Z",
+      "platform": "Avenue",
+      "symbol": "TSM",
+      "side": "BUY",
+      "quantity": 1.24506,
+      "price_usd": 401.58,
+      "cost_usd": 502.5,
+      "reason": "[MANUAL] buy market (user exec)",
+      "run_id": "manual_20260520",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost"
       ]
     }
   ]
