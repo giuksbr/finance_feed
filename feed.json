@@ -102,46 +102,10 @@
             "notes": "S&P 500 (baixo custo)"
           },
           {
-            "symbol_canonical": "NYSEARCA:SMH",
-            "asset_type": "etf",
-            "venue": "NYSEARCA",
-            "notes": "semis (VanEck)"
-          },
-          {
-            "symbol_canonical": "NYSEARCA:IJR",
-            "asset_type": "etf",
-            "venue": "NYSEARCA",
-            "notes": "small caps S&P 600"
-          },
-          {
-            "symbol_canonical": "NYSEARCA:IWF",
-            "asset_type": "etf",
-            "venue": "NYSEARCA",
-            "notes": "Russell 1000 Growth"
-          },
-          {
-            "symbol_canonical": "NYSEARCA:IWD",
-            "asset_type": "etf",
-            "venue": "NYSEARCA",
-            "notes": "Russell 1000 Value"
-          },
-          {
             "symbol_canonical": "NYSEARCA:XLV",
             "asset_type": "etf",
             "venue": "NYSEARCA",
             "notes": "saúde"
-          },
-          {
-            "symbol_canonical": "NYSEARCA:XLF",
-            "asset_type": "etf",
-            "venue": "NYSEARCA",
-            "notes": "financeiro"
-          },
-          {
-            "symbol_canonical": "NYSEARCA:XLE",
-            "asset_type": "etf",
-            "venue": "NYSEARCA",
-            "notes": "energia"
           },
           {
             "symbol_canonical": "NASDAQ:MSFT",
@@ -288,12 +252,6 @@
             "asset_type": "etf",
             "venue": "NYSEARCA",
             "notes": "single-country Colombia"
-          },
-          {
-            "symbol_canonical": "NYSEARCA:EPU",
-            "asset_type": "etf",
-            "venue": "NYSEARCA",
-            "notes": "single-country Peru"
           }
         ]
       },
@@ -337,11 +295,6 @@
             "venue": "BINANCE"
           },
           {
-            "symbol_canonical": "BINANCE:DOTUSDT",
-            "asset_type": "crypto",
-            "venue": "BINANCE"
-          },
-          {
             "symbol_canonical": "BINANCE:ARBUSDT",
             "asset_type": "crypto",
             "venue": "BINANCE"
@@ -362,11 +315,6 @@
             "venue": "BINANCE"
           },
           {
-            "symbol_canonical": "BINANCE:LTCUSDT",
-            "asset_type": "crypto",
-            "venue": "BINANCE"
-          },
-          {
             "symbol_canonical": "BINANCE:TONUSDT",
             "asset_type": "crypto",
             "venue": "BINANCE"
@@ -383,9 +331,9 @@
         "candidate_pool_refresh": "monthly",
         "notes": "low-touch: candidate_pool revisado mensalmente; whitelist só muda por evento estrutural/mandato ou revisão semestral. Cobertura de posições é obrigatória.",
         "created_at_utc": "2026-02-24T00:00:00+00:00",
-        "updated_at_utc": "2026-04-13T15:00:00Z",
-        "updated_at_brt": "2026-04-13T12:00:00-03:00",
-        "next_update_reco_brt": "2026-05-13T12:00:00-03:00",
+        "updated_at_utc": "2026-05-25T15:24:00Z",
+        "updated_at_brt": "2026-05-25T12:24:00-03:00",
+        "next_update_reco_brt": "2026-06-24T12:24:00-03:00",
         "sources_used_ok": [
           "A2",
           "A3",
@@ -400,88 +348,172 @@
           "B3"
         ],
         "holdings_status": "ok",
-        "holdings_asof_max_age_days": 104,
+        "holdings_asof_max_age_days": 25,
         "overlay_used": true,
         "overlay_editorial_enabled": false,
         "data_gate_window_used": "90d|30d|10d (sem símbolos novos nesta rodada)",
-        "etf_robustness_mode": "aum_age|fallback_hysteresis|mixed (sem ETFs novos nesta rodada)",
+        "etf_robustness_mode": "mixed (sem ETFs novos nesta rodada)",
         "basis_ledger": {
           "added": [],
-          "removed": [],
-          "blocked": []
+          "removed": [
+            {
+              "symbol_canonical": "NYSEARCA:EPU",
+              "basis": "legacy_feed",
+              "notes": "ttl_expired_non_reaffirmed_qty0"
+            },
+            {
+              "symbol_canonical": "NYSEARCA:IJR",
+              "basis": "legacy_feed",
+              "notes": "ttl_expired_non_reaffirmed_qty0"
+            },
+            {
+              "symbol_canonical": "NYSEARCA:IWF",
+              "basis": "legacy_feed",
+              "notes": "ttl_expired_non_reaffirmed_qty0"
+            },
+            {
+              "symbol_canonical": "NYSEARCA:IWD",
+              "basis": "legacy_feed",
+              "notes": "ttl_expired_non_reaffirmed_qty0"
+            },
+            {
+              "symbol_canonical": "NYSEARCA:XLF",
+              "basis": "legacy_feed",
+              "notes": "ttl_expired_non_reaffirmed_qty0"
+            },
+            {
+              "symbol_canonical": "NYSEARCA:XLE",
+              "basis": "legacy_feed",
+              "notes": "ttl_expired_non_reaffirmed_qty0"
+            },
+            {
+              "symbol_canonical": "NYSEARCA:SMH",
+              "basis": "legacy_feed",
+              "notes": "ttl_expired_non_reaffirmed_qty0"
+            },
+            {
+              "symbol_canonical": "BINANCE:DOTUSDT",
+              "basis": "legacy_feed",
+              "notes": "ttl_expired_non_reaffirmed_qty0"
+            },
+            {
+              "symbol_canonical": "BINANCE:LTCUSDT",
+              "basis": "legacy_feed",
+              "notes": "ttl_expired_non_reaffirmed_qty0"
+            }
+          ],
+          "blocked": [
+            {
+              "symbol_canonical": "NYSEARCA:IVV",
+              "basis": "anti_redundancy",
+              "notes": "broad_us_redundant_with_NYSEARCA:VOO"
+            },
+            {
+              "symbol_canonical": "NYSEARCA:SPY",
+              "basis": "anti_redundancy",
+              "notes": "broad_us_redundant_with_NYSEARCA:VOO"
+            },
+            {
+              "symbol_canonical": "NYSEARCA:VEA",
+              "basis": "anti_redundancy",
+              "notes": "broad_ex_us_redundant_with_NASDAQ:VXUS"
+            },
+            {
+              "symbol_canonical": "NASDAQ:GOOG",
+              "basis": "slot_limit",
+              "notes": "share_class_redundant_with_NASDAQ:GOOGL"
+            },
+            {
+              "symbol_canonical": "BINANCE:BNBUSDT",
+              "basis": "slot_limit",
+              "notes": "blocked_external_candidate; no mandate change/promotion in this cycle"
+            }
+          ]
         },
         "item_meta": {
           "NYSEARCA:VUG": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NYSEARCA:IVW": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NYSEARCA:IUSG": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NYSEARCA:SGOV": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NASDAQ:QQQM": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NASDAQ:SOXX": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NASDAQ:NVDA": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NASDAQ:AVGO": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NYSE:TSM": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NYSE:PLTR": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NYSE:VST": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NYSEARCA:ARGT": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "NYSEARCA:VOO": {
             "basis": "legacy_feed",
@@ -490,43 +522,48 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "NYSEARCA:SMH": {
             "basis": "legacy_feed",
             "sources": [],
-            "notes": "",
+            "notes": "removed_from_candidate_pool: ttl_expired_non_reaffirmed_qty0",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
           },
           "NYSEARCA:IJR": {
             "basis": "legacy_feed",
             "sources": [],
-            "notes": "",
+            "notes": "removed_from_candidate_pool: ttl_expired_non_reaffirmed_qty0",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
           },
           "NYSEARCA:IWF": {
             "basis": "legacy_feed",
             "sources": [],
-            "notes": "",
+            "notes": "removed_from_candidate_pool: ttl_expired_non_reaffirmed_qty0",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
           },
           "NYSEARCA:IWD": {
             "basis": "legacy_feed",
             "sources": [],
-            "notes": "",
+            "notes": "removed_from_candidate_pool: ttl_expired_non_reaffirmed_qty0",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
           },
           "NYSEARCA:XLV": {
             "basis": "legacy_feed",
@@ -535,170 +572,195 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "NYSEARCA:XLF": {
             "basis": "legacy_feed",
             "sources": [],
-            "notes": "",
+            "notes": "removed_from_candidate_pool: ttl_expired_non_reaffirmed_qty0",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
           },
           "NYSEARCA:XLE": {
             "basis": "legacy_feed",
             "sources": [],
-            "notes": "",
+            "notes": "removed_from_candidate_pool: ttl_expired_non_reaffirmed_qty0",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
           },
           "NASDAQ:MSFT": {
-            "basis": "legacy_feed",
+            "basis": "curation_holdings",
             "sources": [
               "holdings:VUG(Vanguard)",
-              "holdings:IVW(iShares)"
+              "holdings:IVW(iShares)",
+              "holdings:IUSG(iShares)",
+              "holdings:QQQM(Invesco)"
             ],
-            "notes": "reaffirmed_holdings_consensus",
+            "notes": "reaffirmed_holdings_consensus; candidate_cycles_seen>=2; whitelist promotion still blocked by individual_stock_slot/hard-cap",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 1,
-            "last_seen_at_utc": "2026-04-13T15:00:00Z"
+            "candidate_cycles_seen": 2,
+            "last_seen_at_utc": "2026-05-25T15:24:00Z",
+            "review_status": "promotion_candidate"
           },
           "NASDAQ:AAPL": {
-            "basis": "legacy_feed",
+            "basis": "curation_holdings",
             "sources": [
               "holdings:VUG(Vanguard)",
-              "holdings:IVW(iShares)"
+              "holdings:IVW(iShares)",
+              "holdings:IUSG(iShares)",
+              "holdings:QQQM(Invesco)"
             ],
-            "notes": "reaffirmed_holdings_consensus",
+            "notes": "reaffirmed_holdings_consensus; candidate_cycles_seen>=2; whitelist promotion still blocked by individual_stock_slot/hard-cap",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 1,
-            "last_seen_at_utc": "2026-04-13T15:00:00Z"
+            "candidate_cycles_seen": 2,
+            "last_seen_at_utc": "2026-05-25T15:24:00Z",
+            "review_status": "promotion_candidate"
           },
           "NASDAQ:GOOGL": {
-            "basis": "legacy_feed",
+            "basis": "curation_holdings",
             "sources": [
               "holdings:VUG(Vanguard)",
+              "holdings:IVW(iShares)",
+              "holdings:IUSG(iShares)",
+              "holdings:QQQM(Invesco)"
+            ],
+            "notes": "reaffirmed_holdings_consensus; candidate_cycles_seen>=2; whitelist promotion still blocked by individual_stock_slot/hard-cap",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 2,
+            "last_seen_at_utc": "2026-05-25T15:24:00Z",
+            "review_status": "promotion_candidate"
+          },
+          "NASDAQ:AMZN": {
+            "basis": "curation_holdings",
+            "sources": [
+              "holdings:VUG(Vanguard)",
+              "holdings:IUSG(iShares)",
+              "holdings:QQQM(Invesco)"
+            ],
+            "notes": "reaffirmed_holdings_consensus; candidate_cycles_seen>=2; whitelist promotion still blocked by individual_stock_slot/hard-cap",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 2,
+            "last_seen_at_utc": "2026-05-25T15:24:00Z",
+            "review_status": "promotion_candidate"
+          },
+          "NASDAQ:META": {
+            "basis": "curation_holdings",
+            "sources": [
+              "holdings:VUG(Vanguard)",
+              "holdings:IVW(iShares)",
+              "holdings:IUSG(iShares)",
+              "holdings:QQQM(Invesco)"
+            ],
+            "notes": "reaffirmed_holdings_consensus; candidate_cycles_seen>=2; whitelist promotion still blocked by individual_stock_slot/hard-cap",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 2,
+            "last_seen_at_utc": "2026-05-25T15:24:00Z",
+            "review_status": "promotion_candidate"
+          },
+          "NASDAQ:AMD": {
+            "basis": "legacy_feed",
+            "sources": [],
+            "notes": "not_reaffirmed_this_cycle; retained_by_churn_low_touch",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 0,
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
+          },
+          "NASDAQ:LRCX": {
+            "basis": "legacy_feed",
+            "sources": [],
+            "notes": "not_reaffirmed_this_cycle; retained_by_churn_low_touch",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 0,
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
+          },
+          "NASDAQ:ASML": {
+            "basis": "legacy_feed",
+            "sources": [],
+            "notes": "not_reaffirmed_this_cycle; retained_by_churn_low_touch",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 0,
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
+          },
+          "NYSE:COST": {
+            "basis": "legacy_feed",
+            "sources": [],
+            "notes": "not_reaffirmed_this_cycle; retained_by_churn_low_touch",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 0,
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
+          },
+          "NYSE:UNH": {
+            "basis": "legacy_feed",
+            "sources": [],
+            "notes": "not_reaffirmed_this_cycle; retained_by_churn_low_touch",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 0,
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
+          },
+          "NYSE:JPM": {
+            "basis": "legacy_feed",
+            "sources": [],
+            "notes": "not_reaffirmed_this_cycle; retained_by_churn_low_touch",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 0,
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
+          },
+          "NYSE:BRK.B": {
+            "basis": "legacy_feed",
+            "sources": [],
+            "notes": "not_reaffirmed_this_cycle; retained_by_churn_low_touch",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 0,
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
+          },
+          "NYSE:NVO": {
+            "basis": "legacy_feed",
+            "sources": [],
+            "notes": "not_reaffirmed_this_cycle; retained_by_churn_low_touch",
+            "invest_mode": "hold_only",
+            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
+            "candidate_cycles_seen": 0,
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
+          },
+          "NYSE:LLY": {
+            "basis": "pos_coverage",
+            "sources": [
               "holdings:IVW(iShares)",
               "holdings:IUSG(iShares)"
             ],
             "notes": "reaffirmed_holdings_consensus",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 1,
-            "last_seen_at_utc": "2026-04-13T15:00:00Z"
-          },
-          "NASDAQ:AMZN": {
-            "basis": "legacy_feed",
-            "sources": [
-              "holdings:VUG(Vanguard)",
-              "holdings:QQQM(Invesco)"
-            ],
-            "notes": "reaffirmed_holdings_consensus",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 1,
-            "last_seen_at_utc": "2026-04-13T15:00:00Z"
-          },
-          "NASDAQ:META": {
-            "basis": "legacy_feed",
-            "sources": [
-              "holdings:VUG(Vanguard)",
-              "holdings:QQQM(Invesco)"
-            ],
-            "notes": "reaffirmed_holdings_consensus",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 1,
-            "last_seen_at_utc": "2026-04-13T15:00:00Z"
-          },
-          "NASDAQ:AMD": {
-            "basis": "legacy_feed",
-            "sources": [],
-            "notes": "",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
-          },
-          "NASDAQ:LRCX": {
-            "basis": "legacy_feed",
-            "sources": [],
-            "notes": "",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
-          },
-          "NASDAQ:ASML": {
-            "basis": "legacy_feed",
-            "sources": [],
-            "notes": "",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
-          },
-          "NYSE:COST": {
-            "basis": "legacy_feed",
-            "sources": [],
-            "notes": "",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
-          },
-          "NYSE:UNH": {
-            "basis": "legacy_feed",
-            "sources": [],
-            "notes": "",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
-          },
-          "NYSE:JPM": {
-            "basis": "legacy_feed",
-            "sources": [],
-            "notes": "",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
-          },
-          "NYSE:BRK.B": {
-            "basis": "legacy_feed",
-            "sources": [],
-            "notes": "",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
-          },
-          "NYSE:NVO": {
-            "basis": "legacy_feed",
-            "sources": [],
-            "notes": "",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
-          },
-          "NYSE:LLY": {
-            "basis": "pos_coverage",
-            "sources": [
-              "holdings:VUG(Vanguard)",
-              "holdings:IUSG(iShares)"
-            ],
-            "notes": "position_coverage; reaffirmed_holdings_consensus",
-            "invest_mode": "hold_only",
-            "candidate_since_utc": "2026-02-24T00:00:00+00:00",
-            "candidate_cycles_seen": 1,
-            "last_seen_at_utc": "2026-04-13T15:00:00Z"
+            "candidate_cycles_seen": 2,
+            "last_seen_at_utc": "2026-05-25T15:24:00Z",
+            "review_status": "normal"
           },
           "NYSE:CVX": {
             "basis": "pos_coverage",
@@ -707,7 +769,8 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "NYSEARCA:ECH": {
             "basis": "pos_coverage",
@@ -716,7 +779,8 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "NYSE:SLB": {
             "basis": "pos_coverage",
@@ -725,7 +789,8 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "NASDAQ:VXUS": {
             "basis": "legacy_feed",
@@ -734,7 +799,8 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "NYSEARCA:GLDM": {
             "basis": "legacy_feed",
@@ -743,7 +809,8 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "NYSEARCA:SLV": {
             "basis": "legacy_feed",
@@ -752,43 +819,50 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "BINANCE:BTCUSDT": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "BINANCE:ETHUSDT": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "BINANCE:SOLUSDT": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "BINANCE:LINKUSDT": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "BINANCE:XRPUSDT": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "BINANCE:FETUSDT": {
             "basis": "legacy_feed",
             "sources": [],
             "notes": "",
-            "invest_mode": "active"
+            "invest_mode": "active",
+            "review_status": "normal"
           },
           "BINANCE:ADAUSDT": {
             "basis": "legacy_feed",
@@ -797,16 +871,18 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "BINANCE:DOTUSDT": {
             "basis": "legacy_feed",
             "sources": [],
-            "notes": "",
+            "notes": "removed_from_candidate_pool: ttl_expired_non_reaffirmed_qty0",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
           },
           "BINANCE:ARBUSDT": {
             "basis": "legacy_feed",
@@ -815,7 +891,8 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "BINANCE:OPUSDT": {
             "basis": "legacy_feed",
@@ -824,7 +901,8 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "BINANCE:AAVEUSDT": {
             "basis": "legacy_feed",
@@ -833,7 +911,8 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "BINANCE:UNIUSDT": {
             "basis": "legacy_feed",
@@ -842,16 +921,18 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "BINANCE:LTCUSDT": {
             "basis": "legacy_feed",
             "sources": [],
-            "notes": "",
+            "notes": "removed_from_candidate_pool: ttl_expired_non_reaffirmed_qty0",
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "downgrade_candidate"
           },
           "BINANCE:TONUSDT": {
             "basis": "legacy_feed",
@@ -860,7 +941,8 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
           },
           "BINANCE:NEARUSDT": {
             "basis": "legacy_feed",
@@ -869,7 +951,22 @@
             "invest_mode": "hold_only",
             "candidate_since_utc": "2026-02-24T00:00:00+00:00",
             "candidate_cycles_seen": 0,
-            "last_seen_at_utc": "2026-02-24T00:00:00+00:00"
+            "last_seen_at_utc": "2026-02-24T00:00:00+00:00",
+            "review_status": "normal"
+          },
+          "NYSEARCA:COLO": {
+            "basis": "legacy_feed",
+            "sources": [],
+            "notes": "",
+            "invest_mode": "hold_only",
+            "review_status": "normal"
+          },
+          "NYSEARCA:EPU": {
+            "basis": "legacy_feed",
+            "sources": [],
+            "notes": "removed_from_candidate_pool: ttl_expired_non_reaffirmed_qty0",
+            "invest_mode": "hold_only",
+            "review_status": "downgrade_candidate"
           }
         }
       },
@@ -878,20 +975,20 @@
       }
     },
     "watchlists_meta": {
-      "strategy_watchlists_version_applied": "v20260224A",
-      "run_at_utc": "2026-04-13T15:00:00Z",
-      "run_at_brt": "2026-04-13T12:00:00-03:00",
-      "next_update_reco_brt": "2026-05-13T12:00:00-03:00",
+      "strategy_watchlists_version_applied": "v20260525A",
+      "run_at_utc": "2026-05-25T15:24:00Z",
+      "run_at_brt": "2026-05-25T12:24:00-03:00",
+      "next_update_reco_brt": "2026-06-24T12:24:00-03:00",
       "external_overlay": {
-        "policy": "fail-closed com quorum; sem quorum não há adições. Nesta rodada houve quorum, mas sem mudanças de composição.",
+        "policy": "fail-closed com quorum; sem quorum não há adições. Nesta rodada houve quorum; houve poda TTL e sem adições novas.",
         "curated_sources": {
           "avenue": {
             "target_count_y": 6,
             "min_required_x": 4,
             "sources": [
               {
-                "name": "Schwab Quarterly ETF Select List",
-                "type": "tier1_pdf",
+                "name": "Schwab ETF Select List",
+                "type": "tier1_select_list",
                 "status": "FAIL"
               },
               {
@@ -915,7 +1012,7 @@
                 "status": "OK"
               },
               {
-                "name": "SPDR ETF Model Portfolios",
+                "name": "SPDR/State Street ETF Model Portfolios",
                 "type": "tier1_pdf",
                 "status": "OK"
               }
@@ -959,28 +1056,38 @@
         },
         "sources_used_summary": {
           "avenue": [
-            "Quorum 5/6 OK; sem novas adições e sem remoções forçadas."
+            "Quorum 5/6 OK; sem adições novas; poda TTL em candidates stale sem posição."
           ],
           "binance": [
-            "Quorum 2/3 OK; sem crédito de reafirmação por símbolo nesta rodada."
+            "Quorum 2/3 OK; sem adições novas; poda TTL em candidates stale sem posição."
           ]
         }
       },
       "changes": {
         "added_symbols": [],
-        "removed_symbols": [],
-        "removed_count": 0
+        "removed_symbols": [
+          "NYSEARCA:EPU",
+          "NYSEARCA:IJR",
+          "NYSEARCA:IWF",
+          "NYSEARCA:IWD",
+          "NYSEARCA:XLF",
+          "NYSEARCA:XLE",
+          "NYSEARCA:SMH",
+          "BINANCE:DOTUSDT",
+          "BINANCE:LTCUSDT"
+        ],
+        "removed_count": 9
       },
       "integrity": {
-        "check_at_utc": "2026-04-13T15:00:00Z",
+        "check_at_utc": "2026-05-25T15:24:00Z",
         "counts": {
           "avenue": {
             "whitelist": 12,
-            "candidate_pool": 28
+            "candidate_pool": 23
           },
           "binance": {
             "whitelist": 6,
-            "candidate_pool": 9
+            "candidate_pool": 7
           }
         },
         "invariants_ok": true,
@@ -1006,12 +1113,12 @@
         }
       },
       "AUDITORIA_WATCHLISTS": [
-        "Avenue counts (JSON): whitelist=12 candidate_pool=28 total=40",
-        "Binance counts (JSON): whitelist=6 candidate_pool=9 total=15",
+        "Avenue counts (JSON): whitelist=12 candidate_pool=23 total=35",
+        "Binance counts (JSON): whitelist=6 candidate_pool=7 total=13",
         "Cobertura_posicoes: OK",
         "Redundancia broad (Avenue): US=['NYSEARCA:VOO'] ex-US=['NASDAQ:VXUS']",
         "Overlay quorum: Avenue 5/6 (min 4) • Binance 2/3 (min 2)",
-        "Alteracoes de composicao: nenhuma",
+        "Alteracoes de composicao: removed=9 added=0",
         "Reafirmados para candidate_cycles_seen: NASDAQ:MSFT, NASDAQ:AAPL, NASDAQ:GOOGL, NASDAQ:AMZN, NASDAQ:META, NYSE:LLY"
       ],
       "Gate": {
@@ -1020,46 +1127,54 @@
       },
       "created_at_utc": "2026-02-24T00:00:00+00:00",
       "created_at_brt": "2026-02-23T21:00:00-03:00",
-      "next_recommended_update_at_utc": "2026-05-13T15:00:00Z",
-      "next_recommended_update_at_brt": "2026-05-13T12:00:00-03:00",
-      "watchlists_generated_at_utc": "2026-04-13T15:00:00Z",
-      "watchlists_generated_at_brt": "2026-04-13T12:00:00-03:00",
-      "watchlists_next_review_recommended_at_utc": "2026-05-13T15:00:00Z",
-      "watchlists_next_review_recommended_at_brt": "2026-05-13T12:00:00-03:00",
+      "next_recommended_update_at_utc": "2026-06-24T15:24:00Z",
+      "next_recommended_update_at_brt": "2026-06-24T12:24:00-03:00",
+      "watchlists_generated_at_utc": "2026-05-25T15:24:00Z",
+      "watchlists_generated_at_brt": "2026-05-25T12:24:00-03:00",
+      "watchlists_next_review_recommended_at_utc": "2026-06-24T15:24:00Z",
+      "watchlists_next_review_recommended_at_brt": "2026-06-24T12:24:00-03:00",
       "watchlists_review_rule": "mensal (default) — próximo ciclo = generated_at + 30d",
-      "watchlists_method_version": "v20260224A",
+      "watchlists_method_version": "v20260525A",
       "overlay_provenance": {
         "Avenue": {
           "NASDAQ:MSFT": [
             "VUG",
-            "IVW"
+            "IVW",
+            "IUSG",
+            "QQQM"
           ],
           "NASDAQ:AAPL": [
             "VUG",
-            "IVW"
+            "IVW",
+            "IUSG",
+            "QQQM"
           ],
           "NASDAQ:GOOGL": [
             "VUG",
             "IVW",
-            "IUSG"
+            "IUSG",
+            "QQQM"
           ],
           "NASDAQ:AMZN": [
             "VUG",
+            "IUSG",
             "QQQM"
           ],
           "NASDAQ:META": [
             "VUG",
+            "IVW",
+            "IUSG",
             "QQQM"
           ],
           "NYSE:LLY": [
-            "VUG",
+            "IVW",
             "IUSG"
           ]
         },
         "Binance": {}
       },
       "overlay_run": {
-        "version": "v20260224A",
+        "version": "v20260525A",
         "quorum": {
           "avenue": "OK",
           "binance": "OK",
@@ -1086,10 +1201,21 @@
           "Binance": []
         },
         "removed": {
-          "Avenue": [],
-          "Binance": []
+          "Avenue": [
+            "NYSEARCA:EPU",
+            "NYSEARCA:IJR",
+            "NYSEARCA:IWF",
+            "NYSEARCA:IWD",
+            "NYSEARCA:XLF",
+            "NYSEARCA:XLE",
+            "NYSEARCA:SMH"
+          ],
+          "Binance": [
+            "BINANCE:DOTUSDT",
+            "BINANCE:LTCUSDT"
+          ]
         },
-        "notes": "Sem mudanças de composição; apenas reafirmação de candidates com fonte oficial suficiente e atualização de metadados."
+        "notes": "Sem adições novas; remoções por TTL de candidates sem posição e não reafirmados. Whitelist inalterada."
       }
     }
   },
