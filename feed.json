@@ -1290,7 +1290,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 7613.95,
+    "cash_usd": 7071.45,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1387,8 +1387,8 @@
         "schema_warn": []
       },
       "AVGO": {
-        "quantity": 10.89141,
-        "avg_cost_usd": 340.70662879,
+        "quantity": 12.17637,
+        "avg_cost_usd": 349.3057113,
         "asset_type": "equity",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:AVGO",
@@ -3104,6 +3104,23 @@
       "cost_usd": 502.5,
       "reason": "[MANUAL] buy market (user exec)",
       "run_id": "manual_20260520",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-05-28T14:12:00Z",
+      "platform": "Avenue",
+      "symbol": "AVGO",
+      "side": "BUY",
+      "quantity": 1.28496,
+      "price_usd": 420.25,
+      "cost_usd": 542.5,
+      "reason": "[N1] [MANUAL] buy market (user exec)",
+      "run_id": "manual_20260528",
       "notes": [
         "equity",
         "market",
