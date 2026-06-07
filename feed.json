@@ -1290,7 +1290,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 7071.45,
+    "cash_usd": 7624.82,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1325,8 +1325,8 @@
         ]
       },
       "IVW": {
-        "quantity": 51.02158,
-        "avg_cost_usd": 119.91,
+        "quantity": 59.10684,
+        "avg_cost_usd": 122.20239921,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:IVW",
@@ -1355,7 +1355,7 @@
         "schema_warn": []
       },
       "SOXX": {
-        "quantity": 11.92935,
+        "quantity": 8.92935,
         "avg_cost_usd": 290.80761899,
         "asset_type": "etf",
         "venue": "NASDAQ",
@@ -3125,6 +3125,40 @@
         "equity",
         "market",
         "fee_usd=2.50",
+        "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-06-05T17:09:00Z",
+      "platform": "Avenue",
+      "symbol": "SOXX",
+      "side": "SELL",
+      "quantity": 3,
+      "price_usd": 552.79,
+      "proceeds_usd": 1658.37,
+      "reason": "[MANUAL] sell market (user exec) winner_25pct",
+      "run_id": "manual_20260605",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=0.00",
+        "winner_25pct"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-06-05T17:10:00Z",
+      "platform": "Avenue",
+      "symbol": "IVW",
+      "side": "BUY",
+      "quantity": 8.08526,
+      "price_usd": 136.05,
+      "cost_usd": 1105,
+      "reason": "[N1] [MANUAL] buy market (user exec)",
+      "run_id": "manual_20260605",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=5.00",
         "commission_in_cost"
       ]
     }
