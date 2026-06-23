@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2025-10-29T14:41:00-03:00",
+  "generated_at_brt": "2026-06-23T15:16:00-03:00",
   "strategy_version": "v20251215A",
   "patches_active": [],
   "meta": {
@@ -1290,7 +1290,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 7624.82,
+    "cash_usd": 9824.23,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1416,21 +1416,6 @@
         "isin": "US92840M1027",
         "schema_warn": []
       },
-      "PLTR": {
-        "quantity": 5.64453,
-        "avg_cost_usd": 167.09,
-        "asset_type": "equity",
-        "venue": "NYSE",
-        "symbol_canonical": "NYSE:PLTR",
-        "currency": "USD",
-        "vendor_profile": [
-          "alpha",
-          "beta",
-          "gamma"
-        ],
-        "isin": "US69608A1088",
-        "schema_warn": []
-      },
       "ARGT": {
         "quantity": 21.55,
         "avg_cost_usd": 79.57,
@@ -1514,24 +1499,6 @@
           "missing_isin"
         ]
       },
-      "SLB": {
-        "symbol": "SLB",
-        "symbol_canonical": "NYSE:SLB",
-        "asset_type": "equity",
-        "venue": "NYSE",
-        "currency": "USD",
-        "quantity": 20.28631,
-        "avg_cost_usd": 49.70877,
-        "isin": null,
-        "vendor_profile": [
-          "yfinance",
-          "stooq",
-          "tiingo"
-        ],
-        "schema_warn": [
-          "missing_isin"
-        ]
-      },
       "GLDM": {
         "quantity": 29,
         "avg_cost_usd": 106.59,
@@ -1539,20 +1506,6 @@
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:GLDM",
         "currency": "USD",
-        "vendor_profile": [
-          "alpha",
-          "beta",
-          "gamma"
-        ],
-        "schema_warn": []
-      },
-      "SLV": {
-        "symbol_canonical": "NYSEARCA:SLV",
-        "asset_type": "etf",
-        "venue": "NYSEARCA",
-        "currency": "USD",
-        "quantity": 10,
-        "avg_cost_usd": 101.498,
         "vendor_profile": [
           "alpha",
           "beta",
@@ -1580,7 +1533,7 @@
     }
   },
   "binance": {
-    "usdt": 3111.16998657,
+    "usdt": 2961.16998657,
     "positions": {
       "BTC": {
         "quantity": 0.07971843,
@@ -1596,8 +1549,8 @@
         ]
       },
       "ETH": {
-        "quantity": 1.23337847,
-        "avg_cost_usd": 3160.34197915,
+        "quantity": 1.32335777,
+        "avg_cost_usd": 3058.808318268157,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:ETHUSDT",
@@ -3160,6 +3113,75 @@
         "market",
         "fee_usd=5.00",
         "commission_in_cost"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-06-23T16:25:00Z",
+      "platform": "Binance",
+      "symbol": "ETH",
+      "side": "BUY",
+      "quantity": 0.0899793,
+      "price_usd": 1667.05,
+      "cost_usdt": 150.0,
+      "reason": "[N3] [MANUAL] convert buy (user exec)",
+      "run_id": "manual_20260623",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0",
+        "usdt_spent",
+        "n_level=N3"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-06-23T17:29:00Z",
+      "platform": "Avenue",
+      "symbol": "SLV",
+      "side": "SELL",
+      "quantity": 10,
+      "price_usd": 56.08,
+      "proceeds_usd": 558.3,
+      "reason": "[MANUAL] sell market (user exec) cleanup_exit",
+      "run_id": "manual_20260623",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=2.50",
+        "position_closed"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-06-23T17:34:00Z",
+      "platform": "Avenue",
+      "symbol": "PLTR",
+      "side": "SELL",
+      "quantity": 5.64453,
+      "price_usd": 118.97,
+      "proceeds_usd": 669.01,
+      "reason": "[MANUAL] sell market (user exec) cleanup_exit",
+      "run_id": "manual_20260623",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "position_closed"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-06-23T17:39:00Z",
+      "platform": "Avenue",
+      "symbol": "SLB",
+      "side": "SELL",
+      "quantity": 20.28631,
+      "price_usd": 48.04,
+      "proceeds_usd": 972.1,
+      "reason": "[MANUAL] sell market (user exec) cleanup_exit",
+      "run_id": "manual_20260623",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "position_closed"
       ]
     }
   ]
