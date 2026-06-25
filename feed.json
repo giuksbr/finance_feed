@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-06-23T16:56:00-03:00",
+  "generated_at_brt": "2026-06-24T10:56:00-03:00",
   "strategy_version": "v20251215A",
   "patches_active": [],
   "meta": {
@@ -1290,7 +1290,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 11149.31,
+    "cash_usd": 10875.0,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1402,8 +1402,8 @@
         "schema_warn": []
       },
       "VST": {
-        "quantity": 26.85547,
-        "avg_cost_usd": 163.05303,
+        "quantity": 28.69761,
+        "avg_cost_usd": 163.12737387,
         "asset_type": "equity",
         "venue": "NYSE",
         "symbol_canonical": "NYSE:VST",
@@ -3203,6 +3203,24 @@
         "n_level=N1",
         "displayed_price_usd=604.58",
         "cash_from_total_operation"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-06-24T13:56:00Z",
+      "platform": "Avenue",
+      "symbol": "VST",
+      "side": "BUY",
+      "quantity": 1.84214,
+      "price_usd": 162.85,
+      "cost_usd": 302.5,
+      "reason": "[N1] [MANUAL] buy market (user exec)",
+      "run_id": "manual_20260624",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost",
+        "n_level=N1"
       ]
     }
   ]
