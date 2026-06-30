@@ -936,7 +936,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 10875.0,
+    "cash_usd": 11573.64,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1018,8 +1018,8 @@
         ]
       },
       "TSM": {
-        "quantity": 12.41102,
-        "avg_cost_usd": 325.49423377,
+        "quantity": 10.5954,
+        "avg_cost_usd": 342.90194995,
         "asset_type": "equity",
         "venue": "NYSE",
         "symbol_canonical": "NYSE:TSM",
@@ -2861,6 +2861,42 @@
       "cost_usd": 302.5,
       "reason": "[N1] [MANUAL] buy market (user exec)",
       "run_id": "manual_20260624",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost",
+        "n_level=N1"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-06-26T14:00:00Z",
+      "platform": "Avenue",
+      "symbol": "TSM",
+      "side": "SELL",
+      "quantity": 3.1,
+      "price_usd": 421.33,
+      "proceeds_usd": 1301.14,
+      "reason": "[MANUAL] sell market (user exec) winner_25pct",
+      "run_id": "manual_20260626",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=5.00",
+        "winner_25pct",
+        "winner_lockout_5_full_trading_days"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-06-30T14:18:00Z",
+      "platform": "Avenue",
+      "symbol": "TSM",
+      "side": "BUY",
+      "quantity": 1.28438,
+      "price_usd": 467.15,
+      "cost_usd": 602.5,
+      "reason": "[N1] [MANUAL] buy market (user exec)",
+      "run_id": "manual_20260630",
       "notes": [
         "equity",
         "market",
