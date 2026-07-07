@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-07-06T11:20:00-03:00",
+  "generated_at_brt": "2026-07-07T11:02:00-03:00",
   "strategy_version": "v20251215A",
   "patches_active": [],
   "meta": {
@@ -936,7 +936,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 12247.01,
+    "cash_usd": 13397.8,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1018,7 +1018,7 @@
         ]
       },
       "TSM": {
-        "quantity": 10.5954,
+        "quantity": 7.94655,
         "avg_cost_usd": 342.90194995,
         "asset_type": "equity",
         "venue": "NYSE",
@@ -2941,6 +2941,25 @@
         "fee_usd=2.50",
         "commission_in_cost",
         "n_level=N2"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-07-07T14:00:00Z",
+      "platform": "Avenue",
+      "symbol": "TSM",
+      "side": "SELL",
+      "quantity": 2.64885,
+      "price_usd": 436.34,
+      "proceeds_usd": 1150.79,
+      "reason": "[MANUAL] sell market (user exec) winner_25pct",
+      "run_id": "manual_20260707",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=5.00",
+        "winner_25pct",
+        "winner_lockout_5_full_trading_days",
+        "winner_buy_increase_lockout_5_full_trading_days"
       ]
     }
   ]
