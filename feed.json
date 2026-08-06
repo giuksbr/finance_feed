@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-07-28T13:52:34-03:00",
-  "strategy_version": "v20260727G",
+  "generated_at_brt": "2026-08-06T14:49:00-03:00",
+  "strategy_version": "v20260806D",
   "patches_active": [],
   "meta": {
-    "version_timestamp": "2026-07-28T13:52:34-03:00",
+    "version_timestamp": "2026-08-06T14:49:00-03:00",
     "hwm_portfolio_start_date": "2025-09-12",
     "prints_valid_days": 3,
-    "notes": "Estratégia Consolidada ATIVA v20260727G; winners/giveback usam avg_cost_usd do feed; watchlists double-checked em 2026-07-28."
+    "notes": "Estratégia Consolidada ATIVA v20260806D; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06."
   },
   "data_sources": {
     "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
@@ -1066,7 +1066,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 4830.3,
+    "cash_usd": 4828.25,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1289,13 +1289,13 @@
         ],
         "schema_warn": []
       },
-      "COLO": {
-        "symbol_canonical": "NYSEARCA:COLO",
+      "VXUS": {
+        "quantity": 8.2013,
+        "avg_cost_usd": 86.63260702571544,
         "asset_type": "etf",
-        "venue": "NYSEARCA",
+        "venue": "NASDAQ",
+        "symbol_canonical": "NASDAQ:VXUS",
         "currency": "USD",
-        "quantity": 15,
-        "avg_cost_usd": 42.46666667,
         "vendor_profile": [
           "alpha",
           "beta",
@@ -3149,6 +3149,44 @@
         "winner_lockout_5_full_trading_days",
         "winner_buy_increase_lockout_5_full_trading_days",
         "n_level=N2"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-06T17:42:00Z",
+      "platform": "Avenue",
+      "symbol": "COLO",
+      "side": "SELL",
+      "quantity": 15,
+      "price_usd": 47.23,
+      "proceeds_usd": 708.45,
+      "reason": "[MANUAL] sell market (user exec) structural_rotation COLO_to_VXUS",
+      "run_id": "manual_20260806",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=0.00",
+        "position_closed",
+        "structural_rotation",
+        "rotation_origin"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-06T17:43:00Z",
+      "platform": "Avenue",
+      "symbol": "VXUS",
+      "side": "BUY",
+      "quantity": 8.2013,
+      "price_usd": 86.33,
+      "cost_usd": 710.5,
+      "reason": "[MANUAL] buy market (user exec) structural_rotation COLO_to_VXUS",
+      "run_id": "manual_20260806",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost",
+        "structural_rotation",
+        "rotation_destination"
       ]
     }
   ]
