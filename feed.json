@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-08-06T14:49:00-03:00",
-  "strategy_version": "v20260806D",
+  "generated_at_brt": "2026-08-11T13:14:00-03:00",
+  "strategy_version": "v20260811B",
   "patches_active": [],
   "meta": {
-    "version_timestamp": "2026-08-06T14:49:00-03:00",
+    "version_timestamp": "2026-08-11T13:14:00-03:00",
     "hwm_portfolio_start_date": "2025-09-12",
     "prints_valid_days": 3,
-    "notes": "Estratégia Consolidada ATIVA v20260806D; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06."
+    "notes": "Estratégia Consolidada ATIVA v20260811B; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11."
   },
   "data_sources": {
     "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
@@ -1309,7 +1309,7 @@
     }
   },
   "binance": {
-    "usdt": 2961.16998657,
+    "usdt": 2871.16998657000,
     "positions": {
       "BTC": {
         "quantity": 0.07971843,
@@ -1325,8 +1325,8 @@
         ]
       },
       "ETH": {
-        "quantity": 1.32335777,
-        "avg_cost_usd": 3058.808318268157,
+        "quantity": 1.37164848,
+        "avg_cost_usd": 3016.733379765637,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:ETHUSDT",
@@ -3187,6 +3187,24 @@
         "commission_in_cost",
         "structural_rotation",
         "rotation_destination"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-11T15:45:00Z",
+      "platform": "Binance",
+      "symbol": "ETH",
+      "side": "BUY",
+      "quantity": 0.04829071,
+      "price_usd": 1863.71,
+      "cost_usdt": 90,
+      "reason": "[CORE_DCA] [MANUAL] convert buy (user exec)",
+      "run_id": "manual_20260811",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0",
+        "usdt_spent",
+        "core_dca"
       ]
     }
   ]
