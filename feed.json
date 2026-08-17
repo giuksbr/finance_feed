@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-08-11T13:14:00-03:00",
+  "generated_at_brt": "2026-08-17T12:20:00-03:00",
   "strategy_version": "v20260811B",
   "patches_active": [],
   "meta": {
-    "version_timestamp": "2026-08-11T13:14:00-03:00",
+    "version_timestamp": "2026-08-17T12:20:00-03:00",
     "hwm_portfolio_start_date": "2025-09-12",
     "prints_valid_days": 3,
-    "notes": "Estratégia Consolidada ATIVA v20260811B; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11."
+    "notes": "Estratégia Consolidada ATIVA v20260811B; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17."
   },
   "data_sources": {
     "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
@@ -1066,7 +1066,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 4828.25,
+    "cash_usd": 4162.33,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1084,7 +1084,7 @@
         "schema_warn": []
       },
       "SGOV": {
-        "quantity": 102.78735,
+        "quantity": 82.18735,
         "avg_cost_usd": 100.68640351642082,
         "asset_type": "etf",
         "venue": "NYSEARCA",
@@ -1131,8 +1131,8 @@
         "schema_warn": []
       },
       "SOXX": {
-        "quantity": 2.81213,
-        "avg_cost_usd": 290.80761899,
+        "quantity": 5.37890,
+        "avg_cost_usd": 422.5378478109555299410660172154157913328,
         "asset_type": "etf",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:SOXX",
@@ -1290,8 +1290,8 @@
         "schema_warn": []
       },
       "VXUS": {
-        "quantity": 8.2013,
-        "avg_cost_usd": 86.63260702571544,
+        "quantity": 22.59712,
+        "avg_cost_usd": 87.86517927948340487955987311657414750198,
         "asset_type": "etf",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:VXUS",
@@ -3205,6 +3205,60 @@
         "fee=0",
         "usdt_spent",
         "core_dca"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-17T15:12:00Z",
+      "platform": "Avenue",
+      "symbol": "VXUS",
+      "side": "BUY",
+      "quantity": 14.39582,
+      "price_usd": 88.22,
+      "cost_usd": 1275.0,
+      "reason": "[MANUAL] buy market (user exec) DEPLOY_ESTRUTURAL_Avenue",
+      "run_id": "manual_20260817",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=5.00",
+        "commission_in_cost",
+        "deploy_estrutural_avenue"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-17T15:13:00Z",
+      "platform": "Avenue",
+      "symbol": "SOXX",
+      "side": "BUY",
+      "quantity": 2.56677,
+      "price_usd": 564.91,
+      "cost_usd": 1455.0,
+      "reason": "[N2] [MANUAL] buy market (user exec)",
+      "run_id": "manual_20260817",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=5.00",
+        "commission_in_cost",
+        "n_level=N2"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-17T15:14:00Z",
+      "platform": "Avenue",
+      "symbol": "SGOV",
+      "side": "SELL",
+      "quantity": 20.6,
+      "price_usd": 100.56,
+      "proceeds_usd": 2064.08,
+      "reason": "[MANUAL] sell market (user exec) cash_management",
+      "run_id": "manual_20260817",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=7.50",
+        "cash_management",
+        "action_cash"
       ]
     }
   ]
