@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-08-24T10:36:00-03:00",
+  "generated_at_brt": "2026-08-24T11:17:00-03:00",
   "strategy_version": "v20260811B",
   "patches_active": [],
   "meta": {
-    "version_timestamp": "2026-08-24T10:36:00-03:00",
+    "version_timestamp": "2026-08-24T11:17:00-03:00",
     "hwm_portfolio_start_date": "2025-09-12",
     "prints_valid_days": 3,
-    "notes": "Estratégia Consolidada ATIVA v20260811B; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21."
+    "notes": "Estratégia Consolidada ATIVA v20260811B; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24."
   },
   "data_sources": {
     "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
@@ -1066,7 +1066,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 10644.93,
+    "cash_usd": 4634.93,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1084,8 +1084,8 @@
         "schema_warn": []
       },
       "SGOV": {
-        "quantity": 82.18735,
-        "avg_cost_usd": 100.68640351642082,
+        "quantity": 141.80715,
+        "avg_cost_usd": 100.73644866316901990221931686801405993985493679268,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:SGOV",
@@ -3277,6 +3277,25 @@
         "fee_usd=5.00",
         "commission_in_cost",
         "n_level=N2"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-24T14:14:00Z",
+      "platform": "Avenue",
+      "symbol": "SGOV",
+      "side": "BUY",
+      "quantity": 59.61980,
+      "price_usd": 100.64,
+      "cost_usd": 6010.0,
+      "reason": "[MANUAL] buy market (user exec) cash_management",
+      "run_id": "manual_20260824",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=10.00",
+        "commission_in_cost",
+        "cash_management",
+        "action_cash"
       ]
     }
   ]
