@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-08-24T11:17:00-03:00",
+  "generated_at_brt": "2026-08-25T12:51:00-03:00",
   "strategy_version": "v20260811B",
   "patches_active": [],
   "meta": {
-    "version_timestamp": "2026-08-24T11:17:00-03:00",
+    "version_timestamp": "2026-08-25T12:51:00-03:00",
     "hwm_portfolio_start_date": "2025-09-12",
     "prints_valid_days": 3,
-    "notes": "Estratégia Consolidada ATIVA v20260811B; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24."
+    "notes": "Estratégia Consolidada ATIVA v20260811B; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24; rotação tática AVGO→MSFT com compra MSFT [N1] executada em 2026-08-25."
   },
   "data_sources": {
     "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
@@ -1066,7 +1066,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 4634.93,
+    "cash_usd": 4623.33,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1163,7 +1163,7 @@
         "schema_warn": []
       },
       "AVGO": {
-        "quantity": 12.96596,
+        "quantity": 7.41596,
         "avg_cost_usd": 351.36430962,
         "asset_type": "equity",
         "venue": "NASDAQ",
@@ -1175,6 +1175,21 @@
           "gamma"
         ],
         "isin": "US11135F1012",
+        "schema_warn": []
+      },
+      "MSFT": {
+        "quantity": 4.08799,
+        "avg_cost_usd": 490.46108234119946477364181419230477569661373927040,
+        "asset_type": "equity",
+        "venue": "NASDAQ",
+        "symbol_canonical": "NASDAQ:MSFT",
+        "currency": "USD",
+        "vendor_profile": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "isin": "US5949181045",
         "schema_warn": []
       },
       "VST": {
@@ -3296,6 +3311,44 @@
         "commission_in_cost",
         "cash_management",
         "action_cash"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-25T15:48:00Z",
+      "platform": "Avenue",
+      "symbol": "AVGO",
+      "side": "SELL",
+      "quantity": 5.55000,
+      "price_usd": 360.52,
+      "proceeds_usd": 1993.40,
+      "reason": "[MANUAL] sell market (user exec) tactical_rotation AVGO_to_MSFT",
+      "run_id": "manual_20260825",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=7.50",
+        "tactical_rotation",
+        "rotation_origin"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-25T15:51:00Z",
+      "platform": "Avenue",
+      "symbol": "MSFT",
+      "side": "BUY",
+      "quantity": 4.08799,
+      "price_usd": 489.24,
+      "cost_usd": 2005.0,
+      "reason": "[N1] [MANUAL] buy market (user exec) tactical_rotation AVGO_to_MSFT",
+      "run_id": "manual_20260825",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=5.00",
+        "commission_in_cost",
+        "tactical_rotation",
+        "rotation_destination",
+        "n_level=N1"
       ]
     }
   ]
