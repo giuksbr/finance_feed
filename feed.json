@@ -1241,23 +1241,6 @@
           "isin_missing"
         ]
       },
-      "ECH": {
-        "quantity": 14.6,
-        "avg_cost_usd": 42.18,
-        "asset_type": "etf",
-        "venue": "NYSEARCA",
-        "symbol_canonical": "NYSEARCA:ECH",
-        "currency": "USD",
-        "vendor_profile": [
-          "alpha",
-          "beta",
-          "gamma"
-        ],
-        "isin": null,
-        "schema_warn": [
-          "isin_missing"
-        ]
-      },
       "LLY": {
         "quantity": 0.93895,
         "avg_cost_usd": 1074.62,
@@ -1273,13 +1256,13 @@
         ]
       },
       "CVX": {
+        "quantity": 5.63,
+        "avg_cost_usd": 177.69405,
         "symbol": "CVX",
         "symbol_canonical": "NYSE:CVX",
         "asset_type": "equity",
         "venue": "NYSE",
         "currency": "USD",
-        "quantity": 5.63,
-        "avg_cost_usd": 177.69405,
         "isin": null,
         "vendor_profile": [
           "yfinance",
