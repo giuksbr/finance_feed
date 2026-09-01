@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-08-26T13:53:00-03:00",
+  "generated_at_brt": "2026-09-01T16:51:10-03:00",
   "strategy_version": "v20260826B",
   "patches_active": [],
   "meta": {
-    "version_timestamp": "2026-08-26T13:53:00-03:00",
+    "version_timestamp": "2026-09-01T16:51:10-03:00",
     "hwm_portfolio_start_date": "2025-09-12",
     "prints_valid_days": 3,
-    "notes": "Estratégia Consolidada ATIVA v20260826B; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24; rotação tática AVGO→MSFT com compra MSFT [N1] executada em 2026-08-25; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-26; venda SGOV para gestão de caixa executada em 2026-08-26."
+    "notes": "Estratégia Consolidada ATIVA v20260826B; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24; rotação tática AVGO→MSFT com compra MSFT [N1] executada em 2026-08-25; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-26; venda SGOV para gestão de caixa executada em 2026-08-26; compra BTC [N1] executada em 2026-09-01."
   },
   "data_sources": {
     "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
@@ -1085,7 +1085,7 @@
       },
       "SGOV": {
         "quantity": 128.40715,
-        "avg_cost_usd": 100.73644866316901990221931686801405993985493679268,
+        "avg_cost_usd": 100.73644866316901,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:SGOV",
@@ -1131,8 +1131,8 @@
         "schema_warn": []
       },
       "SOXX": {
-        "quantity": 5.37890,
-        "avg_cost_usd": 422.5378478109555299410660172154157913328,
+        "quantity": 5.3789,
+        "avg_cost_usd": 422.53784781095555,
         "asset_type": "etf",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:SOXX",
@@ -1149,7 +1149,7 @@
       },
       "TSM": {
         "quantity": 11.51551,
-        "avg_cost_usd": 366.88670240181915520893125879791689642925063674991,
+        "avg_cost_usd": 366.88670240181915,
         "asset_type": "equity",
         "venue": "NYSE",
         "symbol_canonical": "NYSE:TSM",
@@ -1179,7 +1179,7 @@
       },
       "MSFT": {
         "quantity": 4.08799,
-        "avg_cost_usd": 490.46108234119946477364181419230477569661373927040,
+        "avg_cost_usd": 490.46108234119947,
         "asset_type": "equity",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:MSFT",
@@ -1289,7 +1289,7 @@
       },
       "VXUS": {
         "quantity": 45.28977,
-        "avg_cost_usd": 87.9969602701705238102307464311983418522923408670808575401755,
+        "avg_cost_usd": 87.99696027017052,
         "asset_type": "etf",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:VXUS",
@@ -1307,11 +1307,11 @@
     }
   },
   "binance": {
-    "usdt": 2871.16998657000,
+    "usdt": 2571.16998657,
     "positions": {
       "BTC": {
-        "quantity": 0.07971843,
-        "avg_cost_usd": 95723.93068677,
+        "quantity": 0.08353705,
+        "avg_cost_usd": 94939.4486372,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:BTCUSDT",
@@ -2896,7 +2896,7 @@
       "side": "BUY",
       "quantity": 0.0899793,
       "price_usd": 1667.05,
-      "cost_usdt": 150.0,
+      "cost_usdt": 150,
       "reason": "[N3] [MANUAL] convert buy (user exec)",
       "run_id": "manual_20260623",
       "notes": [
@@ -3117,7 +3117,7 @@
       "side": "BUY",
       "quantity": 98.41179,
       "price_usd": 100.6,
-      "cost_usd": 9910.0,
+      "cost_usd": 9910,
       "reason": "[MANUAL] buy market (user exec) cash_management",
       "run_id": "manual_20260721",
       "notes": [
@@ -3212,7 +3212,7 @@
       "side": "BUY",
       "quantity": 14.39582,
       "price_usd": 88.22,
-      "cost_usd": 1275.0,
+      "cost_usd": 1275,
       "reason": "[MANUAL] buy market (user exec) DEPLOY_ESTRUTURAL_Avenue",
       "run_id": "manual_20260817",
       "notes": [
@@ -3230,7 +3230,7 @@
       "side": "BUY",
       "quantity": 2.56677,
       "price_usd": 564.91,
-      "cost_usd": 1455.0,
+      "cost_usd": 1455,
       "reason": "[N2] [MANUAL] buy market (user exec)",
       "run_id": "manual_20260817",
       "notes": [
@@ -3266,7 +3266,7 @@
       "side": "BUY",
       "quantity": 3.56896,
       "price_usd": 418.89,
-      "cost_usd": 1500.0,
+      "cost_usd": 1500,
       "reason": "[N2] [MANUAL] buy market (user exec)",
       "run_id": "manual_20260821",
       "notes": [
@@ -3282,9 +3282,9 @@
       "platform": "Avenue",
       "symbol": "SGOV",
       "side": "BUY",
-      "quantity": 59.61980,
+      "quantity": 59.6198,
       "price_usd": 100.64,
-      "cost_usd": 6010.0,
+      "cost_usd": 6010,
       "reason": "[MANUAL] buy market (user exec) cash_management",
       "run_id": "manual_20260824",
       "notes": [
@@ -3301,9 +3301,9 @@
       "platform": "Avenue",
       "symbol": "AVGO",
       "side": "SELL",
-      "quantity": 5.55000,
+      "quantity": 5.55,
       "price_usd": 360.52,
-      "proceeds_usd": 1993.40,
+      "proceeds_usd": 1993.4,
       "reason": "[MANUAL] sell market (user exec) tactical_rotation AVGO_to_MSFT",
       "run_id": "manual_20260825",
       "notes": [
@@ -3321,7 +3321,7 @@
       "side": "BUY",
       "quantity": 4.08799,
       "price_usd": 489.24,
-      "cost_usd": 2005.0,
+      "cost_usd": 2005,
       "reason": "[N1] [MANUAL] buy market (user exec) tactical_rotation AVGO_to_MSFT",
       "run_id": "manual_20260825",
       "notes": [
@@ -3341,7 +3341,7 @@
       "side": "BUY",
       "quantity": 15.93262,
       "price_usd": 87.87,
-      "cost_usd": 1405.0,
+      "cost_usd": 1405,
       "reason": "[MANUAL] buy market (user exec) DEPLOY_ESTRUTURAL_Avenue",
       "run_id": "manual_20260826",
       "notes": [
@@ -3368,6 +3368,24 @@
         "fee_usd=5.00",
         "cash_management",
         "action_cash"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-09-01T14:47:00Z",
+      "platform": "Binance",
+      "symbol": "BTC",
+      "side": "BUY",
+      "quantity": 0.00381862,
+      "price_usd": 78562.2,
+      "cost_usdt": 300,
+      "reason": "[N1] [MANUAL] convert buy (user exec)",
+      "run_id": "manual_20260901",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0",
+        "usdt_spent",
+        "n_level=N1"
       ]
     }
   ]
