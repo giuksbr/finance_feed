@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-09-08T14:52:03-03:00",
-  "strategy_version": "v20260826B",
+  "generated_at_brt": "2026-09-22T12:07:50-03:00",
+  "strategy_version": "v20260916A",
   "patches_active": [],
   "meta": {
-    "version_timestamp": "2026-09-08T14:52:03-03:00",
+    "version_timestamp": "2026-09-22T12:07:50-03:00",
     "hwm_portfolio_start_date": "2025-09-12",
     "prints_valid_days": 3,
-    "notes": "Estratégia Consolidada ATIVA v20260826B; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24; rotação tática AVGO→MSFT com compra MSFT [N1] executada em 2026-08-25; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-26; venda SGOV para gestão de caixa executada em 2026-08-26; compra BTC [N1] executada em 2026-09-01; APORTE_CORE BTC [CORE_DCA] executado em 2026-09-08."
+    "notes": "Estratégia Consolidada ATIVA v20260916A; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24; rotação tática AVGO→MSFT com compra MSFT [N1] executada em 2026-08-25; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-26; venda SGOV para gestão de caixa executada em 2026-08-26; compra BTC [N1] executada em 2026-09-01; APORTE_CORE BTC [CORE_DCA] executado em 2026-09-08. Aumento AVGO [N2] executado em 2026-09-22; aumento TSM [N1] executado em 2026-09-22; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-09-22; venda SGOV para gestão de caixa executada em 2026-09-22."
   },
   "data_sources": {
     "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
@@ -1817,7 +1817,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 4562.07,
+    "cash_usd": 3382.16,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1835,7 +1835,7 @@
         "schema_warn": []
       },
       "SGOV": {
-        "quantity": 128.40715,
+        "quantity": 95.40715,
         "avg_cost_usd": 100.73644866316901,
         "asset_type": "etf",
         "venue": "NYSEARCA",
@@ -1899,8 +1899,8 @@
         ]
       },
       "TSM": {
-        "quantity": 11.51551,
-        "avg_cost_usd": 366.88670240181915,
+        "quantity": 12.18728,
+        "avg_cost_usd": 371.48465370248107,
         "asset_type": "equity",
         "venue": "NYSE",
         "symbol_canonical": "NYSE:TSM",
@@ -1914,8 +1914,8 @@
         "schema_warn": []
       },
       "AVGO": {
-        "quantity": 7.41596,
-        "avg_cost_usd": 351.36430962,
+        "quantity": 11.55078,
+        "avg_cost_usd": 355.88104574492246,
         "asset_type": "equity",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:AVGO",
@@ -2039,8 +2039,8 @@
         "schema_warn": []
       },
       "VXUS": {
-        "quantity": 45.28977,
-        "avg_cost_usd": 87.99696027017052,
+        "quantity": 76.56927,
+        "avg_cost_usd": 87.86010445056972,
         "asset_type": "etf",
         "venue": "NASDAQ",
         "symbol_canonical": "NASDAQ:VXUS",
@@ -4155,6 +4155,78 @@
         "fee=0",
         "usdt_spent",
         "core_dca"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-09-22T14:59:00Z",
+      "platform": "Avenue",
+      "symbol": "AVGO",
+      "side": "BUY",
+      "quantity": 4.13482,
+      "price_usd": 362.77,
+      "cost_usd": 1505,
+      "reason": "[N2] [MANUAL] buy market (user exec)",
+      "run_id": "manual_20260922",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=5.00",
+        "commission_in_cost",
+        "n_level=N2"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-09-22T15:00:00Z",
+      "platform": "Avenue",
+      "symbol": "TSM",
+      "side": "BUY",
+      "quantity": 0.67177,
+      "price_usd": 446.58,
+      "cost_usd": 302.5,
+      "reason": "[N1] [MANUAL] buy market (user exec)",
+      "run_id": "manual_20260922",
+      "notes": [
+        "equity",
+        "market",
+        "fee_usd=2.50",
+        "commission_in_cost",
+        "n_level=N1"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-09-22T15:01:00Z",
+      "platform": "Avenue",
+      "symbol": "VXUS",
+      "side": "BUY",
+      "quantity": 16.34642,
+      "price_usd": 87.17,
+      "cost_usd": 1430,
+      "reason": "[MANUAL] buy market (user exec) DEPLOY_ESTRUTURAL_Avenue",
+      "run_id": "manual_20260922",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=5.00",
+        "commission_in_cost",
+        "deploy_estrutural_avenue"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-09-22T15:02:00Z",
+      "platform": "Avenue",
+      "symbol": "SGOV",
+      "side": "SELL",
+      "quantity": 33,
+      "price_usd": 100.6,
+      "proceeds_usd": 3309.8,
+      "reason": "[MANUAL] sell market (user exec) cash_management",
+      "run_id": "manual_20260922",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=10.00",
+        "cash_management",
+        "action_cash"
       ]
     }
   ]
