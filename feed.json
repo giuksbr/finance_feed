@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-09-22T12:07:50-03:00",
+  "generated_at_brt": "2026-10-08T10:59:07-03:00",
   "strategy_version": "v20260916A",
   "patches_active": [],
   "meta": {
-    "version_timestamp": "2026-09-22T12:07:50-03:00",
+    "version_timestamp": "2026-10-08T10:59:07-03:00",
     "hwm_portfolio_start_date": "2025-09-12",
     "prints_valid_days": 3,
-    "notes": "Estratégia Consolidada ATIVA v20260916A; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24; rotação tática AVGO→MSFT com compra MSFT [N1] executada em 2026-08-25; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-26; venda SGOV para gestão de caixa executada em 2026-08-26; compra BTC [N1] executada em 2026-09-01; APORTE_CORE BTC [CORE_DCA] executado em 2026-09-08. Aumento AVGO [N2] executado em 2026-09-22; aumento TSM [N1] executado em 2026-09-22; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-09-22; venda SGOV para gestão de caixa executada em 2026-09-22."
+    "notes": "Estratégia Consolidada ATIVA v20260916A; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24; rotação tática AVGO→MSFT com compra MSFT [N1] executada em 2026-08-25; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-26; venda SGOV para gestão de caixa executada em 2026-08-26; compra BTC [N1] executada em 2026-09-01; APORTE_CORE BTC [CORE_DCA] executado em 2026-09-08. Aumento AVGO [N2] executado em 2026-09-22; aumento TSM [N1] executado em 2026-09-22; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-09-22; venda SGOV para gestão de caixa executada em 2026-09-22. APORTE_CORE ETH [CORE_DCA] executado em 2026-10-07; venda SGOV para gestão de caixa executada em 2026-10-07, com corretagem zero e liquidação T+1 em 2026-10-08."
   },
   "data_sources": {
     "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
@@ -1817,7 +1817,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 3382.16,
+    "cash_usd": 4784,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -1835,7 +1835,7 @@
         "schema_warn": []
       },
       "SGOV": {
-        "quantity": 95.40715,
+        "quantity": 81.90715,
         "avg_cost_usd": 100.73644866316901,
         "asset_type": "etf",
         "venue": "NYSEARCA",
@@ -2058,7 +2058,7 @@
     }
   },
   "binance": {
-    "usdt": 2271.16998657,
+    "usdt": 2121.16998657,
     "positions": {
       "BTC": {
         "quantity": 0.08544046,
@@ -2074,8 +2074,8 @@
         ]
       },
       "ETH": {
-        "quantity": 1.37164848,
-        "avg_cost_usd": 3016.733379765637,
+        "quantity": 1.42994411,
+        "avg_cost_usd": 2998.647097417534,
         "asset_type": "crypto",
         "venue": "BINANCE",
         "symbol_canonical": "BINANCE:ETHUSDT",
@@ -4227,6 +4227,48 @@
         "fee_usd=10.00",
         "cash_management",
         "action_cash"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-07T19:29:00Z",
+      "platform": "Binance",
+      "symbol": "ETH",
+      "side": "BUY",
+      "quantity": 0.05829563,
+      "price_usd": 2573.09,
+      "cost_usdt": 150,
+      "reason": "[CORE_DCA] [MANUAL] convert buy (user exec)",
+      "run_id": "manual_20261007",
+      "notes": [
+        "market",
+        "convert",
+        "fee=0",
+        "usdt_spent",
+        "core_dca",
+        "price_display_rounded",
+        "cost_from_conversion_total"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-07T19:32:00Z",
+      "platform": "Avenue",
+      "symbol": "SGOV",
+      "side": "SELL",
+      "quantity": 13.5,
+      "price_usd": 100.46,
+      "proceeds_usd": 1356.24,
+      "reason": "[MANUAL] sell market (user exec) cash_management",
+      "run_id": "manual_20261007",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=0.00",
+        "cash_management",
+        "action_cash",
+        "price_display_rounded",
+        "proceeds_from_order_total",
+        "settlement_T+1",
+        "settlement_date=2026-10-08"
       ]
     }
   ]
