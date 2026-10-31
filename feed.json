@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0",
-  "generated_at_brt": "2026-10-21T11:46:27-03:00",
+  "generated_at_brt": "2026-10-29T11:46:04-03:00",
   "strategy_version": "v20260916A",
   "patches_active": [],
   "meta": {
-    "version_timestamp": "2026-10-21T11:46:27-03:00",
+    "version_timestamp": "2026-10-29T11:46:04-03:00",
     "hwm_portfolio_start_date": "2025-09-12",
     "prints_valid_days": 3,
-    "notes": "Estratégia Consolidada ATIVA v20260916A; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24; rotação tática AVGO→MSFT com compra MSFT [N1] executada em 2026-08-25; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-26; venda SGOV para gestão de caixa executada em 2026-08-26; compra BTC [N1] executada em 2026-09-01; APORTE_CORE BTC [CORE_DCA] executado em 2026-09-08. Aumento AVGO [N2] executado em 2026-09-22; aumento TSM [N1] executado em 2026-09-22; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-09-22; venda SGOV para gestão de caixa executada em 2026-09-22. APORTE_CORE ETH [CORE_DCA] executado em 2026-10-07; venda SGOV para gestão de caixa executada em 2026-10-07, com corretagem zero e liquidação T+1 em 2026-10-08. DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-10-21 às 11:35 BRT: compra de 16.66910 cotas, principal de US$1.400,00 e corretagem de US$5,00, custo total de US$1.405,00; quantidade conforme campo \"Quantidade estimada\" da ordem executada; preço unitário exibido arredondado a US$83,99; sem tag N por se tratar de deploy estrutural, conforme estratégia v20261013A."
+    "notes": "Estratégia Consolidada ATIVA v20260916A; winners/giveback usam avg_cost_usd do feed; rotação estrutural COLO→VXUS executada em 2026-08-06; APORTE_CORE ETH [CORE_DCA] executado em 2026-08-11; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-17; aumento SOXX [N2] executado em 2026-08-17; venda SGOV para gestão de caixa executada em 2026-08-17; aumento TSM [N2] executado em 2026-08-21; compra SGOV para gestão de caixa executada em 2026-08-24; rotação tática AVGO→MSFT com compra MSFT [N1] executada em 2026-08-25; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-08-26; venda SGOV para gestão de caixa executada em 2026-08-26; compra BTC [N1] executada em 2026-09-01; APORTE_CORE BTC [CORE_DCA] executado em 2026-09-08. Aumento AVGO [N2] executado em 2026-09-22; aumento TSM [N1] executado em 2026-09-22; DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-09-22; venda SGOV para gestão de caixa executada em 2026-09-22. APORTE_CORE ETH [CORE_DCA] executado em 2026-10-07; venda SGOV para gestão de caixa executada em 2026-10-07, com corretagem zero e liquidação T+1 em 2026-10-08. DEPLOY_ESTRUTURAL_Avenue VXUS executado em 2026-10-21 às 11:35 BRT: compra de 16.66910 cotas, principal de US$1.400,00 e corretagem de US$5,00, custo total de US$1.405,00; quantidade conforme campo \"Quantidade estimada\" da ordem executada; preço unitário exibido arredondado a US$83,99; sem tag N por se tratar de deploy estrutural, conforme estratégia v20261013A. Compra SGOV para gestão de caixa (AÇÃO_CAIXA) executada em 2026-10-29 às 11:41 BRT: compra de 65.53620 cotas, principal de US$6.600,00 e corretagem de US$10,00, custo total de US$6.610,00; quantidade conforme campo \"Quantidade estimada\" da ordem executada; preço unitário exibido arredondado a US$100,71; sem tag N por se tratar de AÇÃO_CAIXA, conforme estratégia v20261013A."
   },
   "data_sources": {
     "feed_priority_url": "https://raw.githubusercontent.com/giuksbr/finance_feed/refs/heads/main/feed.json",
@@ -7784,7 +7784,7 @@
     "position_floors_enabled": true
   },
   "avenue": {
-    "cash_usd": 3379,
+    "cash_usd": 5125,
     "positions": {
       "VUG": {
         "quantity": 109.4739,
@@ -7802,8 +7802,8 @@
         "schema_warn": []
       },
       "SGOV": {
-        "quantity": 81.90715,
-        "avg_cost_usd": 100.73644866316901,
+        "quantity": 147.44335,
+        "avg_cost_usd": 100.79149321499737,
         "asset_type": "etf",
         "venue": "NYSEARCA",
         "symbol_canonical": "NYSEARCA:SGOV",
@@ -10258,6 +10258,31 @@
         "cost_from_order_total",
         "quantity_from_executed_order_display",
         "quantity_display_label=estimated",
+        "strategy_applied=v20261013A"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-29T14:41:00Z",
+      "platform": "Avenue",
+      "symbol": "SGOV",
+      "side": "BUY",
+      "quantity": 65.5362,
+      "price_usd": 100.71,
+      "cost_usd": 6610,
+      "reason": "[MANUAL] buy market (user exec) cash_management",
+      "run_id": "manual_20261029",
+      "notes": [
+        "etf",
+        "market",
+        "fee_usd=10.00",
+        "commission_in_cost",
+        "cash_management",
+        "action_cash",
+        "price_display_rounded",
+        "cost_from_order_total",
+        "quantity_from_executed_order_display",
+        "quantity_display_label=estimated",
+        "timestamp_from_order_display_minute_precision",
         "strategy_applied=v20261013A"
       ]
     }
